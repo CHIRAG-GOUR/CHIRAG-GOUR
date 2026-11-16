@@ -1,10 +1,10 @@
 {
   "total_repositories": 58,
-  "total_commits_sample": 575,
+  "total_commits_sample": 0,
   "streak_days": 11,
-  "tis_score": 22.4,
-  "overall_activity_score": 37.0,
-  "technical_growth_score": 87.7,
+  "tis_score": 88.4,
+  "overall_activity_score": 0,
+  "technical_growth_score": 0,
   "categories": {
     "Foundation & Systems": 9,
     "EdTech & Serious Games": 15,
@@ -21,5 +21,5 @@
     "Archived": 28,
     "Showcase": 3
   },
-  "sync_timestamp": "2026-11-16 09:15:08 UTC"
+  "sync_timestamp": "2026-11-16 09:25:14 UTC"
 }
