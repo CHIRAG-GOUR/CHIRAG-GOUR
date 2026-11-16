@@ -1,12 +1,12 @@
 {
   "snapshot_id": "2026-w47",
-  "timestamp": "2026-11-16T09:47:48.453952+00:00",
+  "timestamp": "2026-11-16T10:10:19.697164+00:00",
   "total_repositories": 58,
   "active_repositories": 7,
-  "total_commits_recorded": 575,
+  "total_commits_recorded": 0,
   "streak_days": 11,
-  "overall_activity_score": 37.0,
-  "technical_growth_score": 87.7,
+  "overall_activity_score": 0,
+  "technical_growth_score": 0,
   "top_languages": {
     "TypeScript": 31,
     "JavaScript": 15,
