@@ -1,0 +1,190 @@
+<svg width="880" height="470" viewBox="0 0 880 470" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Phone Bezel Gradient -->
+    <linearGradient id="phone_chassis" x1="0" y1="0" x2="250" y2="440" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="40%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <!-- Screen Glass Glow -->
+    <linearGradient id="screen_glow" x1="0" y1="0" x2="210" y2="400" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1E1035"/>
+      <stop offset="50%" stop-color="#0D1117"/>
+      <stop offset="100%" stop-color="#090D16"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ZERO WHITE BACKGROUND: Seamless Transparent Canvas -->
+
+  <!-- LEFT: REALISTIC SMARTPHONE MOCKUP -->
+  <g transform="translate(25, 15)">
+    <!-- Outer Phone Chassis with metallic drop shadow -->
+    <rect x="0" y="0" width="240" height="440" rx="36" fill="url(#phone_chassis)" stroke="#475569" stroke-width="2.5"/>
+    
+    <!-- Side Buttons (Volume & Power) -->
+    <rect x="-3" y="90" width="3" height="35" rx="1.5" fill="#475569"/>
+    <rect x="-3" y="135" width="3" height="35" rx="1.5" fill="#475569"/>
+    <rect x="240" y="110" width="3" height="48" rx="1.5" fill="#475569"/>
+
+    <!-- Screen Bezel -->
+    <rect x="10" y="10" width="220" height="420" rx="28" fill="url(#screen_glow)"/>
+
+    <!-- Top Dynamic Island / Notch -->
+    <rect x="80" y="18" width="80" height="18" rx="9" fill="#000000"/>
+    <circle cx="94" cy="27" r="3.5" fill="#1E293B"/>
+    <circle cx="148" cy="27" r="2.5" fill="#0284C7" fill-opacity="0.6"/>
+
+    <!-- Status Bar -->
+    <text x="24" y="31" fill="#E6EDF3" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="700">9:41</text>
+    <g transform="translate(192, 23)" fill="#E6EDF3">
+      <!-- 5G Bars -->
+      <rect x="0" y="5" width="2" height="4" rx="0.5"/>
+      <rect x="3" y="3" width="2" height="6" rx="0.5"/>
+      <rect x="6" y="1" width="2" height="8" rx="0.5"/>
+      <rect x="9" y="0" width="2" height="9" rx="0.5"/>
+      <!-- Battery -->
+      <rect x="14" y="1" width="14" height="7" rx="2" fill="none" stroke="#E6EDF3" stroke-width="1"/>
+      <rect x="15" y="2" width="10" height="5" rx="1" fill="#34D399"/>
+    </g>
+
+    <!-- APP UI: ZeePrep Mobile -->
+    <!-- App Header -->
+    <g transform="translate(22, 54)">
+      <text x="0" y="14" fill="#C084FC" font-family="'JetBrains Mono', monospace" font-size="13" font-weight="900">⚡ ZeePrep</text>
+      <rect x="120" y="0" width="76" height="18" rx="5" fill="#2E1065" stroke="#7C3AED" stroke-width="0.8"/>
+      <text x="158" y="12" text-anchor="middle" fill="#E9D5FF" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700">GRADE 8</text>
+    </g>
+
+    <!-- Daily Progress Card -->
+    <g transform="translate(20, 82)">
+      <rect width="200" height="72" rx="10" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+      <text x="12" y="20" fill="#E6EDF3" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="700">Digital Olympiad Drill</text>
+      <text x="12" y="34" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9">Topic: Algorithmic Logic &amp; Math</text>
+      <!-- Progress Bar -->
+      <rect x="12" y="46" width="125" height="6" rx="3" fill="#21262D"/>
+      <rect x="12" y="46" width="110" height="6" rx="3" fill="#38BDF8"/>
+      <text x="12" y="62" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700">88% COMPLETED</text>
+      
+      <!-- Mini Circle Gauge on Right -->
+      <circle cx="168" cy="36" r="18" stroke="#21262D" stroke-width="4" fill="none"/>
+      <circle cx="168" cy="36" r="18" stroke="#34D399" stroke-width="4" stroke-dasharray="113" stroke-dashoffset="20" fill="none"/>
+      <text x="168" y="40" text-anchor="middle" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="800">22/25</text>
+    </g>
+
+    <!-- Question Module Card -->
+    <g transform="translate(20, 164)">
+      <rect width="200" height="175" rx="10" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+      <text x="12" y="18" fill="#C084FC" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="800">QUESTION 14 OF 25</text>
+      <text x="12" y="34" fill="#E6EDF3" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="600">Determine time complexity of BVH traversal:</text>
+      
+      <!-- Option A -->
+      <rect x="12" y="48" width="176" height="24" rx="6" fill="#0D1117" stroke="#21262D"/>
+      <text x="24" y="64" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="9">A. O(N²)</text>
+
+      <!-- Option B (Selected / Correct) -->
+      <rect x="12" y="78" width="176" height="24" rx="6" fill="#063827" stroke="#059669" stroke-width="1.2"/>
+      <text x="24" y="94" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">B. O(log N)  ✓</text>
+
+      <!-- Option C -->
+      <rect x="12" y="108" width="176" height="24" rx="6" fill="#0D1117" stroke="#21262D"/>
+      <text x="24" y="124" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="9">C. O(N log N)</text>
+
+      <!-- Audio Prep Waveform Strip -->
+      <g transform="translate(12, 140)">
+        <rect width="176" height="22" rx="5" fill="#2E1065"/>
+        <text x="10" y="15" fill="#C084FC" font-size="10">▶</text>
+        <text x="26" y="15" fill="#E9D5FF" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700">Audio Hint (0:45)</text>
+        <!-- Mini sound waves -->
+        <line x1="120" y1="8" x2="120" y2="14" stroke="#C084FC" stroke-width="1.5"/>
+        <line x1="126" y1="5" x2="126" y2="17" stroke="#C084FC" stroke-width="1.5"/>
+        <line x1="132" y1="9" x2="132" y2="13" stroke="#C084FC" stroke-width="1.5"/>
+        <line x1="138" y1="6" x2="138" y2="16" stroke="#C084FC" stroke-width="1.5"/>
+        <line x1="144" y1="10" x2="144" y2="12" stroke="#C084FC" stroke-width="1.5"/>
+        <line x1="150" y1="7" x2="150" y2="15" stroke="#C084FC" stroke-width="1.5"/>
+      </g>
+    </g>
+
+    <!-- Bottom App Tab Bar -->
+    <g transform="translate(20, 350)">
+      <rect width="200" height="34" rx="10" fill="#161B22" stroke="#21262D"/>
+      <g transform="translate(15, 21)" font-family="'JetBrains Mono', monospace" font-size="8.5" font-weight="700">
+        <text x="0" y="0" fill="#38BDF8">● DRILL</text>
+        <text x="45" y="0" fill="#7D8590">TESTS</text>
+        <text x="95" y="0" fill="#7D8590">AUDIO</text>
+        <text x="140" y="0" fill="#7D8590">PROFILE</text>
+      </g>
+    </g>
+
+    <!-- Phone Home Indicator Bar -->
+    <rect x="85" y="416" width="70" height="3.5" rx="1.75" fill="#475569"/>
+  </g>
+
+  <!-- RIGHT: PORTFOLIO MOBILE ARCHITECTURE SHOWCASE -->
+  <g transform="translate(300, 35)">
+    <!-- Section Badge -->
+    <text x="0" y="15" fill="#C084FC" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="800" letter-spacing="1">
+      MOBILE APPLICATION PORTFOLIO
+    </text>
+
+    <!-- Project Title -->
+    <text x="0" y="52" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="900">
+      ZeePrep Mobile Platform
+    </text>
+
+    <!-- Subtitle -->
+    <text x="0" y="80" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="500">
+      Cross-platform competitive exam &amp; interactive practice client built with Expo &amp; Firebase.
+    </text>
+
+    <!-- Highlights Cards -->
+    <g transform="translate(0, 105)">
+      <!-- Feature 1 -->
+      <g transform="translate(0, 0)">
+        <rect width="550" height="52" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+        <circle cx="26" cy="26" r="12" fill="#2E1065"/>
+        <text x="26" y="30" text-anchor="middle" fill="#C084FC" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">EX</text>
+        <text x="50" y="24" fill="#E6EDF3" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5" font-weight="700">React Native &amp; Expo SDK 52 (Expo Router)</text>
+        <text x="50" y="40" fill="#7D8590" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">File-based routing, native hardware acceleration, and dynamic sheet modals.</text>
+      </g>
+
+      <!-- Feature 2 -->
+      <g transform="translate(0, 62)">
+        <rect width="550" height="52" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+        <circle cx="26" cy="26" r="12" fill="#0C2D48"/>
+        <text x="26" y="30" text-anchor="middle" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">FB</text>
+        <text x="50" y="24" fill="#E6EDF3" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5" font-weight="700">Firebase Firestore &amp; Offline Persistence</text>
+        <text x="50" y="40" fill="#7D8590" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">Real-time score sync, auth token refresh, and instant local cache queries.</text>
+      </g>
+
+      <!-- Feature 3 -->
+      <g transform="translate(0, 124)">
+        <rect width="550" height="52" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+        <circle cx="26" cy="26" r="12" fill="#063827"/>
+        <text x="26" y="30" text-anchor="middle" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">NW</text>
+        <text x="50" y="24" fill="#E6EDF3" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5" font-weight="700">NativeWind &amp; Hermes Engine Optimization</text>
+        <text x="50" y="40" fill="#7D8590" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">Sub-second bundle execution, unified Tailwind tokens, and 60 FPS transitions.</text>
+      </g>
+
+      <!-- Feature 4 -->
+      <g transform="translate(0, 186)">
+        <rect width="550" height="52" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+        <circle cx="26" cy="26" r="12" fill="#3D2005"/>
+        <text x="26" y="30" text-anchor="middle" fill="#FBBF24" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">AU</text>
+        <text x="50" y="24" fill="#E6EDF3" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12.5" font-weight="700">Interactive Pedagogical Audio &amp; Timed Drills</text>
+        <text x="50" y="40" fill="#7D8590" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">Audio-guided practice modules, time-gated question sets, and streak analytics.</text>
+      </g>
+    </g>
+
+    <!-- Bottom Tags / Actions -->
+    <g transform="translate(0, 375)" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">
+      <rect x="0" y="0" width="165" height="28" rx="6" fill="#2E1065" stroke="#7C3AED" stroke-width="1"/>
+      <text x="82" y="18" text-anchor="middle" fill="#E9D5FF">EXPO SDK 52</text>
+
+      <rect x="175" y="0" width="165" height="28" rx="6" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+      <text x="257" y="18" text-anchor="middle" fill="#38BDF8">REACT NATIVE</text>
+
+      <rect x="350" y="0" width="170" height="28" rx="6" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+      <text x="435" y="18" text-anchor="middle" fill="#34D399">FIREBASE CLOUD</text>
+    </g>
+  </g>
+</svg>

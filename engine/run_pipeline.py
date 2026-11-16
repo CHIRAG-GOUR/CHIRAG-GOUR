@@ -148,6 +148,8 @@ def main():
     print("[5/6] Generating dynamic, high-resolution modern light SVGs...")
     generate_snake_svg()
     svg_gen.generate_identity_header(profile, sync_time_str)
+    svg_gen.generate_portfolio_skills()
+    svg_gen.generate_mobile_phone_mockup()
     svg_gen.generate_achievement_trophies()
     svg_gen.generate_developer_xp_streak()
     svg_gen.generate_activity_waveform()

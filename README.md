@@ -12,6 +12,18 @@
 
 <br/><br/>
 
+<!-- PORTFOLIO CORE TECHNICAL PROFICIENCIES -->
+<img src="assets/generated/portfolio-skills-matrix.svg" alt="Core Technical Proficiencies" width="100%"/>
+
+<br/><br/>
+
+<!-- FEATURED MOBILE APPLICATION MOCKUP (ZEEPREP) -->
+<a href="https://github.com/CHIRAG-GOUR?tab=repositories">
+  <img src="assets/generated/mobile-app-phone-mockup.svg" alt="ZeePrep Mobile App Smartphone Mockup" width="100%"/>
+</a>
+
+<br/><br/>
+
 <!-- LIVE CURRENTLY BUILDING COMMIT TICKER -->
 <img src="assets/generated/commit-ticker.svg" alt="Currently Building Commit Ticker" width="100%"/>
 
