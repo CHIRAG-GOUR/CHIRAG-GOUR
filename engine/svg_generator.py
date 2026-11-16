@@ -1,7 +1,6 @@
 """
-Dynamic SVG Card Generator — Modern Light Theme & Pure Visual Telemetry
-Renders clean, high-contrast, visual SVG charts, rings, and preview cards
-without walls of text or formula clutter.
+Dynamic SVG Card Generator — Ultra Clean Minimalist Edition
+Zero pill containers, high-contrast light theme typography, and pure visual telemetry.
 """
 
 import os
@@ -19,9 +18,10 @@ class SVGGenerator:
         print(f"[SVG] Generated {filename}")
 
     def generate_identity_header(self, profile: Dict[str, Any], sync_time: str):
-        svg = f"""<svg width="880" height="230" viewBox="0 0 880 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+        # NO PILL CONTAINERS: Clean, elegant, premium typography with minimal layout
+        svg = f"""<svg width="880" height="200" viewBox="0 0 880 200" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="light_bg" x1="0" y1="0" x2="880" y2="230" gradientUnits="userSpaceOnUse">
+    <linearGradient id="light_bg" x1="0" y1="0" x2="880" y2="200" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="60%" stop-color="#F8FAFC"/>
       <stop offset="100%" stop-color="#F1F5F9"/>
@@ -36,67 +36,50 @@ class SVGGenerator:
       <stop offset="70%" stop-color="#1E293B"/>
       <stop offset="100%" stop-color="#2563EB"/>
     </linearGradient>
-    <filter id="card_shadow" x="-4" y="-2" width="888" height="238" filterUnits="userSpaceOnUse">
+    <filter id="card_shadow" x="-4" y="-2" width="888" height="208" filterUnits="userSpaceOnUse">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.05"/>
     </filter>
   </defs>
 
-  <rect x="2" y="2" width="876" height="226" rx="16" fill="url(#light_bg)" filter="url(#card_shadow)"/>
-  <rect x="2" y="2" width="876" height="226" rx="16" stroke="url(#light_border)" stroke-width="1.5"/>
+  <rect x="2" y="2" width="876" height="196" rx="16" fill="url(#light_bg)" filter="url(#card_shadow)"/>
+  <rect x="2" y="2" width="876" height="196" rx="16" stroke="url(#light_border)" stroke-width="1.5"/>
 
   <!-- Subtle Blueprint Grid -->
   <g opacity="0.04" stroke="#0F172A" stroke-width="1">
-    <line x1="40" y1="0" x2="40" y2="230"/>
-    <line x1="220" y1="0" x2="220" y2="230"/>
-    <line x1="440" y1="0" x2="440" y2="230"/>
-    <line x1="660" y1="0" x2="660" y2="230"/>
-    <line x1="840" y1="0" x2="840" y2="230"/>
-    <line x1="0" y1="60" x2="880" y2="60"/>
-    <line x1="0" y1="120" x2="880" y2="120"/>
-    <line x1="0" y1="180" x2="880" y2="180"/>
+    <line x1="40" y1="0" x2="40" y2="200"/>
+    <line x1="220" y1="0" x2="220" y2="200"/>
+    <line x1="440" y1="0" x2="440" y2="200"/>
+    <line x1="660" y1="0" x2="660" y2="200"/>
+    <line x1="840" y1="0" x2="840" y2="200"/>
+    <line x1="0" y1="50" x2="880" y2="50"/>
+    <line x1="0" y1="100" x2="880" y2="100"/>
+    <line x1="0" y1="150" x2="880" y2="150"/>
   </g>
 
-  <!-- Top Status Badge -->
-  <rect x="40" y="22" width="190" height="26" rx="13" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
-  <circle cx="56" cy="35" r="4.5" fill="#10B981">
-    <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
-  </circle>
-  <text x="70" y="39" fill="#1E40AF" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="700" letter-spacing="1">
-    AUTONOMOUS ECOSYSTEM
-  </text>
-
-  <!-- Name & Title -->
-  <text x="40" y="94" fill="url(#title_gradient)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="34" font-weight="800" letter-spacing="-0.5">
+  <!-- Name & Professional Title -->
+  <text x="40" y="65" fill="url(#title_gradient)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="38" font-weight="900" letter-spacing="-0.8">
     CHIRAG GOUR
   </text>
 
-  <text x="40" y="122" fill="#2563EB" font-family="'JetBrains Mono', Consolas, monospace" font-size="13" font-weight="700" letter-spacing="1.5">
+  <text x="40" y="98" fill="#2563EB" font-family="'JetBrains Mono', Consolas, monospace" font-size="14" font-weight="700" letter-spacing="1.5">
     CREATIVE COMPUTING &amp; PEDAGOGICAL SYSTEMS ARCHITECT
   </text>
 
-  <text x="40" y="152" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">
-    Spatial 3D web environments • Serious educational games (POA Series) • Reactive Next.js &amp; Mobile
+  <text x="40" y="132" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500">
+    Spatial 3D Web • Serious Educational Games (POA Series) • Reactive Next.js &amp; Mobile
   </text>
 
-  <!-- Bottom Badges -->
-  <g transform="translate(40, 176)">
-    <rect x="0" y="0" width="135" height="26" rx="6" fill="#EFF6FF" stroke="#BFDBFE"/>
-    <text x="67" y="17" text-anchor="middle" fill="#1D4ED8" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">SPATIAL 3D WEB</text>
-
-    <rect x="145" y="0" width="165" height="26" rx="6" fill="#FAF5FF" stroke="#E9D5FF"/>
-    <text x="227" y="17" text-anchor="middle" fill="#7C3AED" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">EDTECH SIMULATIONS</text>
-
-    <rect x="320" y="0" width="155" height="26" rx="6" fill="#ECFDF5" stroke="#A7F3D0"/>
-    <text x="397" y="17" text-anchor="middle" fill="#047857" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">REACT 19 / NEXT.JS</text>
-
-    <rect x="485" y="0" width="160" height="26" rx="6" fill="#FFFBEB" stroke="#FDE68A"/>
-    <text x="565" y="17" text-anchor="middle" fill="#B45309" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">EXPO NATIVE MOBILE</text>
+  <!-- Clean Minimalist Specialty Indicators (NO PILL CONTAINERS) -->
+  <g transform="translate(40, 162)" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">
+    <text x="0" y="0" fill="#0284C7">● SPATIAL 3D WEB</text>
+    <text x="175" y="0" fill="#7C3AED">● EDTECH SIMULATIONS</text>
+    <text x="380" y="0" fill="#059669">● NEXT.JS / REACT 19</text>
+    <text x="575" y="0" fill="#D97706">● EXPO NATIVE MOBILE</text>
   </g>
 </svg>"""
         self._save("identity-header.svg", svg)
 
     def generate_activity_waveform(self):
-        # Pure visual area graph & waveform of 2026 commits with smooth bezier curves
         svg = """<svg width="880" height="240" viewBox="0 0 880 240" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="act_bg" x1="0" y1="0" x2="880" y2="240" gradientUnits="userSpaceOnUse">
@@ -209,7 +192,6 @@ class SVGGenerator:
         self._save("activity-velocity-graph.svg", svg)
 
     def generate_languages_and_radar(self):
-        # Visual Language Stack & Technical Proficiency Rings
         svg = """<svg width="880" height="230" viewBox="0 0 880 230" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="rad_bg" x1="0" y1="0" x2="880" y2="230" gradientUnits="userSpaceOnUse">
@@ -227,7 +209,7 @@ class SVGGenerator:
       Technical Domain Rings
     </text>
 
-    <!-- Concentric Rings Center (110, 105) -->
+    <!-- Concentric Rings Center (105, 105) -->
     <g transform="translate(105, 105)">
       <!-- Ring 1: 3D & Shaders (95%) -->
       <circle r="72" stroke="#E2E8F0" stroke-width="8" fill="none"/>

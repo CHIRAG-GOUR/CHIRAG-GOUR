@@ -15,7 +15,7 @@
       Technical Domain Rings
     </text>
 
-    <!-- Concentric Rings Center (110, 105) -->
+    <!-- Concentric Rings Center (105, 105) -->
     <g transform="translate(105, 105)">
       <!-- Ring 1: 3D & Shaders (95%) -->
       <circle r="72" stroke="#E2E8F0" stroke-width="8" fill="none"/>
