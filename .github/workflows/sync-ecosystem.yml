@@ -2,7 +2,7 @@ name: Autonomous Ecosystem Sync
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Daily at 00:00 UTC
+    - cron: '0 */2 * * *' # Automatically runs every 2 hours (12 times a day)
   push:
     branches:
       - main
@@ -11,6 +11,8 @@ on:
       - 'assets/generated/**'
       - 'README.md'
       - 'data/current/**'
+  repository_dispatch:
+    types: [sync, repo-push]
   workflow_dispatch:
 
 permissions:
@@ -35,14 +37,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python engine/run_pipeline.py
-
-      - name: Generate Contribution Snake
-        uses: Platane/snk@v3
-        continue-on-error: true
-        with:
-          github_user_name: CHIRAG-GOUR
-          outputs: |
-            assets/generated/github-contribution-grid-snake.svg?color_snake=#15803d&color_dots=#ebedf0,#9be9a8,#40c463,#30a14e,#216e39
 
       - name: Commit & Push Changes
         run: |
