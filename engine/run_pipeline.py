@@ -148,12 +148,9 @@ def main():
     print("[5/6] Generating dynamic, high-resolution modern light SVGs...")
     generate_snake_svg()
     svg_gen.generate_identity_header(profile, sync_time_str)
-    svg_gen.generate_metrics_dashboard(analytics)
-    svg_gen.generate_tech_constellation()
+    svg_gen.generate_activity_waveform()
+    svg_gen.generate_languages_and_radar()
     svg_gen.generate_project_previews()
-    svg_gen.generate_featured_projects()
-    svg_gen.generate_commit_intelligence(evaluated_commits[:5])
-    svg_gen.generate_development_journey()
 
     # 6. Build README.md
     print("[6/6] Generating production GitHub README.md...")

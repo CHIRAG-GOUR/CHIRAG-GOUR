@@ -1,6 +1,6 @@
-<svg width="880" height="260" viewBox="0 0 880 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="880" height="230" viewBox="0 0 880 230" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="light_bg" x1="0" y1="0" x2="880" y2="260" gradientUnits="userSpaceOnUse">
+    <linearGradient id="light_bg" x1="0" y1="0" x2="880" y2="230" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#FFFFFF"/>
       <stop offset="60%" stop-color="#F8FAFC"/>
       <stop offset="100%" stop-color="#F1F5F9"/>
@@ -15,73 +15,60 @@
       <stop offset="70%" stop-color="#1E293B"/>
       <stop offset="100%" stop-color="#2563EB"/>
     </linearGradient>
-    <filter id="card_shadow" x="-4" y="-2" width="888" height="268" filterUnits="userSpaceOnUse">
+    <filter id="card_shadow" x="-4" y="-2" width="888" height="238" filterUnits="userSpaceOnUse">
       <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.05"/>
     </filter>
   </defs>
 
-  <!-- Base Card -->
-  <rect x="2" y="2" width="876" height="256" rx="16" fill="url(#light_bg)" filter="url(#card_shadow)"/>
-  <rect x="2" y="2" width="876" height="256" rx="16" stroke="url(#light_border)" stroke-width="1.5"/>
+  <rect x="2" y="2" width="876" height="226" rx="16" fill="url(#light_bg)" filter="url(#card_shadow)"/>
+  <rect x="2" y="2" width="876" height="226" rx="16" stroke="url(#light_border)" stroke-width="1.5"/>
 
-  <!-- Subtle Blueprint Tech Grid -->
+  <!-- Subtle Blueprint Grid -->
   <g opacity="0.04" stroke="#0F172A" stroke-width="1">
-    <line x1="40" y1="0" x2="40" y2="260"/>
-    <line x1="220" y1="0" x2="220" y2="260"/>
-    <line x1="440" y1="0" x2="440" y2="260"/>
-    <line x1="660" y1="0" x2="660" y2="260"/>
-    <line x1="840" y1="0" x2="840" y2="260"/>
-    <line x1="0" y1="65" x2="880" y2="65"/>
-    <line x1="0" y1="130" x2="880" y2="130"/>
-    <line x1="0" y1="195" x2="880" y2="195"/>
+    <line x1="40" y1="0" x2="40" y2="230"/>
+    <line x1="220" y1="0" x2="220" y2="230"/>
+    <line x1="440" y1="0" x2="440" y2="230"/>
+    <line x1="660" y1="0" x2="660" y2="230"/>
+    <line x1="840" y1="0" x2="840" y2="230"/>
+    <line x1="0" y1="60" x2="880" y2="60"/>
+    <line x1="0" y1="120" x2="880" y2="120"/>
+    <line x1="0" y1="180" x2="880" y2="180"/>
   </g>
 
-  <!-- Top Status Bar (FIXED: 'LIVE' removed, wider pill with generous margins) -->
-  <rect x="40" y="24" width="200" height="26" rx="13" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
-  <circle cx="56" cy="37" r="4.5" fill="#10B981">
+  <!-- Top Status Badge -->
+  <rect x="40" y="22" width="190" height="26" rx="13" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
+  <circle cx="56" cy="35" r="4.5" fill="#10B981">
     <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
   </circle>
-  <text x="70" y="41" fill="#1E40AF" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="700" letter-spacing="1">
+  <text x="70" y="39" fill="#1E40AF" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="700" letter-spacing="1">
     AUTONOMOUS ECOSYSTEM
   </text>
 
-  <text x="840" y="41" text-anchor="end" fill="#64748B" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="500">
-    SYNCHRONIZED: 2026-11-16 08:29:37 UTC
-  </text>
-
-  <!-- Name & Professional Title -->
-  <text x="40" y="98" fill="url(#title_gradient)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="34" font-weight="800" letter-spacing="-0.5">
+  <!-- Name & Title -->
+  <text x="40" y="94" fill="url(#title_gradient)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="34" font-weight="800" letter-spacing="-0.5">
     CHIRAG GOUR
   </text>
 
-  <text x="40" y="128" fill="#2563EB" font-family="'JetBrains Mono', Consolas, monospace" font-size="13.5" font-weight="700" letter-spacing="1.5">
+  <text x="40" y="122" fill="#2563EB" font-family="'JetBrains Mono', Consolas, monospace" font-size="13" font-weight="700" letter-spacing="1.5">
     CREATIVE COMPUTING &amp; PEDAGOGICAL SYSTEMS ARCHITECT
   </text>
 
-  <!-- Core Summary -->
-  <text x="40" y="160" fill="#334155" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13.5" font-weight="500">
-    Architecting spatial 3D web environments, interactive educational simulations, and production-grade reactive software.
-  </text>
-  <text x="40" y="180" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12">
-    Specialized in Three.js / R3F shaders, Next.js Turbopack systems, and serious gaming pedagogical frameworks.
+  <text x="40" y="152" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500">
+    Spatial 3D web environments • Serious educational games (POA Series) • Reactive Next.js &amp; Mobile
   </text>
 
-  <!-- Bottom Pills -->
-  <g transform="translate(40, 206)">
-    <!-- Pill 1 -->
-    <rect x="0" y="0" width="135" height="28" rx="7" fill="#EFF6FF" stroke="#BFDBFE"/>
-    <text x="67" y="18" text-anchor="middle" fill="#1D4ED8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">SPATIAL 3D WEB</text>
+  <!-- Bottom Badges -->
+  <g transform="translate(40, 176)">
+    <rect x="0" y="0" width="135" height="26" rx="6" fill="#EFF6FF" stroke="#BFDBFE"/>
+    <text x="67" y="17" text-anchor="middle" fill="#1D4ED8" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">SPATIAL 3D WEB</text>
 
-    <!-- Pill 2 -->
-    <rect x="145" y="0" width="165" height="28" rx="7" fill="#FAF5FF" stroke="#E9D5FF"/>
-    <text x="227" y="18" text-anchor="middle" fill="#7C3AED" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">EDTECH SIMULATIONS</text>
+    <rect x="145" y="0" width="165" height="26" rx="6" fill="#FAF5FF" stroke="#E9D5FF"/>
+    <text x="227" y="17" text-anchor="middle" fill="#7C3AED" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">EDTECH SIMULATIONS</text>
 
-    <!-- Pill 3 -->
-    <rect x="320" y="0" width="155" height="28" rx="7" fill="#ECFDF5" stroke="#A7F3D0"/>
-    <text x="397" y="18" text-anchor="middle" fill="#047857" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">REACT 19 / NEXT.JS</text>
+    <rect x="320" y="0" width="155" height="26" rx="6" fill="#ECFDF5" stroke="#A7F3D0"/>
+    <text x="397" y="17" text-anchor="middle" fill="#047857" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">REACT 19 / NEXT.JS</text>
 
-    <!-- Pill 4 -->
-    <rect x="485" y="0" width="160" height="28" rx="7" fill="#FFFBEB" stroke="#FDE68A"/>
-    <text x="565" y="18" text-anchor="middle" fill="#B45309" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">EXPO NATIVE MOBILE</text>
+    <rect x="485" y="0" width="160" height="26" rx="6" fill="#FFFBEB" stroke="#FDE68A"/>
+    <text x="565" y="17" text-anchor="middle" fill="#B45309" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">EXPO NATIVE MOBILE</text>
   </g>
 </svg>
