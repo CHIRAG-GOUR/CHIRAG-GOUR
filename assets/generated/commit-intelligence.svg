@@ -1,0 +1,43 @@
+<svg width="880" height="340" viewBox="0 0 880 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ci_bg" x1="0" y1="0" x2="880" y2="340" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#080C14"/>
+      <stop offset="100%" stop-color="#0A101C"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="880" height="340" rx="14" fill="url(#ci_bg)"/>
+  <rect x="1" y="1" width="878" height="338" rx="13" stroke="#1E293B" stroke-width="1"/>
+
+  <!-- Header -->
+  <text x="35" y="38" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" letter-spacing="2">
+    COMMIT INTELLIGENCE ENGINE // EXPLAINABLE SCORING FEED
+  </text>
+
+  <!-- Feed Item 1: Skippi Shark Tank Simulation -->
+  <g transform="translate(35, 55)">
+    <rect width="810" height="78" rx="8" fill="#0D1628" stroke="#00E5FF" stroke-opacity="0.25"/>
+    <text x="20" y="24" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">[TIS: 94.2] FEATURE // SPATIAL EDTECH</text>
+    <text x="730" y="24" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="10">2026-11-13</text>
+    <text x="20" y="44" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600">POA-Skippi: Roo 3D hop animation &amp; 13 interactive case study stages</text>
+    <text x="20" y="64" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">Reasoning: Involves complex R3F kinematics, Recharts business analytics, and Zustand pedagogical state coordination.</text>
+  </g>
+
+  <!-- Feed Item 2: Eat Better Internship -->
+  <g transform="translate(35, 145)">
+    <rect width="810" height="78" rx="8" fill="#0D1C1A" stroke="#00F5A0" stroke-opacity="0.25"/>
+    <text x="20" y="24" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">[TIS: 91.5] ARCHITECTURE // MODERN PIPELINE</text>
+    <text x="730" y="24" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="10">2026-11-16</text>
+    <text x="20" y="44" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600">Eat-Better-Internship: Next.js Turbopack + Three.js canvas viewport orchestration</text>
+    <text x="20" y="64" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">Reasoning: High architectural significance; integrates turbopack compiler, 3D viewport canvas, and programmatic PDF generation.</text>
+  </g>
+
+  <!-- Feed Item 3: Olympiad Activities Digital Exam -->
+  <g transform="translate(35, 235)">
+    <rect width="810" height="78" rx="8" fill="#1A112C" stroke="#8A2BE2" stroke-opacity="0.25"/>
+    <text x="20" y="24" fill="#C084FC" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">[TIS: 89.0] INTEGRATION // CLOUD &amp; DND</text>
+    <text x="730" y="24" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="10">2026-11-04</text>
+    <text x="20" y="44" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="600">Olympiad-Activities: Drag-and-drop mechanics &amp; Firebase cloud persistence</text>
+    <text x="20" y="64" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">Reasoning: Orchestrates DND-Kit interaction states with multi-stage Firebase cloud synchronization under digital exam timing.</text>
+  </g>
+</svg>

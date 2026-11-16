@@ -1,0 +1,52 @@
+<svg width="880" height="210" viewBox="0 0 880 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="card_grad" x1="0" y1="0" x2="880" y2="210" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#080C14"/>
+      <stop offset="100%" stop-color="#0D111A"/>
+    </linearGradient>
+    <linearGradient id="border_base" x1="0" y1="0" x2="880" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="50%" stop-color="#334155"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="880" height="210" rx="14" fill="url(#card_grad)"/>
+  <rect x="1" y="1" width="878" height="208" rx="13" stroke="url(#border_base)" stroke-width="1"/>
+
+  <!-- Chamber 1: Repositories -->
+  <g transform="translate(35, 30)">
+    <rect width="180" height="150" rx="10" fill="#0E1626" stroke="#00E5FF" stroke-opacity="0.25" stroke-width="1"/>
+    <text x="20" y="32" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" letter-spacing="1">SOURCE REPOSITORIES</text>
+    <text x="20" y="80" fill="#00E5FF" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="38" font-weight="800">57</text>
+    <text x="20" y="112" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11.5">100% Original Works</text>
+    <text x="20" y="130" fill="#475569" font-family="'JetBrains Mono', monospace" font-size="10">0 Forks // Pure Origin</text>
+  </g>
+
+  <!-- Chamber 2: Analyzed Velocity -->
+  <g transform="translate(240, 30)">
+    <rect width="180" height="150" rx="10" fill="#141126" stroke="#8A2BE2" stroke-opacity="0.25" stroke-width="1"/>
+    <text x="20" y="32" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" letter-spacing="1">ANALYZED COMMITS</text>
+    <text x="20" y="80" fill="#C084FC" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="38" font-weight="800">575+</text>
+    <text x="20" y="112" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11.5">Across Active Sample</text>
+    <text x="20" y="130" fill="#475569" font-family="'JetBrains Mono', monospace" font-size="10">Peak: 276 in Sept 2026</text>
+  </g>
+
+  <!-- Chamber 3: TIS Score -->
+  <g transform="translate(445, 30)">
+    <rect width="180" height="150" rx="10" fill="#0C1B19" stroke="#00F5A0" stroke-opacity="0.25" stroke-width="1"/>
+    <text x="20" y="32" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" letter-spacing="1">TECHNICAL IMPACT (TIS)</text>
+    <text x="20" y="80" fill="#00F5A0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="38" font-weight="800">22.4</text>
+    <text x="20" y="112" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11.5">Explainable Index / 100</text>
+    <text x="20" y="130" fill="#475569" font-family="'JetBrains Mono', monospace" font-size="10">9 Scoring Dimensions</text>
+  </g>
+
+  <!-- Chamber 4: Streak & Cadence -->
+  <g transform="translate(650, 30)">
+    <rect width="195" height="150" rx="10" fill="#1C180E" stroke="#FFB800" stroke-opacity="0.25" stroke-width="1"/>
+    <text x="20" y="32" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" letter-spacing="1">MAX ACTIVE STREAK</text>
+    <text x="20" y="80" fill="#FFB800" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="38" font-weight="800">11 <tspan font-size="20">DAYS</tspan></text>
+    <text x="20" y="112" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11.5">Sustained Rhythm</text>
+    <text x="20" y="130" fill="#475569" font-family="'JetBrains Mono', monospace" font-size="10">Fri &amp; Mon Peak Days</text>
+  </g>
+</svg>
