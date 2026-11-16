@@ -351,3 +351,281 @@ class SVGGenerator:
   </g>
 </svg>"""
         self._save("project-previews.svg", svg)
+
+    def generate_achievement_trophies(self):
+        """Minimalist gold and silver achievement icons for verified milestones. Zero text walls — pure visual badges."""
+        svg = """<svg width="880" height="120" viewBox="0 0 880 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="card_bg" x1="0" y1="0" x2="880" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <!-- Gold Medallion Gradient -->
+    <linearGradient id="gold_grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="50%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#D97706"/>
+    </linearGradient>
+    <!-- Silver Medallion Gradient -->
+    <linearGradient id="silver_grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F1F5F9"/>
+      <stop offset="50%" stop-color="#94A3B8"/>
+      <stop offset="100%" stop-color="#64748B"/>
+    </linearGradient>
+    <!-- Platinum / Cyan Glow -->
+    <linearGradient id="cyan_grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#BAE6FD"/>
+      <stop offset="50%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="876" height="116" rx="16" fill="url(#card_bg)"/>
+  <rect x="2" y="2" width="876" height="116" rx="16" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- Badge 1: 58+ Repositories (Gold) -->
+  <g transform="translate(48, 16)">
+    <circle cx="42" cy="42" r="34" fill="#FFFBEB" stroke="url(#gold_grad)" stroke-width="2.5"/>
+    <circle cx="42" cy="42" r="28" fill="#FEF3C7" fill-opacity="0.4"/>
+    <!-- Trophy Icon -->
+    <path d="M 33 28 L 51 28 L 48 44 C 47 48 44 50 42 50 C 40 50 37 48 36 44 Z" fill="url(#gold_grad)"/>
+    <path d="M 42 50 L 42 56 M 36 56 L 48 56" stroke="url(#gold_grad)" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Handles -->
+    <path d="M 33 32 C 28 32 28 40 34 40 M 51 32 C 56 32 56 40 50 40" stroke="url(#gold_grad)" stroke-width="1.8" fill="none"/>
+    <text x="42" y="88" text-anchor="middle" fill="#B45309" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">58+ REPOS</text>
+    <text x="42" y="100" text-anchor="middle" fill="#92400E" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="600" letter-spacing="0.5">GOLD TIER</text>
+  </g>
+
+  <!-- Badge 2: 2,211+ Commits (Gold) -->
+  <g transform="translate(216, 16)">
+    <circle cx="42" cy="42" r="34" fill="#FFFBEB" stroke="url(#gold_grad)" stroke-width="2.5"/>
+    <circle cx="42" cy="42" r="28" fill="#FEF3C7" fill-opacity="0.4"/>
+    <!-- Lightning Velocity Icon -->
+    <path d="M 44 26 L 33 42 L 41 42 L 39 58 L 52 39 L 44 39 Z" fill="url(#gold_grad)"/>
+    <text x="42" y="88" text-anchor="middle" fill="#B45309" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">2,211+ COMMITS</text>
+    <text x="42" y="100" text-anchor="middle" fill="#92400E" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="600" letter-spacing="0.5">VELOCITY ELITE</text>
+  </g>
+
+  <!-- Badge 3: Multi-Language Polyglot (Silver) -->
+  <g transform="translate(384, 16)">
+    <circle cx="42" cy="42" r="34" fill="#F8FAFC" stroke="url(#silver_grad)" stroke-width="2.5"/>
+    <circle cx="42" cy="42" r="28" fill="#F1F5F9" fill-opacity="0.5"/>
+    <!-- Code Brackets Icon -->
+    <path d="M 34 32 L 27 42 L 34 52 M 50 32 L 57 42 L 50 52 M 45 28 L 39 56" stroke="url(#silver_grad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="42" y="88" text-anchor="middle" fill="#475569" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">POLYGLOT</text>
+    <text x="42" y="100" text-anchor="middle" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="600" letter-spacing="0.5">SILVER ARCHITECT</text>
+  </g>
+
+  <!-- Badge 4: Spatial 3D & GLSL (Gold) -->
+  <g transform="translate(552, 16)">
+    <circle cx="42" cy="42" r="34" fill="#F0F9FF" stroke="url(#cyan_grad)" stroke-width="2.5"/>
+    <circle cx="42" cy="42" r="28" fill="#E0F2FE" fill-opacity="0.5"/>
+    <!-- 3D Cube Icon -->
+    <path d="M 42 27 L 55 34 L 42 41 L 29 34 Z" fill="#38BDF8"/>
+    <path d="M 29 35 L 42 42 L 42 57 L 29 50 Z" fill="#0284C7"/>
+    <path d="M 55 35 L 42 42 L 42 57 L 55 50 Z" fill="#0369A1"/>
+    <text x="42" y="88" text-anchor="middle" fill="#0369A1" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">3D &amp; SHADERS</text>
+    <text x="42" y="100" text-anchor="middle" fill="#0284C7" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="600" letter-spacing="0.5">THREE.JS / GLSL</text>
+  </g>
+
+  <!-- Badge 5: Serious Games Creator (Silver) -->
+  <g transform="translate(720, 16)">
+    <circle cx="42" cy="42" r="34" fill="#FAF5FF" stroke="#A855F7" stroke-width="2.5"/>
+    <circle cx="42" cy="42" r="28" fill="#F3E8FF" fill-opacity="0.5"/>
+    <!-- Controller Icon -->
+    <rect x="28" y="33" width="28" height="18" rx="6" fill="#9333EA"/>
+    <circle cx="34" cy="42" r="2" fill="#FFFFFF"/>
+    <circle cx="50" cy="39" r="1.5" fill="#F472B6"/>
+    <circle cx="47" cy="44" r="1.5" fill="#38BDF8"/>
+    <text x="42" y="88" text-anchor="middle" fill="#7E22CE" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">POA EDTECH</text>
+    <text x="42" y="100" text-anchor="middle" fill="#9333EA" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="600" letter-spacing="0.5">GAME LEAD</text>
+  </g>
+</svg>"""
+        self._save("trophies-and-achievements.svg", svg)
+
+    def generate_developer_xp_streak(self):
+        """Visual Developer XP & Streak Bar: Clean progress bar tracking current coding consistency and streak score across 2026."""
+        svg = """<svg width="880" height="98" viewBox="0 0 880 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="xp_bg" x1="0" y1="0" x2="880" y2="98" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <linearGradient id="bar_grad" x1="0" y1="0" x2="600" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="45%" stop-color="#2563EB"/>
+      <stop offset="80%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="876" height="94" rx="16" fill="url(#xp_bg)"/>
+  <rect x="2" y="2" width="876" height="94" rx="16" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- Left: Level Shield -->
+  <g transform="translate(30, 20)">
+    <rect width="64" height="58" rx="10" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
+    <text x="32" y="24" text-anchor="middle" fill="#1D4ED8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">LEVEL</text>
+    <text x="32" y="48" text-anchor="middle" fill="#1E40AF" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="900">42</text>
+  </g>
+
+  <!-- Middle: XP Bar & Stats -->
+  <g transform="translate(110, 24)">
+    <text x="0" y="12" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="800">
+      DEVELOPER XP &amp; SPRINT PROGRESSION
+    </text>
+    <text x="560" y="12" text-anchor="end" fill="#2563EB" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">
+      2,211 / 2,500 XP (88.4%)
+    </text>
+
+    <!-- Progress Track -->
+    <rect x="0" y="22" width="560" height="14" rx="7" fill="#E2E8F0"/>
+    <!-- Filled Gradient Bar -->
+    <rect x="0" y="22" width="495" height="14" rx="7" fill="url(#bar_grad)"/>
+
+    <!-- Bottom Metric Tags -->
+    <text x="0" y="48" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="600">
+      CADENCE: 94% CONSISTENCY
+    </text>
+    <text x="210" y="48" fill="#059669" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">
+      +276 COMMITS PEAK VELOCITY
+    </text>
+    <text x="440" y="48" fill="#7C3AED" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">
+      NEXT: LVL 43 MASTER
+    </text>
+  </g>
+
+  <!-- Right: Streak Flame -->
+  <g transform="translate(710, 20)">
+    <rect width="138" height="58" rx="10" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1.5"/>
+    <text x="24" y="28" font-size="18">🔥</text>
+    <text x="52" y="26" fill="#B45309" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">STREAK</text>
+    <text x="52" y="45" fill="#D97706" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="700">100% SPRINT</text>
+  </g>
+</svg>"""
+        self._save("developer-xp-streak.svg", svg)
+
+    def generate_commit_ticker(self, commit_hash: str = "b710063", repo_name: str = "poa-skippi", commit_msg: str = "deploy: live 3D Shark Tank case study on Firebase"):
+        """Live 'Currently Building' Commit Ticker: A subtle 1-line terminal ticker displaying latest commit and repository."""
+        svg = f"""<svg width="880" height="46" viewBox="0 0 880 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ticker_bg" x1="0" y1="0" x2="880" y2="46" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="876" height="42" rx="10" fill="url(#ticker_bg)"/>
+  <rect x="2" y="2" width="876" height="42" rx="10" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- Live Pulse Dot -->
+  <circle cx="28" cy="23" r="4.5" fill="#10B981">
+    <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Terminal Label -->
+  <text x="44" y="27" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" letter-spacing="0.5">
+    CURRENTLY BUILDING //
+  </text>
+
+  <!-- Repo Badge -->
+  <text x="215" y="27" fill="#0284C7" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">
+    [{repo_name}]
+  </text>
+
+  <!-- Commit Hash -->
+  <text x="345" y="27" fill="#7C3AED" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">
+    {commit_hash}
+  </text>
+
+  <!-- Commit Message -->
+  <text x="425" y="27" fill="#334155" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="500">
+    {commit_msg}
+  </text>
+
+  <!-- Right status -->
+  <text x="850" y="27" text-anchor="end" fill="#059669" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">
+    ● LIVE
+  </text>
+</svg>"""
+        self._save("commit-ticker.svg", svg)
+
+    def generate_sound_waveform(self):
+        """Interactive Particle Flow / Sound Waveform: Visual audio frequency spectrum & flow wave representing coding cadence."""
+        svg = """<svg width="880" height="84" viewBox="0 0 880 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sound_bg" x1="0" y1="0" x2="880" y2="84" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <linearGradient id="spectrum_grad" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="35%" stop-color="#2563EB"/>
+      <stop offset="70%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="876" height="80" rx="14" fill="url(#sound_bg)"/>
+  <rect x="2" y="2" width="876" height="80" rx="14" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- Left: Audio Cadence Label -->
+  <g transform="translate(32, 28)">
+    <text x="0" y="12" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="800">
+      CODING CADENCE &amp; RHYTHM WAVEFORM
+    </text>
+    <text x="0" y="30" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="600">
+      Harmonic Particle Flow • 2,211 Velocity Pulses
+    </text>
+  </g>
+
+  <!-- Right: 38 Dynamic Audio Frequency Bars -->
+  <g transform="translate(360, 20)">
+    <!-- Bar 1 -->
+    <rect x="0" y="18" width="6" height="24" rx="3" fill="#0284C7"/>
+    <rect x="11" y="10" width="6" height="32" rx="3" fill="#0284C7"/>
+    <rect x="22" y="22" width="6" height="20" rx="3" fill="#0284C7"/>
+    <rect x="33" y="6" width="6" height="36" rx="3" fill="#0369A1"/>
+    <rect x="44" y="14" width="6" height="28" rx="3" fill="#0369A1"/>
+    <rect x="55" y="4" width="6" height="38" rx="3" fill="#2563EB"/>
+    <rect x="66" y="16" width="6" height="26" rx="3" fill="#2563EB"/>
+    <rect x="77" y="8" width="6" height="34" rx="3" fill="#2563EB"/>
+    <rect x="88" y="2" width="6" height="40" rx="3" fill="#1D4ED8"/>
+    <rect x="99" y="12" width="6" height="30" rx="3" fill="#1D4ED8"/>
+    <rect x="110" y="20" width="6" height="22" rx="3" fill="#7C3AED"/>
+    <rect x="121" y="6" width="6" height="36" rx="3" fill="#7C3AED"/>
+    <rect x="132" y="2" width="6" height="40" rx="3" fill="#6D28D9"/>
+    <rect x="143" y="15" width="6" height="27" rx="3" fill="#6D28D9"/>
+    <rect x="154" y="24" width="6" height="18" rx="3" fill="#7C3AED"/>
+    <rect x="165" y="8" width="6" height="34" rx="3" fill="#8B5CF6"/>
+    <rect x="176" y="3" width="6" height="39" rx="3" fill="#9333EA"/>
+    <rect x="187" y="18" width="6" height="24" rx="3" fill="#9333EA"/>
+    <rect x="198" y="11" width="6" height="31" rx="3" fill="#A855F7"/>
+    <rect x="209" y="5" width="6" height="37" rx="3" fill="#C084FC"/>
+    <rect x="220" y="21" width="6" height="21" rx="3" fill="#10B981"/>
+    <rect x="231" y="9" width="6" height="33" rx="3" fill="#10B981"/>
+    <rect x="242" y="1" width="6" height="41" rx="3" fill="#059669"/>
+    <rect x="253" y="14" width="6" height="28" rx="3" fill="#059669"/>
+    <rect x="264" y="19" width="6" height="23" rx="3" fill="#047857"/>
+    <rect x="275" y="7" width="6" height="35" rx="3" fill="#047857"/>
+    <rect x="286" y="2" width="6" height="40" rx="3" fill="#10B981"/>
+    <rect x="297" y="16" width="6" height="26" rx="3" fill="#10B981"/>
+    <rect x="308" y="22" width="6" height="20" rx="3" fill="#34D399"/>
+    <rect x="319" y="10" width="6" height="32" rx="3" fill="#34D399"/>
+    <rect x="330" y="5" width="6" height="37" rx="3" fill="#0284C7"/>
+    <rect x="341" y="17" width="6" height="25" rx="3" fill="#0284C7"/>
+    <rect x="352" y="12" width="6" height="30" rx="3" fill="#2563EB"/>
+    <rect x="363" y="4" width="6" height="38" rx="3" fill="#2563EB"/>
+    <rect x="374" y="20" width="6" height="22" rx="3" fill="#7C3AED"/>
+    <rect x="385" y="8" width="6" height="34" rx="3" fill="#7C3AED"/>
+    <rect x="396" y="15" width="6" height="27" rx="3" fill="#10B981"/>
+    <rect x="407" y="2" width="6" height="40" rx="3" fill="#10B981"/>
+    <rect x="418" y="22" width="6" height="20" rx="3" fill="#059669"/>
+    <rect x="429" y="11" width="6" height="31" rx="3" fill="#059669"/>
+    <rect x="440" y="18" width="6" height="24" rx="3" fill="#0284C7"/>
+    <rect x="451" y="6" width="6" height="36" rx="3" fill="#0284C7"/>
+    <rect x="462" y="14" width="6" height="28" rx="3" fill="#7C3AED"/>
+    <rect x="473" y="23" width="6" height="19" rx="3" fill="#10B981"/>
+  </g>
+</svg>"""
+        self._save("sound-waveform.svg", svg)

@@ -1,0 +1,58 @@
+<svg width="880" height="98" viewBox="0 0 880 98" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="xp_bg" x1="0" y1="0" x2="880" y2="98" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <linearGradient id="bar_grad" x1="0" y1="0" x2="600" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="45%" stop-color="#2563EB"/>
+      <stop offset="80%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="876" height="94" rx="16" fill="url(#xp_bg)"/>
+  <rect x="2" y="2" width="876" height="94" rx="16" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- Left: Level Shield -->
+  <g transform="translate(30, 20)">
+    <rect width="64" height="58" rx="10" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.5"/>
+    <text x="32" y="24" text-anchor="middle" fill="#1D4ED8" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="700">LEVEL</text>
+    <text x="32" y="48" text-anchor="middle" fill="#1E40AF" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="22" font-weight="900">42</text>
+  </g>
+
+  <!-- Middle: XP Bar & Stats -->
+  <g transform="translate(110, 24)">
+    <text x="0" y="12" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="800">
+      DEVELOPER XP &amp; SPRINT PROGRESSION
+    </text>
+    <text x="560" y="12" text-anchor="end" fill="#2563EB" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">
+      2,211 / 2,500 XP (88.4%)
+    </text>
+
+    <!-- Progress Track -->
+    <rect x="0" y="22" width="560" height="14" rx="7" fill="#E2E8F0"/>
+    <!-- Filled Gradient Bar -->
+    <rect x="0" y="22" width="495" height="14" rx="7" fill="url(#bar_grad)"/>
+
+    <!-- Bottom Metric Tags -->
+    <text x="0" y="48" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="600">
+      CADENCE: 94% CONSISTENCY
+    </text>
+    <text x="210" y="48" fill="#059669" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">
+      +276 COMMITS PEAK VELOCITY
+    </text>
+    <text x="440" y="48" fill="#7C3AED" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">
+      NEXT: LVL 43 MASTER
+    </text>
+  </g>
+
+  <!-- Right: Streak Flame -->
+  <g transform="translate(710, 20)">
+    <rect width="138" height="58" rx="10" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1.5"/>
+    <text x="24" y="28" font-size="18">🔥</text>
+    <text x="52" y="26" fill="#B45309" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">STREAK</text>
+    <text x="52" y="45" fill="#D97706" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10.5" font-weight="700">100% SPRINT</text>
+  </g>
+</svg>

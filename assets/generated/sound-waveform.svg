@@ -1,0 +1,76 @@
+<svg width="880" height="84" viewBox="0 0 880 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sound_bg" x1="0" y1="0" x2="880" y2="84" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <linearGradient id="spectrum_grad" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="35%" stop-color="#2563EB"/>
+      <stop offset="70%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="876" height="80" rx="14" fill="url(#sound_bg)"/>
+  <rect x="2" y="2" width="876" height="80" rx="14" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- Left: Audio Cadence Label -->
+  <g transform="translate(32, 28)">
+    <text x="0" y="12" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="800">
+      CODING CADENCE &amp; RHYTHM WAVEFORM
+    </text>
+    <text x="0" y="30" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="600">
+      Harmonic Particle Flow • 2,211 Velocity Pulses
+    </text>
+  </g>
+
+  <!-- Right: 38 Dynamic Audio Frequency Bars -->
+  <g transform="translate(360, 20)">
+    <!-- Bar 1 -->
+    <rect x="0" y="18" width="6" height="24" rx="3" fill="#0284C7"/>
+    <rect x="11" y="10" width="6" height="32" rx="3" fill="#0284C7"/>
+    <rect x="22" y="22" width="6" height="20" rx="3" fill="#0284C7"/>
+    <rect x="33" y="6" width="6" height="36" rx="3" fill="#0369A1"/>
+    <rect x="44" y="14" width="6" height="28" rx="3" fill="#0369A1"/>
+    <rect x="55" y="4" width="6" height="38" rx="3" fill="#2563EB"/>
+    <rect x="66" y="16" width="6" height="26" rx="3" fill="#2563EB"/>
+    <rect x="77" y="8" width="6" height="34" rx="3" fill="#2563EB"/>
+    <rect x="88" y="2" width="6" height="40" rx="3" fill="#1D4ED8"/>
+    <rect x="99" y="12" width="6" height="30" rx="3" fill="#1D4ED8"/>
+    <rect x="110" y="20" width="6" height="22" rx="3" fill="#7C3AED"/>
+    <rect x="121" y="6" width="6" height="36" rx="3" fill="#7C3AED"/>
+    <rect x="132" y="2" width="6" height="40" rx="3" fill="#6D28D9"/>
+    <rect x="143" y="15" width="6" height="27" rx="3" fill="#6D28D9"/>
+    <rect x="154" y="24" width="6" height="18" rx="3" fill="#7C3AED"/>
+    <rect x="165" y="8" width="6" height="34" rx="3" fill="#8B5CF6"/>
+    <rect x="176" y="3" width="6" height="39" rx="3" fill="#9333EA"/>
+    <rect x="187" y="18" width="6" height="24" rx="3" fill="#9333EA"/>
+    <rect x="198" y="11" width="6" height="31" rx="3" fill="#A855F7"/>
+    <rect x="209" y="5" width="6" height="37" rx="3" fill="#C084FC"/>
+    <rect x="220" y="21" width="6" height="21" rx="3" fill="#10B981"/>
+    <rect x="231" y="9" width="6" height="33" rx="3" fill="#10B981"/>
+    <rect x="242" y="1" width="6" height="41" rx="3" fill="#059669"/>
+    <rect x="253" y="14" width="6" height="28" rx="3" fill="#059669"/>
+    <rect x="264" y="19" width="6" height="23" rx="3" fill="#047857"/>
+    <rect x="275" y="7" width="6" height="35" rx="3" fill="#047857"/>
+    <rect x="286" y="2" width="6" height="40" rx="3" fill="#10B981"/>
+    <rect x="297" y="16" width="6" height="26" rx="3" fill="#10B981"/>
+    <rect x="308" y="22" width="6" height="20" rx="3" fill="#34D399"/>
+    <rect x="319" y="10" width="6" height="32" rx="3" fill="#34D399"/>
+    <rect x="330" y="5" width="6" height="37" rx="3" fill="#0284C7"/>
+    <rect x="341" y="17" width="6" height="25" rx="3" fill="#0284C7"/>
+    <rect x="352" y="12" width="6" height="30" rx="3" fill="#2563EB"/>
+    <rect x="363" y="4" width="6" height="38" rx="3" fill="#2563EB"/>
+    <rect x="374" y="20" width="6" height="22" rx="3" fill="#7C3AED"/>
+    <rect x="385" y="8" width="6" height="34" rx="3" fill="#7C3AED"/>
+    <rect x="396" y="15" width="6" height="27" rx="3" fill="#10B981"/>
+    <rect x="407" y="2" width="6" height="40" rx="3" fill="#10B981"/>
+    <rect x="418" y="22" width="6" height="20" rx="3" fill="#059669"/>
+    <rect x="429" y="11" width="6" height="31" rx="3" fill="#059669"/>
+    <rect x="440" y="18" width="6" height="24" rx="3" fill="#0284C7"/>
+    <rect x="451" y="6" width="6" height="36" rx="3" fill="#0284C7"/>
+    <rect x="462" y="14" width="6" height="28" rx="3" fill="#7C3AED"/>
+    <rect x="473" y="23" width="6" height="19" rx="3" fill="#10B981"/>
+  </g>
+</svg>

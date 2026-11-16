@@ -148,9 +148,23 @@ def main():
     print("[5/6] Generating dynamic, high-resolution modern light SVGs...")
     generate_snake_svg()
     svg_gen.generate_identity_header(profile, sync_time_str)
+    svg_gen.generate_achievement_trophies()
+    svg_gen.generate_developer_xp_streak()
     svg_gen.generate_activity_waveform()
+    svg_gen.generate_sound_waveform()
     svg_gen.generate_languages_and_radar()
     svg_gen.generate_project_previews()
+
+    latest_hash = "b710063"
+    latest_repo = "poa-skippi"
+    latest_msg = "deploy: live 3D Shark Tank case study on Firebase"
+    if evaluated_commits:
+        latest_c = evaluated_commits[0]
+        latest_hash = latest_c.get("hash", "b710063")[:7]
+        latest_repo = latest_c.get("project_name", "poa-skippi")
+        latest_msg = (latest_c.get("message") or "ecosystem refinement").split("\n")[0][:50]
+
+    svg_gen.generate_commit_ticker(commit_hash=latest_hash, repo_name=latest_repo, commit_msg=latest_msg)
 
     # 6. Build README.md
     print("[6/6] Generating production GitHub README.md...")
