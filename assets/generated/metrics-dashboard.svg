@@ -1,52 +1,50 @@
 <svg width="880" height="210" viewBox="0 0 880 210" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="card_grad" x1="0" y1="0" x2="880" y2="210" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#080C14"/>
-      <stop offset="100%" stop-color="#0D111A"/>
+    <linearGradient id="mbg" x1="0" y1="0" x2="880" y2="210" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
     </linearGradient>
-    <linearGradient id="border_base" x1="0" y1="0" x2="880" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#1E293B"/>
-      <stop offset="50%" stop-color="#334155"/>
-      <stop offset="100%" stop-color="#1E293B"/>
-    </linearGradient>
+    <filter id="mshadow" x="-4" y="-2" width="888" height="218" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#0F172A" flood-opacity="0.04"/>
+    </filter>
   </defs>
 
-  <rect width="880" height="210" rx="14" fill="url(#card_grad)"/>
-  <rect x="1" y="1" width="878" height="208" rx="13" stroke="url(#border_base)" stroke-width="1"/>
+  <rect x="2" y="2" width="876" height="206" rx="16" fill="url(#mbg)" filter="url(#mshadow)"/>
+  <rect x="2" y="2" width="876" height="206" rx="16" stroke="#E2E8F0" stroke-width="1.5"/>
 
   <!-- Chamber 1: Repositories -->
-  <g transform="translate(35, 30)">
-    <rect width="180" height="150" rx="10" fill="#0E1626" stroke="#00E5FF" stroke-opacity="0.25" stroke-width="1"/>
-    <text x="20" y="32" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" letter-spacing="1">SOURCE REPOSITORIES</text>
-    <text x="20" y="80" fill="#00E5FF" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="38" font-weight="800">57</text>
-    <text x="20" y="112" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11.5">100% Original Works</text>
-    <text x="20" y="130" fill="#475569" font-family="'JetBrains Mono', monospace" font-size="10">0 Forks // Pure Origin</text>
+  <g transform="translate(30, 26)">
+    <rect width="185" height="155" rx="12" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1.2"/>
+    <text x="20" y="30" fill="#0369A1" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" letter-spacing="0.5">SOURCE REPOSITORIES</text>
+    <text x="20" y="80" fill="#0284C7" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="38" font-weight="800">58</text>
+    <text x="20" y="112" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600">100% Original Works</text>
+    <text x="20" y="132" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="10">0 Forks // Pure Origin</text>
   </g>
 
   <!-- Chamber 2: Analyzed Velocity -->
-  <g transform="translate(240, 30)">
-    <rect width="180" height="150" rx="10" fill="#141126" stroke="#8A2BE2" stroke-opacity="0.25" stroke-width="1"/>
-    <text x="20" y="32" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" letter-spacing="1">ANALYZED COMMITS</text>
-    <text x="20" y="80" fill="#C084FC" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="38" font-weight="800">575+</text>
-    <text x="20" y="112" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11.5">Across Active Sample</text>
-    <text x="20" y="130" fill="#475569" font-family="'JetBrains Mono', monospace" font-size="10">Peak: 276 in Sept 2026</text>
+  <g transform="translate(235, 26)">
+    <rect width="185" height="155" rx="12" fill="#FAF5FF" stroke="#E9D5FF" stroke-width="1.2"/>
+    <text x="20" y="30" fill="#7E22CE" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" letter-spacing="0.5">ANALYZED COMMITS</text>
+    <text x="20" y="80" fill="#9333EA" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="38" font-weight="800">575+</text>
+    <text x="20" y="112" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600">Across Active Sample</text>
+    <text x="20" y="132" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="10">Peak: 276 in Sept 2026</text>
   </g>
 
   <!-- Chamber 3: TIS Score -->
-  <g transform="translate(445, 30)">
-    <rect width="180" height="150" rx="10" fill="#0C1B19" stroke="#00F5A0" stroke-opacity="0.25" stroke-width="1"/>
-    <text x="20" y="32" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" letter-spacing="1">TECHNICAL IMPACT (TIS)</text>
-    <text x="20" y="80" fill="#00F5A0" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="38" font-weight="800">22.4</text>
-    <text x="20" y="112" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11.5">Explainable Index / 100</text>
-    <text x="20" y="130" fill="#475569" font-family="'JetBrains Mono', monospace" font-size="10">9 Scoring Dimensions</text>
+  <g transform="translate(440, 26)">
+    <rect width="185" height="155" rx="12" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1.2"/>
+    <text x="20" y="30" fill="#047857" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" letter-spacing="0.5">TECHNICAL IMPACT (TIS)</text>
+    <text x="20" y="80" fill="#059669" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="38" font-weight="800">22.4</text>
+    <text x="20" y="112" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600">Explainable Index / 100</text>
+    <text x="20" y="132" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="10">9 Scoring Dimensions</text>
   </g>
 
   <!-- Chamber 4: Streak & Cadence -->
-  <g transform="translate(650, 30)">
-    <rect width="195" height="150" rx="10" fill="#1C180E" stroke="#FFB800" stroke-opacity="0.25" stroke-width="1"/>
-    <text x="20" y="32" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" letter-spacing="1">MAX ACTIVE STREAK</text>
-    <text x="20" y="80" fill="#FFB800" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="38" font-weight="800">11 <tspan font-size="20">DAYS</tspan></text>
-    <text x="20" y="112" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11.5">Sustained Rhythm</text>
-    <text x="20" y="130" fill="#475569" font-family="'JetBrains Mono', monospace" font-size="10">Fri &amp; Mon Peak Days</text>
+  <g transform="translate(645, 26)">
+    <rect width="205" height="155" rx="12" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1.2"/>
+    <text x="20" y="30" fill="#B45309" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" letter-spacing="0.5">MAX ACTIVE STREAK</text>
+    <text x="20" y="80" fill="#D97706" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="38" font-weight="800">11 <tspan font-size="20">DAYS</tspan></text>
+    <text x="20" y="112" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="600">Sustained Rhythm</text>
+    <text x="20" y="132" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="10">Fri &amp; Mon Peak Days</text>
   </g>
 </svg>

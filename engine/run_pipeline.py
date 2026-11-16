@@ -144,10 +144,11 @@ def main():
     trends = tracker.calculate_trends(analytics)
 
     # 5. Render Dynamic SVGs
-    print("[5/6] Generating dynamic, high-resolution obsidian SVGs...")
+    print("[5/6] Generating dynamic, high-resolution modern light SVGs...")
     svg_gen.generate_identity_header(profile, sync_time_str)
     svg_gen.generate_metrics_dashboard(analytics)
     svg_gen.generate_tech_constellation()
+    svg_gen.generate_project_previews()
     svg_gen.generate_featured_projects()
     svg_gen.generate_commit_intelligence(evaluated_commits[:5])
     svg_gen.generate_development_journey()

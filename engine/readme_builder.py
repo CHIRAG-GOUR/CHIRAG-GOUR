@@ -1,6 +1,7 @@
 """
-README Builder Engine
+README Builder Engine — Modern Light Theme & Interactive Showcase Edition
 Assembles the production GitHub Profile README.md with embedded high-res SVGs,
+Mario animation below the top identity section, visual project mockups,
 markdown tables, collapsible deep-dives, live synchronization timestamps,
 and links to the companion interactive web experience.
 """
@@ -20,22 +21,29 @@ class ReadmeBuilder:
         
         md = f"""<div align="center">
 
-<!-- CINEMATIC IDENTITY HEADER -->
+<!-- EDITORIAL LIGHT IDENTITY HEADER -->
 <img src="assets/generated/identity-header.svg" alt="Chirag Gour - Creative Computing &amp; Pedagogical Systems Architect" width="100%"/>
 
-<br/>
+<br/><br/>
 
-[![GitHub Profile](https://img.shields.io/badge/GitHub-CHIRAG--GOUR-00E5FF?style=flat-square&logo=github&logoColor=white)](https://github.com/CHIRAG-GOUR)
-[![Verified Origin Repositories](https://img.shields.io/badge/Original_Source_Repos-57-8A2BE2?style=flat-square&logo=git&logoColor=white)](https://github.com/CHIRAG-GOUR?tab=repositories)
-[![Technical Impact Score](https://img.shields.io/badge/Avg_TIS_Rating-88.4%2F100-00F5A0?style=flat-square&logo=speedtest&logoColor=black)](#-commit-intelligence--scoring-system)
-[![Automated Sync](https://img.shields.io/badge/Ecosystem_Sync-Automated_CI-FFB800?style=flat-square&logo=githubactions&logoColor=black)](#-automation-architecture)
+<!-- MARIO ANIMATION HERO SECTION -->
+<a href="#-project-universe">
+  <img src="assets/Mario.gif" alt="Mario Level Jump // Chirag Gour Engineering Journey" width="100%" style="border-radius: 14px; border: 1px solid #E2E8F0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);"/>
+</a>
+
+<br/><br/>
+
+[![GitHub Profile](https://img.shields.io/badge/GitHub-CHIRAG--GOUR-0284C7?style=flat-square&logo=github&logoColor=white)](https://github.com/CHIRAG-GOUR)
+[![Verified Origin Repositories](https://img.shields.io/badge/Original_Source_Repos-57-7C3AED?style=flat-square&logo=git&logoColor=white)](https://github.com/CHIRAG-GOUR?tab=repositories)
+[![Technical Impact Score](https://img.shields.io/badge/Avg_TIS_Rating-88.4%2F100-059669?style=flat-square&logo=speedtest&logoColor=white)](#-commit-intelligence--scoring-system)
+[![Automated Sync](https://img.shields.io/badge/Ecosystem_Sync-Automated_CI-D97706?style=flat-square&logo=githubactions&logoColor=white)](#-automation-architecture)
 
 <p align="center">
   <b>Architecting spatial 3D web environments, interactive educational game systems, and production full-stack platforms.</b><br/>
   <i>Continuously synchronized with live repository activity, commit intelligence, and historical learning snapshots.</i>
 </p>
 
-[Explore Companion Web App](#-interactive-companion-experience) • [Project Universe](#-project-universe) • [Commit Intelligence](#-commit-intelligence--scoring-system) • [Architecture](#-automation-architecture)
+[🎮 Play Companion Web App](#-interactive-companion-experience) • [🚀 Project Universe](#-project-universe) • [🧠 Commit Intelligence](#-commit-intelligence--scoring-system) • [⚙️ Architecture](#-automation-architecture)
 
 </div>
 
@@ -86,7 +94,11 @@ class ReadmeBuilder:
 
 ---
 
-### 🚀 Project Universe // Key Engineering Benchmarks
+### 🖼️ Visual Project Previews & Benchmarks
+
+<div align="center">
+  <img src="assets/generated/project-previews.svg" alt="Visual Project Previews" width="100%"/>
+</div>
 
 <div align="center">
   <img src="assets/generated/featured-projects.svg" alt="Featured Projects Universe" width="100%"/>
@@ -171,12 +183,13 @@ $$\\text{{TIS}} = \\min\\left(100, \\sum_{{i=1}}^{{9}} w_i \\cdot s_i \\cdot M_{
 
 ---
 
-### 🌐 Interactive Companion Experience
+### 🎮 Interactive Companion Experience & Mini-Game
 
 Beyond GitHub Markdown limits, this ecosystem features a **companion web application** built with **Vite, React, Tailwind CSS, Three.js, and Framer Motion**:
 
 - **3D Particle Constellation:** Visual spatial representation of repository relations and topics.
 - **Interactive Commit Calculator:** Live inspector allowing users to test commit messages against the explainable TIS engine.
+- **Playable Mini-Game:** Kangaroo Hopper interactive canvas game right in the browser!
 - **Dynamic Project Filter:** Filter 57 projects by 3D, EdTech, Mobile, or AI tiers.
 - **Historical Snapshot Explorer:** Compare multi-week developer trajectory and velocity graphs.
 
@@ -209,7 +222,7 @@ flowchart LR
 - **Zero Secret Leakage:** Requires only default `GITHUB_TOKEN` with `contents: write` permissions.
 
 <div align="center">
-  <sub>Last Ecosystem Synchronization: <code>{sync_time}</code> | Engine Version: <code>v2.4.0-autonomous</code></sub>
+  <sub>Last Ecosystem Synchronization: <code>{sync_time}</code> | Engine Version: <code>v2.5.0-light-edition</code></sub>
 </div>
 """
         return md

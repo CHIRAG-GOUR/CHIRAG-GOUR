@@ -19,17 +19,17 @@ export const HeroCosmos3D: React.FC = () => {
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     containerRef.current.appendChild(renderer.domElement);
 
-    // Particle Constellation
-    const particleCount = 1400;
+    // Light Theme Particle Constellation (Rich contrasting pigments)
+    const particleCount = 1200;
     const geometry = new THREE.BufferGeometry();
     const positions = new Float32Array(particleCount * 3);
     const colors = new Float32Array(particleCount * 3);
 
-    const cyan = new THREE.Color(0x00E5FF);
-    const violet = new THREE.Color(0x8A2BE2);
-    const mint = new THREE.Color(0x00F5A0);
-    const amber = new THREE.Color(0xFFB800);
-    const palette = [cyan, violet, mint, amber];
+    const royalBlue = new THREE.Color(0x2563EB);
+    const violet = new THREE.Color(0x7C3AED);
+    const emerald = new THREE.Color(0x059669);
+    const amber = new THREE.Color(0xD97706);
+    const palette = [royalBlue, violet, emerald, amber];
 
     for (let i = 0; i < particleCount; i++) {
       const radius = 2 + Math.pow(Math.random(), 1.5) * 22;
@@ -44,7 +44,6 @@ export const HeroCosmos3D: React.FC = () => {
       positions[i * 3 + 1] = randomY * (radius * 0.2);
       positions[i * 3 + 2] = Math.sin(branchAngle + spinAngle) * radius + randomZ;
 
-      // Color selection based on quadrant
       const chosenColor = palette[i % palette.length];
       colors[i * 3] = chosenColor.r;
       colors[i * 3 + 1] = chosenColor.g;
@@ -55,23 +54,22 @@ export const HeroCosmos3D: React.FC = () => {
     geometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
 
     const material = new THREE.PointsMaterial({
-      size: 0.18,
+      size: 0.22,
       vertexColors: true,
       transparent: true,
-      opacity: 0.85,
-      blending: THREE.AdditiveBlending
+      opacity: 0.75
     });
 
     const particles = new THREE.Points(geometry, material);
     scene.add(particles);
 
-    // Subtle inner core sphere
+    // Subtle inner core wireframe
     const coreGeo = new THREE.SphereGeometry(1.2, 16, 16);
     const coreMat = new THREE.MeshBasicMaterial({
-      color: 0x00E5FF,
+      color: 0x2563EB,
       wireframe: true,
       transparent: true,
-      opacity: 0.25
+      opacity: 0.18
     });
     const core = new THREE.Mesh(coreGeo, coreMat);
     scene.add(core);
@@ -134,7 +132,7 @@ export const HeroCosmos3D: React.FC = () => {
   return (
     <div
       ref={containerRef}
-      className="absolute inset-0 pointer-events-none opacity-60 z-0 overflow-hidden"
+      className="absolute inset-0 pointer-events-none opacity-50 z-0 overflow-hidden"
     />
   );
 };

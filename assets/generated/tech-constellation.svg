@@ -1,73 +1,73 @@
 <svg width="880" height="340" viewBox="0 0 880 340" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="tc_bg" x1="0" y1="0" x2="880" y2="340" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#080C14"/>
-      <stop offset="100%" stop-color="#0A0F1A"/>
+    <linearGradient id="tbg" x1="0" y1="0" x2="880" y2="340" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
     </linearGradient>
   </defs>
 
-  <rect width="880" height="340" rx="14" fill="url(#tc_bg)"/>
-  <rect x="1" y="1" width="878" height="338" rx="13" stroke="#1E293B" stroke-width="1"/>
+  <rect x="2" y="2" width="876" height="336" rx="16" fill="url(#tbg)"/>
+  <rect x="2" y="2" width="876" height="336" rx="16" stroke="#E2E8F0" stroke-width="1.5"/>
 
   <!-- Header -->
-  <text x="35" y="38" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="600" letter-spacing="2">
+  <text x="35" y="38" fill="#475569" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" letter-spacing="2">
     TECHNICAL ECOSYSTEM // VERIFIED PROFICIENCIES
   </text>
 
   <!-- Quadrant 1: Spatial & 3D Web -->
   <g transform="translate(35, 55)">
-    <rect width="390" height="120" rx="10" fill="#0D1628" stroke="#00E5FF" stroke-opacity="0.3"/>
-    <text x="20" y="28" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">01 // CREATIVE 3D &amp; SHADERS</text>
-    <text x="20" y="48" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">Procedural rendering, timeline keyframing, and custom materials</text>
+    <rect width="390" height="120" rx="12" fill="#F0F9FF" stroke="#BAE6FD" stroke-width="1.2"/>
+    <text x="20" y="28" fill="#0284C7" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="800">01 // CREATIVE 3D &amp; SHADERS</text>
+    <text x="20" y="48" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11.5">Procedural rendering, timeline keyframing, and custom materials</text>
     <!-- Pills -->
     <g transform="translate(20, 65)">
-      <rect x="0" y="0" width="70" height="22" rx="4" fill="#162544"/><text x="35" y="15" text-anchor="middle" fill="#7DD3FC" font-family="'JetBrains Mono', monospace" font-size="9.5">Three.js</text>
-      <rect x="76" y="0" width="55" height="22" rx="4" fill="#162544"/><text x="103" y="15" text-anchor="middle" fill="#7DD3FC" font-family="'JetBrains Mono', monospace" font-size="9.5">R3F</text>
-      <rect x="137" y="0" width="85" height="22" rx="4" fill="#162544"/><text x="179" y="15" text-anchor="middle" fill="#7DD3FC" font-family="'JetBrains Mono', monospace" font-size="9.5">Theatre.js</text>
-      <rect x="228" y="0" width="55" height="22" rx="4" fill="#162544"/><text x="255" y="15" text-anchor="middle" fill="#7DD3FC" font-family="'JetBrains Mono', monospace" font-size="9.5">GSAP</text>
-      <rect x="289" y="0" width="60" height="22" rx="4" fill="#162544"/><text x="319" y="15" text-anchor="middle" fill="#7DD3FC" font-family="'JetBrains Mono', monospace" font-size="9.5">GLSL</text>
+      <rect x="0" y="0" width="70" height="24" rx="6" fill="#E0F2FE"/><text x="35" y="16" text-anchor="middle" fill="#0369A1" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Three.js</text>
+      <rect x="76" y="0" width="55" height="24" rx="6" fill="#E0F2FE"/><text x="103" y="16" text-anchor="middle" fill="#0369A1" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">R3F</text>
+      <rect x="137" y="0" width="85" height="24" rx="6" fill="#E0F2FE"/><text x="179" y="16" text-anchor="middle" fill="#0369A1" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Theatre.js</text>
+      <rect x="228" y="0" width="55" height="24" rx="6" fill="#E0F2FE"/><text x="255" y="16" text-anchor="middle" fill="#0369A1" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">GSAP</text>
+      <rect x="289" y="0" width="60" height="24" rx="6" fill="#E0F2FE"/><text x="319" y="16" text-anchor="middle" fill="#0369A1" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">GLSL</text>
     </g>
   </g>
 
   <!-- Quadrant 2: EdTech & Serious Games -->
   <g transform="translate(455, 55)">
-    <rect width="390" height="120" rx="10" fill="#140E2A" stroke="#8A2BE2" stroke-opacity="0.3"/>
-    <text x="20" y="28" fill="#C084FC" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">02 // EDTECH &amp; SERIOUS GAMES</text>
-    <text x="20" y="48" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">Plan of Activity (POA) frameworks, Shark Tank sims, exams</text>
+    <rect width="390" height="120" rx="12" fill="#FAF5FF" stroke="#E9D5FF" stroke-width="1.2"/>
+    <text x="20" y="28" fill="#7E22CE" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="800">02 // EDTECH &amp; SERIOUS GAMES</text>
+    <text x="20" y="48" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11.5">Plan of Activity (POA) frameworks, Shark Tank sims, exams</text>
     <!-- Pills -->
     <g transform="translate(20, 65)">
-      <rect x="0" y="0" width="80" height="22" rx="4" fill="#281A4E"/><text x="40" y="15" text-anchor="middle" fill="#D8B4FE" font-family="'JetBrains Mono', monospace" font-size="9.5">POA Series</text>
-      <rect x="86" y="0" width="80" height="22" rx="4" fill="#281A4E"/><text x="126" y="15" text-anchor="middle" fill="#D8B4FE" font-family="'JetBrains Mono', monospace" font-size="9.5">Gamification</text>
-      <rect x="172" y="0" width="70" height="22" rx="4" fill="#281A4E"/><text x="207" y="15" text-anchor="middle" fill="#D8B4FE" font-family="'JetBrains Mono', monospace" font-size="9.5">Zustand</text>
-      <rect x="248" y="0" width="65" height="22" rx="4" fill="#281A4E"/><text x="280" y="15" text-anchor="middle" fill="#D8B4FE" font-family="'JetBrains Mono', monospace" font-size="9.5">Recharts</text>
+      <rect x="0" y="0" width="80" height="24" rx="6" fill="#F3E8FF"/><text x="40" y="16" text-anchor="middle" fill="#6B21A8" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">POA Series</text>
+      <rect x="86" y="0" width="85" height="24" rx="6" fill="#F3E8FF"/><text x="128" y="16" text-anchor="middle" fill="#6B21A8" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Gamification</text>
+      <rect x="177" y="0" width="70" height="24" rx="6" fill="#F3E8FF"/><text x="212" y="16" text-anchor="middle" fill="#6B21A8" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Zustand</text>
+      <rect x="253" y="0" width="65" height="24" rx="6" fill="#F3E8FF"/><text x="285" y="16" text-anchor="middle" fill="#6B21A8" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Recharts</text>
     </g>
   </g>
 
   <!-- Quadrant 3: Reactive Web & Mobile -->
   <g transform="translate(35, 190)">
-    <rect width="390" height="120" rx="10" fill="#0C1B17" stroke="#00F5A0" stroke-opacity="0.3"/>
-    <text x="20" y="28" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">03 // REACTIVE WEB &amp; MOBILE</text>
-    <text x="20" y="48" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">Modern Turbopack pipelines, Expo native routing, and cloud sync</text>
+    <rect width="390" height="120" rx="12" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1.2"/>
+    <text x="20" y="28" fill="#047857" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="800">03 // REACTIVE WEB &amp; MOBILE</text>
+    <text x="20" y="48" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11.5">Modern Turbopack pipelines, Expo native routing, and cloud sync</text>
     <!-- Pills -->
     <g transform="translate(20, 65)">
-      <rect x="0" y="0" width="65" height="22" rx="4" fill="#14362A"/><text x="32" y="15" text-anchor="middle" fill="#6EE7B7" font-family="'JetBrains Mono', monospace" font-size="9.5">Next.js</text>
-      <rect x="71" y="0" width="85" height="22" rx="4" fill="#14362A"/><text x="113" y="15" text-anchor="middle" fill="#6EE7B7" font-family="'JetBrains Mono', monospace" font-size="9.5">Turbopack</text>
-      <rect x="162" y="0" width="85" height="22" rx="4" fill="#14362A"/><text x="204" y="15" text-anchor="middle" fill="#6EE7B7" font-family="'JetBrains Mono', monospace" font-size="9.5">Expo Router</text>
-      <rect x="253" y="0" width="68" height="22" rx="4" fill="#14362A"/><text x="287" y="15" text-anchor="middle" fill="#6EE7B7" font-family="'JetBrains Mono', monospace" font-size="9.5">Firebase</text>
+      <rect x="0" y="0" width="65" height="24" rx="6" fill="#D1FAE5"/><text x="32" y="16" text-anchor="middle" fill="#065F46" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Next.js</text>
+      <rect x="71" y="0" width="85" height="24" rx="6" fill="#D1FAE5"/><text x="113" y="16" text-anchor="middle" fill="#065F46" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Turbopack</text>
+      <rect x="162" y="0" width="85" height="24" rx="6" fill="#D1FAE5"/><text x="204" y="16" text-anchor="middle" fill="#065F46" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Expo Router</text>
+      <rect x="253" y="0" width="68" height="24" rx="6" fill="#D1FAE5"/><text x="287" y="16" text-anchor="middle" fill="#065F46" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Firebase</text>
     </g>
   </g>
 
   <!-- Quadrant 4: Vision & Applied AI -->
   <g transform="translate(455, 190)">
-    <rect width="390" height="120" rx="10" fill="#1F170B" stroke="#FFB800" stroke-opacity="0.3"/>
-    <text x="20" y="28" fill="#FBBF24" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">04 // COMPUTER VISION &amp; FAST AI</text>
-    <text x="20" y="48" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11">Edge face/emotion detection and ultra-low latency LPU reasoning</text>
+    <rect width="390" height="120" rx="12" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1.2"/>
+    <text x="20" y="28" fill="#B45309" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="800">04 // COMPUTER VISION &amp; FAST AI</text>
+    <text x="20" y="48" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11.5">Edge face/emotion detection and ultra-low latency LPU reasoning</text>
     <!-- Pills -->
     <g transform="translate(20, 65)">
-      <rect x="0" y="0" width="75" height="22" rx="4" fill="#3C2C10"/><text x="37" y="15" text-anchor="middle" fill="#FCD34D" font-family="'JetBrains Mono', monospace" font-size="9.5">Face-API</text>
-      <rect x="81" y="0" width="75" height="22" rx="4" fill="#3C2C10"/><text x="118" y="15" text-anchor="middle" fill="#FCD34D" font-family="'JetBrains Mono', monospace" font-size="9.5">Groq SDK</text>
-      <rect x="162" y="0" width="95" height="22" rx="4" fill="#3C2C10"/><text x="209" y="15" text-anchor="middle" fill="#FCD34D" font-family="'JetBrains Mono', monospace" font-size="9.5">Edge Vision</text>
-      <rect x="263" y="0" width="55" height="22" rx="4" fill="#3C2C10"/><text x="290" y="15" text-anchor="middle" fill="#FCD34D" font-family="'JetBrains Mono', monospace" font-size="9.5">jsPDF</text>
+      <rect x="0" y="0" width="75" height="24" rx="6" fill="#FEF3C7"/><text x="37" y="16" text-anchor="middle" fill="#92400E" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Face-API</text>
+      <rect x="81" y="0" width="75" height="24" rx="6" fill="#FEF3C7"/><text x="118" y="16" text-anchor="middle" fill="#92400E" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Groq SDK</text>
+      <rect x="162" y="0" width="95" height="24" rx="6" fill="#FEF3C7"/><text x="209" y="16" text-anchor="middle" fill="#92400E" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Edge Vision</text>
+      <rect x="263" y="0" width="55" height="24" rx="6" fill="#FEF3C7"/><text x="290" y="16" text-anchor="middle" fill="#92400E" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">jsPDF</text>
     </g>
   </g>
 </svg>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Activity, Flame, GitCommit, GitPullRequest, Code2, TrendingUp } from 'lucide-react';
+import { Activity, Flame, GitCommit, Code2, TrendingUp } from 'lucide-react';
 import analyticsData from '../data/analytics.json';
 
 export const AnalyticsDashboard: React.FC = () => {
@@ -41,61 +41,61 @@ export const AnalyticsDashboard: React.FC = () => {
         
         {/* Header */}
         <div className="mb-10">
-          <div className="flex items-center gap-2 text-cyan-400 font-mono text-xs uppercase tracking-widest mb-2">
+          <div className="flex items-center gap-2 text-blue-600 font-mono text-xs uppercase tracking-widest mb-2 font-bold">
             <Activity className="w-4 h-4" />
             <span>Developer Telemetry // Verified GitHub Metrics</span>
           </div>
-          <h2 className="text-3xl font-bold tracking-tight text-white flex items-center justify-between">
+          <h2 className="text-3xl font-bold tracking-tight text-slate-900 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <span>Activity &amp; Velocity Dashboard</span>
-            <span className="text-xs font-mono font-normal text-slate-500 bg-slate-900 px-3 py-1 rounded-full border border-slate-800">
+            <span className="text-xs font-mono font-normal text-slate-600 bg-white px-3 py-1.5 rounded-full border border-slate-200 shadow-sm">
               Synced: {sync_timestamp}
             </span>
           </h2>
-          <p className="mt-2 text-slate-400 text-sm max-w-2xl">
-            Live metrics extracted directly from 57 repositories and historical commit activity across 2026.
+          <p className="mt-2 text-slate-600 text-sm max-w-2xl">
+            Live telemetry extracted directly from 57 repositories and historical commit activity across 2026.
           </p>
         </div>
 
         {/* 4 Core Stat Chambers */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
           
-          <div className="glass-panel p-5 rounded-2xl border border-cyan-500/30">
-            <div className="flex items-center justify-between text-slate-400 mb-2 font-mono text-xs">
+          <div className="glass-panel p-5 rounded-2xl border border-sky-200 bg-sky-50/50">
+            <div className="flex items-center justify-between text-slate-600 mb-2 font-mono text-xs font-bold">
               <span>TOTAL REPOSITORIES</span>
-              <Code2 className="w-4 h-4 text-cyan-400" />
+              <Code2 className="w-4 h-4 text-sky-600" />
             </div>
-            <div className="text-3xl font-extrabold text-cyan-400 font-mono mb-1">{total_repositories}</div>
-            <div className="text-xs text-slate-400">100% Original Source Works</div>
+            <div className="text-3xl font-extrabold text-sky-700 font-mono mb-1">{total_repositories}</div>
+            <div className="text-xs text-slate-700 font-medium">100% Original Source Works</div>
             <div className="text-[10px] text-slate-500 font-mono mt-2">0 Forks // Pure Origin</div>
           </div>
 
-          <div className="glass-panel p-5 rounded-2xl border border-purple-500/30">
-            <div className="flex items-center justify-between text-slate-400 mb-2 font-mono text-xs">
+          <div className="glass-panel p-5 rounded-2xl border border-purple-200 bg-purple-50/50">
+            <div className="flex items-center justify-between text-slate-600 mb-2 font-mono text-xs font-bold">
               <span>SAMPLED COMMITS</span>
-              <GitCommit className="w-4 h-4 text-purple-400" />
+              <GitCommit className="w-4 h-4 text-purple-600" />
             </div>
-            <div className="text-3xl font-extrabold text-purple-400 font-mono mb-1">{total_commits_sample}+</div>
-            <div className="text-xs text-slate-400">Across Active Portfolio</div>
-            <div className="text-[10px] text-purple-400/80 font-mono mt-2">Peak: 276 in September</div>
+            <div className="text-3xl font-extrabold text-purple-700 font-mono mb-1">{total_commits_sample}+</div>
+            <div className="text-xs text-slate-700 font-medium">Across Active Portfolio</div>
+            <div className="text-[10px] text-purple-700 font-mono mt-2">Peak: 276 in September</div>
           </div>
 
-          <div className="glass-panel p-5 rounded-2xl border border-emerald-500/30">
-            <div className="flex items-center justify-between text-slate-400 mb-2 font-mono text-xs">
+          <div className="glass-panel p-5 rounded-2xl border border-emerald-200 bg-emerald-50/50">
+            <div className="flex items-center justify-between text-slate-600 mb-2 font-mono text-xs font-bold">
               <span>TECHNICAL IMPACT (TIS)</span>
-              <TrendingUp className="w-4 h-4 text-emerald-400" />
+              <TrendingUp className="w-4 h-4 text-emerald-600" />
             </div>
-            <div className="text-3xl font-extrabold text-emerald-400 font-mono mb-1">{tis_score}</div>
-            <div className="text-xs text-slate-400">Explainable Index / 100</div>
+            <div className="text-3xl font-extrabold text-emerald-700 font-mono mb-1">{tis_score}</div>
+            <div className="text-xs text-slate-700 font-medium">Explainable Index / 100</div>
             <div className="text-[10px] text-slate-500 font-mono mt-2">Weighted 9 Dimensions</div>
           </div>
 
-          <div className="glass-panel p-5 rounded-2xl border border-amber-500/30">
-            <div className="flex items-center justify-between text-slate-400 mb-2 font-mono text-xs">
+          <div className="glass-panel p-5 rounded-2xl border border-amber-200 bg-amber-50/50">
+            <div className="flex items-center justify-between text-slate-600 mb-2 font-mono text-xs font-bold">
               <span>MAX ACTIVE STREAK</span>
-              <Flame className="w-4 h-4 text-amber-400" />
+              <Flame className="w-4 h-4 text-amber-600" />
             </div>
-            <div className="text-3xl font-extrabold text-amber-400 font-mono mb-1">{streak_days} <span className="text-base font-normal">Days</span></div>
-            <div className="text-xs text-slate-400">Sustained Rhythm</div>
+            <div className="text-3xl font-extrabold text-amber-700 font-mono mb-1">{streak_days} <span className="text-base font-normal">Days</span></div>
+            <div className="text-xs text-slate-700 font-medium">Sustained Rhythm</div>
             <div className="text-[10px] text-slate-500 font-mono mt-2">Peak Coding: Fri &amp; Mon</div>
           </div>
 
@@ -105,33 +105,33 @@ export const AnalyticsDashboard: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
           
           {/* Monthly Velocity Bar Graph */}
-          <div className="lg:col-span-7 glass-panel p-6 rounded-2xl border border-slate-800">
-            <h3 className="text-sm font-mono text-slate-300 uppercase tracking-wider mb-2 flex items-center justify-between">
+          <div className="lg:col-span-7 glass-panel p-6 rounded-2xl border border-slate-200">
+            <h3 className="text-sm font-mono text-slate-800 uppercase tracking-wider mb-1 flex items-center justify-between font-bold">
               <span>Monthly Commit Velocity Trajectory (2026)</span>
-              <span className="text-xs text-cyan-400 font-normal">Peak: Sept 2026</span>
+              <span className="text-xs text-blue-600 font-semibold">Peak: Sept 2026</span>
             </h3>
             <p className="text-xs text-slate-500 mb-6 font-mono">
               Empirical commit distribution showing exponential ramp during fall edtech platform sprints.
             </p>
 
-            <div className="h-56 flex items-end gap-3 pt-6 pb-2 px-2">
+            <div className="h-56 flex items-end gap-3 pt-6 pb-2 px-2 border-b border-slate-200">
               {monthlyData.map((d, i) => {
                 const heightPct = Math.max(10, (d.commits / maxCommitMonth) * 100);
                 const isPeak = d.commits === maxCommitMonth;
                 return (
                   <div key={i} className="flex-1 flex flex-col items-center gap-2 group h-full justify-end">
-                    <span className="text-[10px] font-mono text-slate-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span className="text-[10px] font-mono text-slate-600 opacity-0 group-hover:opacity-100 transition-opacity font-bold">
                       {d.commits}
                     </span>
                     <div
                       style={{ height: `${heightPct}%` }}
                       className={`w-full rounded-t-lg transition-all duration-500 ${
                         isPeak
-                          ? 'bg-gradient-to-t from-cyan-600 to-cyan-300 shadow-lg shadow-cyan-950'
-                          : 'bg-gradient-to-t from-slate-800 to-slate-600 group-hover:from-purple-900 group-hover:to-purple-400'
+                          ? 'bg-gradient-to-t from-blue-600 to-sky-400 shadow-md'
+                          : 'bg-gradient-to-t from-slate-300 to-slate-200 group-hover:from-purple-500 group-hover:to-purple-300'
                       }`}
                     />
-                    <span className="text-[11px] font-mono text-slate-400 group-hover:text-white">
+                    <span className="text-[11px] font-mono text-slate-600 group-hover:text-slate-900 font-medium">
                       {d.month}
                     </span>
                   </div>
@@ -141,9 +141,9 @@ export const AnalyticsDashboard: React.FC = () => {
           </div>
 
           {/* Day of Week Cadence */}
-          <div className="lg:col-span-5 glass-panel p-6 rounded-2xl border border-slate-800 flex flex-col justify-between">
+          <div className="lg:col-span-5 glass-panel p-6 rounded-2xl border border-slate-200 flex flex-col justify-between">
             <div>
-              <h3 className="text-sm font-mono text-slate-300 uppercase tracking-wider mb-2">
+              <h3 className="text-sm font-mono text-slate-800 uppercase tracking-wider mb-1 font-bold">
                 Weekly Cadence &amp; Focus Days
               </h3>
               <p className="text-xs text-slate-500 mb-6 font-mono">
@@ -153,19 +153,19 @@ export const AnalyticsDashboard: React.FC = () => {
               <div className="space-y-3">
                 {dayOfWeek.map((item, idx) => (
                   <div key={idx} className="space-y-1">
-                    <div className="flex justify-between text-xs font-mono">
-                      <span className="text-slate-400">{item.day}</span>
-                      <span className="text-slate-200">{item.commits} commits</span>
+                    <div className="flex justify-between text-xs font-mono font-medium">
+                      <span className="text-slate-600">{item.day}</span>
+                      <span className="text-slate-900 font-bold">{item.commits} commits</span>
                     </div>
-                    <div className="w-full bg-slate-900 rounded-full h-2 overflow-hidden border border-slate-800">
+                    <div className="w-full bg-slate-100 rounded-full h-2.5 overflow-hidden border border-slate-200">
                       <div
                         style={{ width: `${item.pct}%` }}
                         className={`h-full rounded-full ${
                           item.day === 'Fri'
-                            ? 'bg-cyan-400'
+                            ? 'bg-sky-500'
                             : item.day === 'Mon'
-                            ? 'bg-purple-400'
-                            : 'bg-slate-600'
+                            ? 'bg-purple-500'
+                            : 'bg-slate-400'
                         }`}
                       />
                     </div>
@@ -174,9 +174,9 @@ export const AnalyticsDashboard: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-4 pt-4 border-t border-slate-800/80 text-[11px] font-mono text-slate-500 flex justify-between">
+            <div className="mt-4 pt-4 border-t border-slate-200 text-[11px] font-mono text-slate-500 flex justify-between">
               <span>Active Cycle: Nov 2026</span>
-              <span className="text-cyan-400">Weekly Rhythm: Consistent</span>
+              <span className="text-blue-600 font-bold">Weekly Rhythm: Consistent</span>
             </div>
 
           </div>
