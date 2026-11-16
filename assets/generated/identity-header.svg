@@ -1,58 +1,32 @@
-<svg width="880" height="200" viewBox="0 0 880 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="880" height="155" viewBox="0 0 880 155" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="light_bg" x1="0" y1="0" x2="880" y2="200" gradientUnits="userSpaceOnUse">
+    <linearGradient id="hdr_title_grad" x1="0" y1="0" x2="450" y2="0" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="60%" stop-color="#F8FAFC"/>
-      <stop offset="100%" stop-color="#F1F5F9"/>
+      <stop offset="60%" stop-color="#F1F5F9"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
     </linearGradient>
-    <linearGradient id="light_border" x1="0" y1="0" x2="880" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#2563EB" stop-opacity="0.6"/>
-      <stop offset="50%" stop-color="#7C3AED" stop-opacity="0.4"/>
-      <stop offset="100%" stop-color="#059669" stop-opacity="0.6"/>
-    </linearGradient>
-    <linearGradient id="title_gradient" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#0F172A"/>
-      <stop offset="70%" stop-color="#1E293B"/>
-      <stop offset="100%" stop-color="#2563EB"/>
-    </linearGradient>
-    <filter id="card_shadow" x="-4" y="-2" width="888" height="208" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0F172A" flood-opacity="0.05"/>
-    </filter>
   </defs>
 
-  <rect x="2" y="2" width="876" height="196" rx="16" fill="url(#light_bg)" filter="url(#card_shadow)"/>
-  <rect x="2" y="2" width="876" height="196" rx="16" stroke="url(#light_border)" stroke-width="1.5"/>
-
-  <!-- Subtle Blueprint Grid -->
-  <g opacity="0.04" stroke="#0F172A" stroke-width="1">
-    <line x1="40" y1="0" x2="40" y2="200"/>
-    <line x1="220" y1="0" x2="220" y2="200"/>
-    <line x1="440" y1="0" x2="440" y2="200"/>
-    <line x1="660" y1="0" x2="660" y2="200"/>
-    <line x1="840" y1="0" x2="840" y2="200"/>
-    <line x1="0" y1="50" x2="880" y2="50"/>
-    <line x1="0" y1="100" x2="880" y2="100"/>
-    <line x1="0" y1="150" x2="880" y2="150"/>
-  </g>
+  <!-- ZERO WHITE BACKGROUND: Seamless Transparent Canvas -->
 
   <!-- Name & Professional Title -->
-  <text x="40" y="65" fill="url(#title_gradient)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="38" font-weight="900" letter-spacing="-0.8">
+  <text x="0" y="45" fill="url(#hdr_title_grad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="40" font-weight="900" letter-spacing="-0.8">
     CHIRAG GOUR
   </text>
 
-  <text x="40" y="98" fill="#2563EB" font-family="'JetBrains Mono', Consolas, monospace" font-size="14" font-weight="700" letter-spacing="1.5">
+  <text x="0" y="80" fill="#38BDF8" font-family="'JetBrains Mono', Consolas, monospace" font-size="14.5" font-weight="700" letter-spacing="1.5">
     CREATIVE COMPUTING &amp; PEDAGOGICAL SYSTEMS ARCHITECT
   </text>
 
-  <text x="40" y="132" fill="#475569" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500">
+  <text x="0" y="112" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500">
     Spatial 3D Web • Serious Educational Games (POA Series) • Reactive Next.js &amp; Mobile
   </text>
 
-  <!-- Clean Minimalist Specialty Indicators (NO PILL CONTAINERS) -->
-  <g transform="translate(40, 162)" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">
-    <text x="0" y="0" fill="#0284C7">● SPATIAL 3D WEB</text>
-    <text x="175" y="0" fill="#7C3AED">● EDTECH SIMULATIONS</text>
-    <text x="380" y="0" fill="#059669">● NEXT.JS / REACT 19</text>
-    <text x="575" y="0" fill="#D97706">● EXPO NATIVE MOBILE</text>
+  <!-- Clean Specialty Indicators (No pill boxes, pure typography) -->
+  <g transform="translate(0, 142)" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700">
+    <text x="0" y="0" fill="#38BDF8">● SPATIAL 3D WEB</text>
+    <text x="180" y="0" fill="#C084FC">● EDTECH SIMULATIONS</text>
+    <text x="395" y="0" fill="#34D399">● NEXT.JS / REACT 19</text>
+    <text x="600" y="0" fill="#FBBF24">● EXPO NATIVE MOBILE</text>
   </g>
 </svg>

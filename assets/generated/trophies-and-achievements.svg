@@ -1,9 +1,5 @@
-<svg width="880" height="120" viewBox="0 0 880 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="880" height="110" viewBox="0 0 880 110" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="card_bg" x1="0" y1="0" x2="880" y2="120" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#F8FAFC"/>
-    </linearGradient>
     <!-- Gold Medallion Gradient -->
     <linearGradient id="gold_grad" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#FDE68A"/>
@@ -16,72 +12,65 @@
       <stop offset="50%" stop-color="#94A3B8"/>
       <stop offset="100%" stop-color="#64748B"/>
     </linearGradient>
-    <!-- Platinum / Cyan Glow -->
+    <!-- Cyan Glow -->
     <linearGradient id="cyan_grad" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#BAE6FD"/>
-      <stop offset="50%" stop-color="#0284C7"/>
-      <stop offset="100%" stop-color="#0369A1"/>
+      <stop offset="50%" stop-color="#38BDF8"/>
+      <stop offset="100%" stop-color="#0284C7"/>
     </linearGradient>
   </defs>
 
-  <rect x="2" y="2" width="876" height="116" rx="16" fill="url(#card_bg)"/>
-  <rect x="2" y="2" width="876" height="116" rx="16" stroke="#E2E8F0" stroke-width="1.5"/>
+  <!-- ZERO WHITE BACKGROUND: Seamless Transparent Canvas -->
 
   <!-- Badge 1: 58+ Repositories (Gold) -->
-  <g transform="translate(48, 16)">
-    <circle cx="42" cy="42" r="34" fill="#FFFBEB" stroke="url(#gold_grad)" stroke-width="2.5"/>
-    <circle cx="42" cy="42" r="28" fill="#FEF3C7" fill-opacity="0.4"/>
-    <!-- Trophy Icon -->
+  <g transform="translate(30, 10)">
+    <circle cx="42" cy="42" r="34" fill="#161B22" stroke="url(#gold_grad)" stroke-width="2"/>
+    <circle cx="42" cy="42" r="28" fill="#F59E0B" fill-opacity="0.12"/>
     <path d="M 33 28 L 51 28 L 48 44 C 47 48 44 50 42 50 C 40 50 37 48 36 44 Z" fill="url(#gold_grad)"/>
     <path d="M 42 50 L 42 56 M 36 56 L 48 56" stroke="url(#gold_grad)" stroke-width="2.5" stroke-linecap="round"/>
-    <!-- Handles -->
     <path d="M 33 32 C 28 32 28 40 34 40 M 51 32 C 56 32 56 40 50 40" stroke="url(#gold_grad)" stroke-width="1.8" fill="none"/>
-    <text x="42" y="88" text-anchor="middle" fill="#B45309" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">58+ REPOS</text>
-    <text x="42" y="100" text-anchor="middle" fill="#92400E" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="600" letter-spacing="0.5">GOLD TIER</text>
+    <text x="42" y="86" text-anchor="middle" fill="#F59E0B" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">58+ REPOS</text>
+    <text x="42" y="98" text-anchor="middle" fill="#FBBF24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="600" letter-spacing="0.5">GOLD TIER</text>
   </g>
 
   <!-- Badge 2: 2,211+ Commits (Gold) -->
-  <g transform="translate(216, 16)">
-    <circle cx="42" cy="42" r="34" fill="#FFFBEB" stroke="url(#gold_grad)" stroke-width="2.5"/>
-    <circle cx="42" cy="42" r="28" fill="#FEF3C7" fill-opacity="0.4"/>
-    <!-- Lightning Velocity Icon -->
+  <g transform="translate(205, 10)">
+    <circle cx="42" cy="42" r="34" fill="#161B22" stroke="url(#gold_grad)" stroke-width="2"/>
+    <circle cx="42" cy="42" r="28" fill="#F59E0B" fill-opacity="0.12"/>
     <path d="M 44 26 L 33 42 L 41 42 L 39 58 L 52 39 L 44 39 Z" fill="url(#gold_grad)"/>
-    <text x="42" y="88" text-anchor="middle" fill="#B45309" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">2,211+ COMMITS</text>
-    <text x="42" y="100" text-anchor="middle" fill="#92400E" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="600" letter-spacing="0.5">VELOCITY ELITE</text>
+    <text x="42" y="86" text-anchor="middle" fill="#F59E0B" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">2,211+ COMMITS</text>
+    <text x="42" y="98" text-anchor="middle" fill="#FBBF24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="600" letter-spacing="0.5">VELOCITY ELITE</text>
   </g>
 
   <!-- Badge 3: Multi-Language Polyglot (Silver) -->
-  <g transform="translate(384, 16)">
-    <circle cx="42" cy="42" r="34" fill="#F8FAFC" stroke="url(#silver_grad)" stroke-width="2.5"/>
-    <circle cx="42" cy="42" r="28" fill="#F1F5F9" fill-opacity="0.5"/>
-    <!-- Code Brackets Icon -->
+  <g transform="translate(380, 10)">
+    <circle cx="42" cy="42" r="34" fill="#161B22" stroke="url(#silver_grad)" stroke-width="2"/>
+    <circle cx="42" cy="42" r="28" fill="#94A3B8" fill-opacity="0.12"/>
     <path d="M 34 32 L 27 42 L 34 52 M 50 32 L 57 42 L 50 52 M 45 28 L 39 56" stroke="url(#silver_grad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-    <text x="42" y="88" text-anchor="middle" fill="#475569" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">POLYGLOT</text>
-    <text x="42" y="100" text-anchor="middle" fill="#64748B" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="600" letter-spacing="0.5">SILVER ARCHITECT</text>
+    <text x="42" y="86" text-anchor="middle" fill="#E2E8F0" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">POLYGLOT</text>
+    <text x="42" y="98" text-anchor="middle" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="600" letter-spacing="0.5">SILVER ARCHITECT</text>
   </g>
 
-  <!-- Badge 4: Spatial 3D & GLSL (Gold) -->
-  <g transform="translate(552, 16)">
-    <circle cx="42" cy="42" r="34" fill="#F0F9FF" stroke="url(#cyan_grad)" stroke-width="2.5"/>
-    <circle cx="42" cy="42" r="28" fill="#E0F2FE" fill-opacity="0.5"/>
-    <!-- 3D Cube Icon -->
+  <!-- Badge 4: Spatial 3D & GLSL (Gold/Cyan) -->
+  <g transform="translate(555, 10)">
+    <circle cx="42" cy="42" r="34" fill="#161B22" stroke="url(#cyan_grad)" stroke-width="2"/>
+    <circle cx="42" cy="42" r="28" fill="#38BDF8" fill-opacity="0.12"/>
     <path d="M 42 27 L 55 34 L 42 41 L 29 34 Z" fill="#38BDF8"/>
     <path d="M 29 35 L 42 42 L 42 57 L 29 50 Z" fill="#0284C7"/>
     <path d="M 55 35 L 42 42 L 42 57 L 55 50 Z" fill="#0369A1"/>
-    <text x="42" y="88" text-anchor="middle" fill="#0369A1" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">3D &amp; SHADERS</text>
-    <text x="42" y="100" text-anchor="middle" fill="#0284C7" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="600" letter-spacing="0.5">THREE.JS / GLSL</text>
+    <text x="42" y="86" text-anchor="middle" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">3D &amp; SHADERS</text>
+    <text x="42" y="98" text-anchor="middle" fill="#7DD3FC" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="600" letter-spacing="0.5">THREE.JS / GLSL</text>
   </g>
 
-  <!-- Badge 5: Serious Games Creator (Silver) -->
-  <g transform="translate(720, 16)">
-    <circle cx="42" cy="42" r="34" fill="#FAF5FF" stroke="#A855F7" stroke-width="2.5"/>
-    <circle cx="42" cy="42" r="28" fill="#F3E8FF" fill-opacity="0.5"/>
-    <!-- Controller Icon -->
-    <rect x="28" y="33" width="28" height="18" rx="6" fill="#9333EA"/>
-    <circle cx="34" cy="42" r="2" fill="#FFFFFF"/>
+  <!-- Badge 5: Serious Games Creator (Silver/Purple) -->
+  <g transform="translate(730, 10)">
+    <circle cx="42" cy="42" r="34" fill="#161B22" stroke="#C084FC" stroke-width="2"/>
+    <circle cx="42" cy="42" r="28" fill="#A855F7" fill-opacity="0.12"/>
+    <rect x="28" y="33" width="28" height="18" rx="6" fill="#C084FC"/>
+    <circle cx="34" cy="42" r="2" fill="#161B22"/>
     <circle cx="50" cy="39" r="1.5" fill="#F472B6"/>
     <circle cx="47" cy="44" r="1.5" fill="#38BDF8"/>
-    <text x="42" y="88" text-anchor="middle" fill="#7E22CE" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">POA EDTECH</text>
-    <text x="42" y="100" text-anchor="middle" fill="#9333EA" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="600" letter-spacing="0.5">GAME LEAD</text>
+    <text x="42" y="86" text-anchor="middle" fill="#C084FC" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">POA EDTECH</text>
+    <text x="42" y="98" text-anchor="middle" fill="#E9D5FF" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="600" letter-spacing="0.5">GAME LEAD</text>
   </g>
 </svg>

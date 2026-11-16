@@ -1,109 +1,100 @@
-<svg width="880" height="240" viewBox="0 0 880 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="880" height="210" viewBox="0 0 880 210" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="act_bg" x1="0" y1="0" x2="880" y2="240" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#F8FAFC"/>
-    </linearGradient>
-    <linearGradient id="wave_fill" x1="0" y1="50" x2="0" y2="190" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.35"/>
-      <stop offset="70%" stop-color="#818CF8" stop-opacity="0.1"/>
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    <linearGradient id="wave_fill" x1="0" y1="50" x2="0" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.3"/>
+      <stop offset="70%" stop-color="#818CF8" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="wave_stroke" x1="50" y1="0" x2="550" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#0284C7"/>
-      <stop offset="50%" stop-color="#2563EB"/>
-      <stop offset="80%" stop-color="#7C3AED"/>
-      <stop offset="100%" stop-color="#059669"/>
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="80%" stop-color="#C084FC"/>
+      <stop offset="100%" stop-color="#34D399"/>
     </linearGradient>
   </defs>
 
-  <rect x="2" y="2" width="876" height="236" rx="16" fill="url(#act_bg)"/>
-  <rect x="2" y="2" width="876" height="236" rx="16" stroke="#E2E8F0" stroke-width="1.5"/>
+  <!-- ZERO WHITE BACKGROUND: Seamless Transparent Canvas -->
 
   <!-- Left: Activity Waveform Graph -->
-  <g transform="translate(30, 25)">
-    <text x="15" y="15" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700">
+  <g transform="translate(0, 15)">
+    <text x="0" y="15" fill="#E6EDF3" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700">
       Commit Velocity Waveform (2026)
     </text>
-    <text x="470" y="15" text-anchor="end" fill="#0284C7" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">
+    <text x="480" y="15" text-anchor="end" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">
       PEAK: 276 COMMITS (SEPTEMBER)
     </text>
 
     <!-- Grid lines -->
-    <line x1="15" y1="55" x2="470" y2="55" stroke="#F1F5F9" stroke-width="1"/>
-    <line x1="15" y1="100" x2="470" y2="100" stroke="#F1F5F9" stroke-width="1"/>
-    <line x1="15" y1="145" x2="470" y2="145" stroke="#F1F5F9" stroke-width="1"/>
-    <line x1="15" y1="180" x2="470" y2="180" stroke="#E2E8F0" stroke-width="1.5"/>
+    <line x1="0" y1="55" x2="480" y2="55" stroke="#21262D" stroke-width="1"/>
+    <line x1="0" y1="100" x2="480" y2="100" stroke="#21262D" stroke-width="1"/>
+    <line x1="0" y1="145" x2="480" y2="145" stroke="#21262D" stroke-width="1"/>
+    <line x1="0" y1="180" x2="480" y2="180" stroke="#30363D" stroke-width="1.5"/>
 
     <!-- Waveform Area -->
-    <path d="M 25 170 C 60 165, 80 175, 110 172 C 140 170, 160 162, 200 160 C 230 155, 260 120, 290 110 C 330 100, 360 45, 385 45 C 410 45, 430 135, 455 125 L 455 180 L 25 180 Z" fill="url(#wave_fill)"/>
+    <path d="M 15 170 C 50 165, 75 175, 105 172 C 135 170, 160 162, 200 160 C 235 155, 265 120, 295 110 C 335 100, 365 45, 390 45 C 415 45, 435 135, 465 125 L 465 180 L 15 180 Z" fill="url(#wave_fill)"/>
 
     <!-- Waveform Stroke -->
-    <path d="M 25 170 C 60 165, 80 175, 110 172 C 140 170, 160 162, 200 160 C 230 155, 260 120, 290 110 C 330 100, 360 45, 385 45 C 410 45, 430 135, 455 125" stroke="url(#wave_stroke)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 15 170 C 50 165, 75 175, 105 172 C 135 170, 160 162, 200 160 C 235 155, 265 120, 295 110 C 335 100, 365 45, 390 45 C 415 45, 435 135, 465 125" stroke="url(#wave_stroke)" stroke-width="3" fill="none" stroke-linecap="round"/>
 
     <!-- Data Nodes -->
-    <circle cx="25" cy="170" r="4" fill="#0284C7"/>
-    <circle cx="110" cy="172" r="4" fill="#0284C7"/>
-    <circle cx="200" cy="160" r="4" fill="#2563EB"/>
-    <circle cx="290" cy="110" r="4" fill="#2563EB"/>
-    <circle cx="385" cy="45" r="6" fill="#7C3AED" stroke="#FFFFFF" stroke-width="2"/>
-    <circle cx="455" cy="125" r="4.5" fill="#059669"/>
+    <circle cx="15" cy="170" r="4" fill="#38BDF8"/>
+    <circle cx="105" cy="172" r="4" fill="#38BDF8"/>
+    <circle cx="200" cy="160" r="4" fill="#818CF8"/>
+    <circle cx="295" cy="110" r="4" fill="#818CF8"/>
+    <circle cx="390" cy="45" r="6" fill="#C084FC" stroke="#161B22" stroke-width="2"/>
+    <circle cx="465" cy="125" r="4.5" fill="#34D399"/>
 
     <!-- Month markers -->
-    <g fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="9.5" text-anchor="middle">
-      <text x="25" y="196">Mar</text>
-      <text x="110" y="196">May</text>
+    <g fill="#7D8590" font-family="'JetBrains Mono', monospace" font-size="9.5" text-anchor="middle">
+      <text x="15" y="196">Mar</text>
+      <text x="105" y="196">May</text>
       <text x="200" y="196">Jul</text>
-      <text x="290" y="196">Aug</text>
-      <text x="385" y="196" fill="#7C3AED" font-weight="700">Sep</text>
-      <text x="455" y="196" fill="#059669" font-weight="700">Nov</text>
+      <text x="295" y="196">Aug</text>
+      <text x="390" y="196" fill="#C084FC" font-weight="700">Sep</text>
+      <text x="465" y="196" fill="#34D399" font-weight="700">Nov</text>
     </g>
   </g>
 
   <!-- Divider -->
-  <line x1="535" y1="25" x2="535" y2="215" stroke="#E2E8F0" stroke-width="1"/>
+  <line x1="535" y1="20" x2="535" y2="195" stroke="#21262D" stroke-width="1"/>
 
   <!-- Right: Day of Week Rhythm Matrix -->
-  <g transform="translate(565, 25)">
-    <text x="0" y="15" fill="#0F172A" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700">
+  <g transform="translate(565, 15)">
+    <text x="0" y="15" fill="#E6EDF3" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700">
       Weekly Rhythm
     </text>
 
     <!-- Bars -->
     <g transform="translate(0, 36)">
       <!-- Friday (Peak) -->
-      <text x="0" y="12" fill="#0F172A" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">Fri</text>
-      <rect x="35" y="2" width="180" height="12" rx="4" fill="#0284C7"/>
-      <text x="225" y="12" fill="#0284C7" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">160</text>
+      <text x="0" y="12" fill="#E6EDF3" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">Fri</text>
+      <rect x="35" y="2" width="180" height="12" rx="4" fill="#38BDF8"/>
+      <text x="225" y="12" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">160</text>
 
       <!-- Monday -->
-      <text x="0" y="34" fill="#0F172A" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">Mon</text>
-      <rect x="35" y="24" width="150" height="12" rx="4" fill="#2563EB"/>
-      <text x="195" y="34" fill="#2563EB" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">133</text>
-
-      <!-- Tuesday -->
-      <text x="0" y="56" fill="#475569" font-family="'JetBrains Mono', monospace" font-size="10.5">Tue</text>
-      <rect x="35" y="46" width="105" height="12" rx="4" fill="#7C3AED"/>
-      <text x="150" y="56" fill="#7C3AED" font-family="'JetBrains Mono', monospace" font-size="10">94</text>
+      <text x="0" y="34" fill="#E6EDF3" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">Mon</text>
+      <rect x="35" y="24" width="150" height="12" rx="4" fill="#818CF8"/>
+      <text x="195" y="34" fill="#818CF8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">133</text>
 
       <!-- Thursday -->
-      <text x="0" y="78" fill="#475569" font-family="'JetBrains Mono', monospace" font-size="10.5">Thu</text>
-      <rect x="35" y="68" width="95" height="12" rx="4" fill="#9333EA"/>
-      <text x="140" y="78" fill="#9333EA" font-family="'JetBrains Mono', monospace" font-size="10">83</text>
+      <text x="0" y="56" fill="#E6EDF3" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">Thu</text>
+      <rect x="35" y="46" width="128" height="12" rx="4" fill="#38BDF8"/>
+      <text x="173" y="56" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">114</text>
 
       <!-- Wednesday -->
-      <text x="0" y="100" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="10.5">Wed</text>
-      <rect x="35" y="90" width="70" height="12" rx="4" fill="#A855F7"/>
-      <text x="115" y="100" fill="#A855F7" font-family="'JetBrains Mono', monospace" font-size="10">61</text>
+      <text x="0" y="78" fill="#E6EDF3" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">Wed</text>
+      <rect x="35" y="68" width="105" height="12" rx="4" fill="#A855F7"/>
+      <text x="150" y="78" fill="#A855F7" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">93</text>
 
-      <!-- Weekend -->
-      <text x="0" y="122" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="10.5">Sat</text>
-      <rect x="35" y="112" width="45" height="12" rx="4" fill="#CBD5E1"/>
-      <text x="90" y="122" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="10">40</text>
+      <!-- Tuesday -->
+      <text x="0" y="100" fill="#E6EDF3" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">Tue</text>
+      <rect x="35" y="90" width="85" height="12" rx="4" fill="#34D399"/>
+      <text x="130" y="100" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">75</text>
+
+      <!-- Saturday -->
+      <text x="0" y="122" fill="#7D8590" font-family="'JetBrains Mono', monospace" font-size="10.5">Sat</text>
+      <rect x="35" y="112" width="45" height="12" rx="4" fill="#30363D"/>
+      <text x="90" y="122" fill="#7D8590" font-family="'JetBrains Mono', monospace" font-size="10">40</text>
     </g>
-
-    <text x="0" y="195" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="9.5">
-      Peak Velocity on Friday &amp; Monday
-    </text>
   </g>
 </svg>

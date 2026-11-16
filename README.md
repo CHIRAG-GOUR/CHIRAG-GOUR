@@ -7,7 +7,7 @@
 
 <!-- MARIO HERO ANIMATION -->
 <a href="#curated-flagship-projects">
-  <img src="assets/Mario.gif" alt="Mario Level Jump" width="100%" style="border-radius: 14px; border: 1px solid #E2E8F0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);"/>
+  <img src="assets/Mario.gif" alt="Mario Level Jump" width="100%" style="border-radius: 14px; border: 1px solid #30363D; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);"/>
 </a>
 
 <br/><br/>

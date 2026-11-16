@@ -1,41 +1,34 @@
-<svg width="880" height="46" viewBox="0 0 880 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="ticker_bg" x1="0" y1="0" x2="880" y2="46" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#F8FAFC"/>
-    </linearGradient>
-  </defs>
-
-  <rect x="2" y="2" width="876" height="42" rx="10" fill="url(#ticker_bg)"/>
-  <rect x="2" y="2" width="876" height="42" rx="10" stroke="#E2E8F0" stroke-width="1.5"/>
+<svg width="880" height="42" viewBox="0 0 880 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Subtle dark terminal container matching GitHub code blocks -->
+  <rect x="1" y="1" width="878" height="40" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1.2"/>
 
   <!-- Live Pulse Dot -->
-  <circle cx="28" cy="23" r="4.5" fill="#10B981">
+  <circle cx="24" cy="21" r="4.5" fill="#22C55E">
     <animate attributeName="opacity" values="1;0.3;1" dur="1.8s" repeatCount="indefinite"/>
   </circle>
 
   <!-- Terminal Label -->
-  <text x="44" y="27" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" letter-spacing="0.5">
+  <text x="38" y="25" fill="#7D8590" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700" letter-spacing="0.5">
     CURRENTLY BUILDING //
   </text>
 
   <!-- Repo Badge -->
-  <text x="215" y="27" fill="#0284C7" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">
+  <text x="210" y="25" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">
     [poa-skippi]
   </text>
 
   <!-- Commit Hash -->
-  <text x="345" y="27" fill="#7C3AED" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">
+  <text x="340" y="25" fill="#C084FC" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">
     b710063
   </text>
 
   <!-- Commit Message -->
-  <text x="425" y="27" fill="#334155" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="500">
+  <text x="420" y="25" fill="#E6EDF3" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="500">
     ecosystem refinement
   </text>
 
   <!-- Right status -->
-  <text x="850" y="27" text-anchor="end" fill="#059669" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">
-    ● LIVE
+  <text x="855" y="25" text-anchor="end" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700">
+    ● LIVE SYNC
   </text>
 </svg>
