@@ -36,6 +36,14 @@ jobs:
         run: |
           python engine/run_pipeline.py
 
+      - name: Generate Contribution Snake
+        uses: Platane/snk@v3
+        continue-on-error: true
+        with:
+          github_user_name: CHIRAG-GOUR
+          outputs: |
+            assets/generated/github-contribution-grid-snake.svg?color_snake=#15803d&color_dots=#ebedf0,#9be9a8,#40c463,#30a14e,#216e39
+
       - name: Commit & Push Changes
         run: |
           git config --local user.name "github-actions[bot]"

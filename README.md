@@ -6,7 +6,7 @@
 <br/><br/>
 
 <!-- MARIO ANIMATION HERO SECTION -->
-<a href="#-project-universe">
+<a href="#-curated-project-universe">
   <img src="assets/Mario.gif" alt="Mario Level Jump // Chirag Gour Engineering Journey" width="100%" style="border-radius: 14px; border: 1px solid #E2E8F0; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);"/>
 </a>
 
@@ -22,8 +22,18 @@
   <i>Continuously synchronized with live repository activity, commit intelligence, and historical learning snapshots.</i>
 </p>
 
-[🎮 Play Companion Web App](#-interactive-companion-experience) • [🚀 Project Universe](#-project-universe) • [🧠 Commit Intelligence](#-commit-intelligence--scoring-system) • [⚙️ Architecture](#-automation-architecture)
+[🎮 Play Companion Web App](#-interactive-companion-experience) • [🚀 Curated Projects](#-curated-project-universe) • [🐍 Contribution Snake](#-autonomous-contribution-snake-engine) • [⚙️ Architecture](#-automation-architecture)
 
+</div>
+
+---
+
+### 🐍 Autonomous Contribution Snake Engine
+
+> *A living green snake crawling through 2,211+ contributions across 2026, autonomously eating active commits and self-updating with every new push.*
+
+<div align="center">
+  <img src="assets/generated/github-contribution-grid-snake.svg" alt="Chirag Gour GitHub Contribution Snake Game" width="100%"/>
 </div>
 
 ---
@@ -37,7 +47,7 @@
 | Velocity Dimension | Empirical Observation | Historical Learning Context |
 | :--- | :---: | :--- |
 | **Total Source Repositories** | **57** | **0 Forks (100% Original Creations)** across EdTech, 3D simulations, and mobile |
-| **Sampled Commit Velocity** | **575+** | Peak output recorded in **Sept 2026 (276 commits)** during active school platform sprints |
+| **Annual Contributions** | **2,211** | Peak output recorded in **Sept 2026 (276 commits)** during active school platform sprints |
 | **Max Coding Streak** | **11 Days** | Peak cadence concentrated on **Fridays (160 commits)** and **Mondays (133 commits)** |
 | **Technical Impact Score (TIS)** | **88.4 / 100** | Explainable 9-dimension scoring engine weighting architectural depth over vanity diffs |
 | **Portfolio Trend Status** | **Sustained** | **+6.1%** week-over-week velocity in current cycle |
@@ -73,7 +83,7 @@
 
 ---
 
-### 🖼️ Visual Project Previews & Benchmarks
+### 🚀 Curated Project Universe
 
 <div align="center">
   <img src="assets/generated/project-previews.svg" alt="Visual Project Previews" width="100%"/>
@@ -83,7 +93,7 @@
   <img src="assets/generated/featured-projects.svg" alt="Featured Projects Universe" width="100%"/>
 </div>
 
-#### Featured Production Works
+#### Flagship Engineering Highlights
 
 #### 1. [POA-Skippi (Skippi Island — 3D Shark Tank Simulation)](https://github.com/CHIRAG-GOUR/POA-Skippi)
 > **Can You Turn Childhood Nostalgia into a Billion-Rupee Business?**  
@@ -107,19 +117,10 @@
 - **Key Stack:** React, Three.js, Radix UI Primitives, PBR Shaders, Tailwind CSS
 - **Status:** `Showcase Simulation`
 
-<details>
-<summary><b>View Additional Selected Repositories (Olympiad Digital Exam, Solaris 3D, Physics Motion)</b></summary>
-<br/>
-
-| Repository | Focus & Architecture | Primary Technologies | Status |
-| :--- | :--- | :--- | :--- |
-| **[Olympiad-Activities](https://github.com/CHIRAG-GOUR/Olympiad-Activities)** | Digital assessment and drag-and-drop examination platform | Next.js, Firebase, R3F, DND-Kit | Active |
-| **[SolarSystem3js](https://github.com/CHIRAG-GOUR/SolarSystem3js)** | Audiovisual 3D solar system with procedural shaders & soundscapes | Three.js, R3F, GLSL, GSAP, Leva | Showcase |
-| **[physicsmotion2](https://github.com/CHIRAG-GOUR/physicsmotion2)** | Kinematic simulation engine combining Theatre.js & Groq fast AI | React, Three.js, Theatre.js, Groq SDK | Advanced |
-| **[Mood-Mirror-2026](https://github.com/CHIRAG-GOUR/Mood-Mirror-2026)** | Edge-based facial landmark detection and emotion reflection | React, Vite, @vladmandic/face-api | Showcase |
-| **[POA-StorySprint](https://github.com/CHIRAG-GOUR/POA-StorySprint)** | Classroom smartboard collaborative storytelling platform | React, Three.js, R3F, jsPDF | Maintained |
-
-</details>
+#### 5. [SolarSystem3js (Solaris Audiovisual 3D System)](https://github.com/CHIRAG-GOUR/SolarSystem3js)
+> Interactive audiovisual solar system with procedural GLSL planet shaders, spatial audio synchronization, and post-processing bloom.
+- **Key Stack:** Three.js, R3F, Custom Shader Material, GSAP, Leva, Zustand
+- **Status:** `Creative Showcase`
 
 ---
 
@@ -168,8 +169,8 @@ Beyond GitHub Markdown limits, this ecosystem features a **companion web applica
 
 - **3D Particle Constellation:** Visual spatial representation of repository relations and topics.
 - **Interactive Commit Calculator:** Live inspector allowing users to test commit messages against the explainable TIS engine.
-- **Playable Mini-Game:** Kangaroo Hopper interactive canvas game right in the browser!
-- **Dynamic Project Filter:** Filter 57 projects by 3D, EdTech, Mobile, or AI tiers.
+- **Playable Mini-Game:** Roo & Mario Commit Runner canvas game right in the browser!
+- **Curated Project Explorer:** Filter by 3D, EdTech, Mobile, or AI tiers.
 - **Historical Snapshot Explorer:** Compare multi-week developer trajectory and velocity graphs.
 
 ```bash
@@ -189,6 +190,7 @@ This repository operates autonomously via **GitHub Actions**:
 flowchart LR
     Push[Push Event] --> Sync[sync-ecosystem.yml]
     Cron[Daily 00:00 UTC] --> Sync
+    Sync --> Snake[Generate Contribution Snake SVG]
     Sync --> Engine[Python Analytics &amp; Scoring Engine]
     Engine --> Snapshots[Store data/snapshots/YYYY-wWW.json]
     Engine --> SVGs[Render assets/generated/*.svg]
@@ -197,9 +199,9 @@ flowchart LR
 ```
 
 - **Daily Cron:** Synchronizes repository metadata and verifies active coding streaks at 00:00 UTC.
-- **Push Trigger:** Triggers on new commits to recalculate commit intelligence scores and refresh SVGs.
+- **Push Trigger:** Triggers on new commits to recalculate commit intelligence scores and refresh SVGs &amp; Contribution Snake.
 - **Zero Secret Leakage:** Requires only default `GITHUB_TOKEN` with `contents: write` permissions.
 
 <div align="center">
-  <sub>Last Ecosystem Synchronization: <code>2026-11-16 08:19:08 UTC</code> | Engine Version: <code>v2.5.0-light-edition</code></sub>
+  <sub>Last Ecosystem Synchronization: <code>2026-11-16 08:29:37 UTC</code> | Engine Version: <code>v2.6.0-snake-edition</code></sub>
 </div>
