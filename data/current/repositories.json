@@ -1,17 +1,17 @@
 {
-  "total_source_repos": 57,
+  "total_source_repos": 58,
   "categories": {
+    "Foundation & Systems": 9,
     "EdTech & Serious Games": 15,
     "Creative Full-Stack": 1,
     "Modern Reactive Web": 23,
     "Mobile Architecture": 1,
     "Creative 3D & Simulation": 7,
     "Vision & Applied AI": 1,
-    "Foundation & Systems": 8,
     "Simulation & Fast AI": 1
   },
   "stages": {
-    "Active": 6,
+    "Active": 7,
     "Maintained": 20,
     "Archived": 28,
     "Showcase": 3
@@ -111,7 +111,7 @@
       "forks": 0,
       "stage": "Actively Developing",
       "stage_badge": "Active",
-      "days_since_push": 11,
+      "days_since_push": 12,
       "pushed_at": "2026-11-04T08:02:25Z",
       "featured": true,
       "complexity_tier": "High"
@@ -193,6 +193,26 @@
   ],
   "all_projects": [
     {
+      "name": "CHIRAG-GOUR",
+      "title": "CHIRAG GOUR",
+      "category": "Foundation & Systems",
+      "description": "Active development project.",
+      "html_url": "https://github.com/CHIRAG-GOUR/CHIRAG-GOUR",
+      "live_url": null,
+      "language": "Python",
+      "key_tech": [
+        "Python"
+      ],
+      "stars": 0,
+      "forks": 0,
+      "stage": "Actively Developing",
+      "stage_badge": "Active",
+      "days_since_push": 0,
+      "pushed_at": "2026-11-16T08:11:08Z",
+      "featured": false,
+      "complexity_tier": "Standard"
+    },
+    {
       "name": "POA-Skippi",
       "title": "Skippi Island \u2014 3D Shark Tank Simulation",
       "category": "EdTech & Serious Games",
@@ -262,7 +282,7 @@
       "forks": 0,
       "stage": "Actively Developing",
       "stage_badge": "Active",
-      "days_since_push": 11,
+      "days_since_push": 12,
       "pushed_at": "2026-11-04T08:02:25Z",
       "featured": true,
       "complexity_tier": "High"
@@ -325,7 +345,7 @@
       "forks": 0,
       "stage": "Actively Developing",
       "stage_badge": "Active",
-      "days_since_push": 40,
+      "days_since_push": 41,
       "pushed_at": "2026-10-06T07:46:28Z",
       "featured": false,
       "complexity_tier": "Medium"
@@ -478,7 +498,7 @@
       "forks": 0,
       "stage": "Maintained & Stable",
       "stage_badge": "Maintained",
-      "days_since_push": 93,
+      "days_since_push": 94,
       "pushed_at": "2026-08-14T07:57:21Z",
       "featured": false,
       "complexity_tier": "Standard"
@@ -682,7 +702,7 @@
       "forks": 0,
       "stage": "Maintained & Stable",
       "stage_badge": "Maintained",
-      "days_since_push": 129,
+      "days_since_push": 130,
       "pushed_at": "2026-07-09T08:09:34Z",
       "featured": false,
       "complexity_tier": "Standard"
@@ -742,7 +762,7 @@
       "forks": 0,
       "stage": "Maintained & Stable",
       "stage_badge": "Maintained",
-      "days_since_push": 139,
+      "days_since_push": 140,
       "pushed_at": "2026-06-29T07:34:12Z",
       "featured": false,
       "complexity_tier": "Standard"
@@ -943,7 +963,7 @@
       "forks": 0,
       "stage": "Foundational Archive",
       "stage_badge": "Archived",
-      "days_since_push": 215,
+      "days_since_push": 216,
       "pushed_at": "2026-04-14T07:45:05Z",
       "featured": false,
       "complexity_tier": "Standard"
@@ -1003,7 +1023,7 @@
       "forks": 0,
       "stage": "Foundational Archive",
       "stage_badge": "Archived",
-      "days_since_push": 226,
+      "days_since_push": 227,
       "pushed_at": "2026-04-03T07:31:34Z",
       "featured": false,
       "complexity_tier": "Standard"
@@ -1123,7 +1143,7 @@
       "forks": 0,
       "stage": "Foundational Archive",
       "stage_badge": "Archived",
-      "days_since_push": 240,
+      "days_since_push": 241,
       "pushed_at": "2026-03-20T07:33:38Z",
       "featured": false,
       "complexity_tier": "Standard"
@@ -1308,7 +1328,7 @@
       "forks": 0,
       "stage": "Foundational Archive",
       "stage_badge": "Archived",
-      "days_since_push": 263,
+      "days_since_push": 264,
       "pushed_at": "2026-02-25T08:18:34Z",
       "featured": false,
       "complexity_tier": "Standard"
