@@ -55,7 +55,7 @@ class GitHubClient:
         return {
             "login": self.username,
             "name": "Chirag Gour",
-            "public_repos": 57,
+            "public_repos": 83,
             "followers": 1,
             "following": 1,
             "created_at": "2024-07-05T12:28:52Z"

@@ -216,14 +216,14 @@ class SVGGenerator:
 
   <!-- ZERO WHITE BACKGROUND: Seamless Transparent Canvas -->
 
-  <!-- Badge 1: 58+ Repositories (Gold) -->
+  <!-- Badge 1: 83+ Repositories (Gold) -->
   <g transform="translate(30, 10)">
     <circle cx="42" cy="42" r="34" fill="#161B22" stroke="url(#gold_grad)" stroke-width="2"/>
     <circle cx="42" cy="42" r="28" fill="#F59E0B" fill-opacity="0.12"/>
     <path d="M 33 28 L 51 28 L 48 44 C 47 48 44 50 42 50 C 40 50 37 48 36 44 Z" fill="url(#gold_grad)"/>
     <path d="M 42 50 L 42 56 M 36 56 L 48 56" stroke="url(#gold_grad)" stroke-width="2.5" stroke-linecap="round"/>
     <path d="M 33 32 C 28 32 28 40 34 40 M 51 32 C 56 32 56 40 50 40" stroke="url(#gold_grad)" stroke-width="1.8" fill="none"/>
-    <text x="42" y="86" text-anchor="middle" fill="#F59E0B" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">58+ REPOS</text>
+    <text x="42" y="86" text-anchor="middle" fill="#F59E0B" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">83+ REPOS</text>
     <text x="42" y="98" text-anchor="middle" fill="#FBBF24" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="600" letter-spacing="0.5">GOLD TIER</text>
   </g>
 
@@ -484,7 +484,7 @@ class SVGGenerator:
   <!-- Right Side: Verified Language Distribution -->
   <g transform="translate(470, 15)">
     <text x="0" y="15" fill="#E6EDF3" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700">
-      Verified Language Stack (58 Repositories)
+      Verified Language Stack (83 Repositories)
     </text>
 
     <!-- Stack Bar -->
@@ -607,7 +607,7 @@ class SVGGenerator:
     PORTFOLIO CORE TECHNICAL PROFICIENCIES
   </text>
   <text x="880" y="20" text-anchor="end" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">
-    PROVEN ACROSS 58 REPOSITORIES
+    PROVEN ACROSS 83 REPOSITORIES
   </text>
 
   <!-- Pillar 1: Spatial 3D & Graphics -->

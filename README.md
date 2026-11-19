@@ -12,6 +12,11 @@
 
 <br/><br/>
 
+<!-- RETRO DEVELOPER NEOFETCH TERMINAL BIO -->
+<img src="assets/generated/developer-neofetch-bio.svg" alt="Retro Developer Neofetch Terminal Bio" width="100%"/>
+
+<br/><br/>
+
 <!-- PORTFOLIO CORE TECHNICAL PROFICIENCIES -->
 <img src="assets/generated/portfolio-skills-matrix.svg" alt="Core Technical Proficiencies" width="100%"/>
 
@@ -54,6 +59,11 @@
 
 <br/><br/>
 
+<!-- 3D ISOMETRIC GIT COMMIT SKYLINE -->
+<img src="assets/generated/commit-skyline-isometric.svg" alt="3D Isometric Git Commit Skyline" width="100%"/>
+
+<br/><br/>
+
 <!-- ACTIVITY VELOCITY WAVEFORM & WEEKLY RHYTHM -->
 <img src="assets/generated/activity-velocity-graph.svg" alt="Activity Velocity Waveform" width="100%"/>
 
@@ -81,7 +91,7 @@
   &nbsp;&nbsp;
   <a href="https://olympiad-activities.web.app"><img src="https://img.shields.io/badge/Olympiad_Activities-Live_Demo-059669?style=for-the-badge&logo=firebase&logoColor=white" alt="Olympiad Live"/></a>
   &nbsp;&nbsp;
-  <a href="https://github.com/CHIRAG-GOUR?tab=repositories"><img src="https://img.shields.io/badge/58_Source_Repositories-Explore_All-7C3AED?style=for-the-badge&logo=github&logoColor=white" alt="Explore Repositories"/></a>
+  <a href="https://github.com/CHIRAG-GOUR?tab=repositories"><img src="https://img.shields.io/badge/83_Source_Repositories-Explore_All-7C3AED?style=for-the-badge&logo=github&logoColor=white" alt="Explore Repositories"/></a>
 </div>
 
 <br/><br/>

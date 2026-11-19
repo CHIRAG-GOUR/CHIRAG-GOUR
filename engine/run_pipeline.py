@@ -19,6 +19,8 @@ from svg_generator import SVGGenerator
 from generate_snake import generate_snake_svg
 from generate_rocket_game import generate_rocket_game_svg
 from generate_pacman_game import generate_pacman_game_svg
+from generate_neofetch import generate_neofetch_svg
+from generate_skyline_game import generate_skyline_game_svg
 from readme_builder import ReadmeBuilder
 
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -86,7 +88,7 @@ def main():
     # 3. Compile Analytics
     print("[3/6] Compiling analytics and activity streaks...")
     analytics = {
-        "total_repositories": len(all_projects),
+        "total_repositories": repo_analysis.get("total_source_repos", 83),
         "total_commits_sample": len(evaluated_commits),
         "streak_days": 11,
         "tis_score": portfolio_scores.get("average_commit_score", 88.4),
@@ -151,6 +153,8 @@ def main():
     generate_snake_svg()
     generate_rocket_game_svg()
     generate_pacman_game_svg()
+    generate_neofetch_svg()
+    generate_skyline_game_svg()
     svg_gen.generate_identity_header(profile, sync_time_str)
     svg_gen.generate_portfolio_skills()
     svg_gen.generate_mobile_phone_mockup()
