@@ -19,37 +19,78 @@ class SVGGenerator:
         print(f"[SVG] Generated transparent {filename}")
 
     def generate_identity_header(self, profile: Dict[str, Any], sync_time: str):
-        """Clean header with zero background boxes, high-contrast typography and colorful accent dots."""
-        svg = f"""<svg width="880" height="155" viewBox="0 0 880 155" fill="none" xmlns="http://www.w3.org/2000/svg">
+        """Clean header with animated classy developer typography, Computer Science Engineer title, and dope tagline."""
+        svg = f"""<svg width="880" height="180" viewBox="0 0 880 180" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="hdr_title_grad" x1="0" y1="0" x2="450" y2="0" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="60%" stop-color="#F1F5F9"/>
-      <stop offset="100%" stop-color="#38BDF8"/>
+    <!-- Shimmering Developer Gradient for Name -->
+    <linearGradient id="shimmer_grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF">
+        <animate attributeName="stop-color" values="#FFFFFF;#38BDF8;#34D399;#FFFFFF" dur="5s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="40%" stop-color="#38BDF8">
+        <animate attributeName="stop-color" values="#38BDF8;#34D399;#FFFFFF;#38BDF8" dur="5s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="80%" stop-color="#34D399">
+        <animate attributeName="stop-color" values="#34D399;#FFFFFF;#38BDF8;#34D399" dur="5s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#FFFFFF">
+        <animate attributeName="stop-color" values="#FFFFFF;#38BDF8;#34D399;#FFFFFF" dur="5s" repeatCount="indefinite"/>
+      </stop>
     </linearGradient>
+
+    <style>
+      <![CDATA[
+      @keyframes devGlow {{
+        0%, 100% {{ filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.35)); }}
+        50%      {{ filter: drop-shadow(0 0 20px rgba(52, 211, 153, 0.7)); }}
+      }}
+      .animated-dev-name {{
+        animation: devGlow 4s infinite ease-in-out;
+      }}
+      @keyframes cursorBlink {{
+        0%, 49%   {{ opacity: 1; }}
+        50%, 100% {{ opacity: 0; }}
+      }}
+      .terminal-cursor {{
+        animation: cursorBlink 0.9s infinite;
+      }}
+      ]]>
+    </style>
   </defs>
 
   <!-- ZERO WHITE BACKGROUND: Seamless Transparent Canvas -->
 
-  <!-- Name & Professional Title -->
-  <text x="0" y="45" fill="url(#hdr_title_grad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="40" font-weight="900" letter-spacing="-0.8">
-    CHIRAG GOUR
+  <!-- Developer Prompt / Root Identifier -->
+  <text x="0" y="20" fill="#38BDF8" font-family="'JetBrains Mono', Consolas, monospace" font-size="12" font-weight="700" letter-spacing="1.5">
+    &lt;developer/&gt; ~ /universe/chirag-gour
   </text>
 
-  <text x="0" y="80" fill="#38BDF8" font-family="'JetBrains Mono', Consolas, monospace" font-size="14.5" font-weight="700" letter-spacing="1.5">
-    CREATIVE COMPUTING &amp; PEDAGOGICAL SYSTEMS ARCHITECT
+  <!-- Classy Animated Developer Name + Blinking IDE Cursor -->
+  <g class="animated-dev-name">
+    <text x="0" y="65" fill="url(#shimmer_grad)" font-family="'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="44" font-weight="900" letter-spacing="-1">
+      CHIRAG GOUR
+    </text>
+    <text x="320" y="62" fill="#38BDF8" class="terminal-cursor" font-family="'JetBrains Mono', Consolas, monospace" font-size="36" font-weight="900">
+      ▋
+    </text>
+  </g>
+
+  <!-- Professional Title: Computer Science Engineer -->
+  <text x="0" y="100" fill="#38BDF8" font-family="'JetBrains Mono', Consolas, monospace" font-size="15" font-weight="800" letter-spacing="2">
+    COMPUTER SCIENCE ENGINEER
   </text>
 
-  <text x="0" y="112" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="500">
-    Spatial 3D Web • Serious Educational Games (POA Series) • Reactive Next.js &amp; Mobile
+  <!-- Dope Tagline -->
+  <text x="0" y="132" fill="#E2E8F0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="500">
+    More creative than your average engineer • More technical than your average designer.
   </text>
 
-  <!-- Clean Specialty Indicators (No pill boxes, pure typography) -->
-  <g transform="translate(0, 142)" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700">
-    <text x="0" y="0" fill="#38BDF8">● SPATIAL 3D WEB</text>
-    <text x="180" y="0" fill="#C084FC">● EDTECH SIMULATIONS</text>
-    <text x="395" y="0" fill="#34D399">● NEXT.JS / REACT 19</text>
-    <text x="600" y="0" fill="#FBBF24">● EXPO NATIVE MOBILE</text>
+  <!-- Clean Specialty Indicators (Pure Typography, No Box Containers) -->
+  <g transform="translate(0, 164)" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700">
+    <text x="0" y="0" fill="#38BDF8">● SPATIAL 3D &amp; GLSL</text>
+    <text x="185" y="0" fill="#C084FC">● EDTECH &amp; SIMULATIONS</text>
+    <text x="410" y="0" fill="#34D399">● REACTIVE NEXT.JS / REACT 19</text>
+    <text x="655" y="0" fill="#FBBF24">● EXPO NATIVE MOBILE</text>
   </g>
 </svg>"""
         self._save("identity-header.svg", svg)
