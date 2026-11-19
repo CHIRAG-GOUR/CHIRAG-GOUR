@@ -17,6 +17,7 @@ from commit_scorer import CommitScorer
 from historical_tracker import HistoricalTracker
 from svg_generator import SVGGenerator
 from generate_snake import generate_snake_svg
+from generate_rocket_game import generate_rocket_game_svg
 from readme_builder import ReadmeBuilder
 
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
@@ -147,6 +148,7 @@ def main():
     # 5. Render Dynamic SVGs
     print("[5/6] Generating dynamic, high-resolution modern light SVGs...")
     generate_snake_svg()
+    generate_rocket_game_svg()
     svg_gen.generate_identity_header(profile, sync_time_str)
     svg_gen.generate_portfolio_skills()
     svg_gen.generate_mobile_phone_mockup()

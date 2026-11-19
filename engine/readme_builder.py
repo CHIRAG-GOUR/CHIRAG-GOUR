@@ -64,6 +64,11 @@ class ReadmeBuilder:
 
 <br/><br/>
 
+<!-- RETRO ARCADE ROCKET SHIP COMMIT DEFENDER -->
+<img src="assets/generated/arcade-rocket-commit-game.svg" alt="Retro Arcade Rocket Ship Commit Defender" width="100%"/>
+
+<br/><br/>
+
 <!-- ACTIVITY VELOCITY WAVEFORM & WEEKLY RHYTHM -->
 <img src="assets/generated/activity-velocity-graph.svg" alt="Activity Velocity Waveform" width="100%"/>
 
