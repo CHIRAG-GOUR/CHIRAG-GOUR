@@ -1,0 +1,96 @@
+<svg width="880" height="190" viewBox="0 0 880 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      <![CDATA[
+      /* Pac-Man Horizontal Chomp Path */
+      @keyframes pacmanMove {
+        0%   { transform: translate(40px, 95px) scaleX(1); }
+        48%  { transform: translate(780px, 95px) scaleX(1); }
+        50%  { transform: translate(780px, 95px) scaleX(-1); }
+        98%  { transform: translate(40px, 95px) scaleX(-1); }
+        100% { transform: translate(40px, 95px) scaleX(1); }
+      }
+      .pacman-runner {
+        animation: pacmanMove 10s infinite linear;
+      }
+
+      /* Blinky Red Ghost Chaser */
+      @keyframes ghostMove {
+        0%   { transform: translate(0px, 95px); }
+        48%  { transform: translate(720px, 95px); }
+        52%  { transform: translate(720px, 95px); }
+        98%  { transform: translate(0px, 95px); }
+        100% { transform: translate(0px, 95px); }
+      }
+      .ghost-runner {
+        animation: ghostMove 10s infinite linear 0.4s;
+      }
+
+      /* Mouth Chomp Animation */
+      @keyframes mouthChomp {
+        0%, 100% { d: path('M0,0 L14,-14 A18,18 0 1,0 14,14 Z'); }
+        50%      { d: path('M0,0 L18,-2 A18,18 0 1,0 18,2 Z'); }
+      }
+      .pacman-mouth {
+        animation: mouthChomp 0.28s infinite ease-in-out;
+      }
+
+      /* Energizer Pulse */
+      @keyframes energizerPulse {
+        0%, 100% { transform: scale(1); opacity: 0.8; }
+        50%      { transform: scale(1.4); opacity: 1; }
+      }
+      .energizer-dot {
+        animation: energizerPulse 1s infinite ease-in-out;
+        transform-origin: center;
+      }
+      ]]>
+    </style>
+  </defs>
+
+  <!-- Border & Transparent Frame -->
+  <rect x="2" y="2" width="876" height="186" rx="8" stroke="#30363D" stroke-width="1" fill="none"/>
+
+  <!-- Top Arcade HUD -->
+  <g transform="translate(28, 26)">
+    <text x="0" y="0" fill="#FACC15" font-family="'JetBrains Mono', Consolas, monospace" font-size="12" font-weight="800" letter-spacing="1">
+      ★ EAT-BETTER-INTERNSHIP // SPATIAL PLATFORM &amp; THREE.JS
+    </text>
+    <text x="440" y="0" text-anchor="middle" fill="#38BDF8" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="700">
+      TURBOPACK 3.2X • COMMITS CONSUMED: 2,211
+    </text>
+    <text x="824" y="0" text-anchor="end" fill="#34D399" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="700">
+      HIGH SCORE: 98,200
+    </text>
+  </g>
+
+  <!-- Retro Neon Maze Rails -->
+  <g stroke="#38BDF8" stroke-width="2" opacity="0.65">
+    <line x1="30" y1="58" x2="850" y2="58"/>
+    <line x1="30" y1="138" x2="850" y2="138"/>
+  </g>
+
+  <!-- Regular Commit Pellets Along the Corridor -->
+  <g fill="#22C55E" opacity="0.85">
+    <circle cx="70" cy="95" r="3.5"/><circle cx="106" cy="95" r="3.5"/><circle cx="142" cy="95" r="3.5"/><circle cx="178" cy="95" r="3.5"/><circle cx="214" cy="95" r="3.5"/><circle cx="250" cy="95" r="3.5"/><circle cx="286" cy="95" r="3.5"/><circle cx="322" cy="95" r="3.5"/><circle cx="358" cy="95" r="3.5"/><circle cx="394" cy="95" r="3.5"/><circle cx="430" cy="95" r="3.5"/><circle cx="466" cy="95" r="3.5"/><circle cx="502" cy="95" r="3.5"/><circle cx="538" cy="95" r="3.5"/><circle cx="574" cy="95" r="3.5"/><circle cx="610" cy="95" r="3.5"/><circle cx="646" cy="95" r="3.5"/><circle cx="682" cy="95" r="3.5"/><circle cx="718" cy="95" r="3.5"/><circle cx="754" cy="95" r="3.5"/><circle cx="790" cy="95" r="3.5"/><circle cx="826" cy="95" r="3.5"/>
+  </g>
+
+  <!-- Large Power Energizers (Turbopack Powered) -->
+  <circle cx="180" cy="95" r="8" fill="#FACC15" class="energizer-dot"/>
+  <circle cx="540" cy="95" r="8" fill="#38BDF8" class="energizer-dot"/>
+  <circle cx="760" cy="95" r="8" fill="#FACC15" class="energizer-dot"/>
+
+  <!-- Ghost 1 (Blinky / Red) -->
+  <g class="ghost-runner">
+    <path d="M-12,8 L-12,-4 A12,12 0 0,1 12,-4 L12,8 L8,5 L4,8 L0,5 L-4,8 L-8,5 Z" fill="#EF4444"/>
+    <ellipse cx="-4" cy="-4" rx="3.5" ry="4.5" fill="#FFFFFF"/>
+    <circle cx="-3" cy="-4" r="2" fill="#1E3A8A"/>
+    <ellipse cx="4" cy="-4" rx="3.5" ry="4.5" fill="#FFFFFF"/>
+    <circle cx="5" cy="-4" r="2" fill="#1E3A8A"/>
+  </g>
+
+  <!-- Pac-Man Runner -->
+  <g class="pacman-runner">
+    <path class="pacman-mouth" fill="#FACC15" d="M0,0 L14,-14 A18,18 0 1,0 14,14 Z"/>
+  </g>
+</svg>

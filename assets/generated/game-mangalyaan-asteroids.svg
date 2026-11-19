@@ -1,0 +1,132 @@
+<svg width="880" height="190" viewBox="0 0 880 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Mars Atmospheric Radial Glow -->
+    <radialGradient id="mars_glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#EF4444"/>
+      <stop offset="60%" stop-color="#DC2626"/>
+      <stop offset="100%" stop-color="#7F1D1D" stop-opacity="0.8"/>
+    </radialGradient>
+
+    <style>
+      <![CDATA[
+      /* Mangalyaan Orbiter Rotation & Inertia */
+      @keyframes orbiterManeuver {
+        0%   { transform: translate(380px, 95px) rotate(0deg); }
+        25%  { transform: translate(395px, 90px) rotate(15deg); }
+        50%  { transform: translate(380px, 102px) rotate(-10deg); }
+        75%  { transform: translate(365px, 92px) rotate(25deg); }
+        100% { transform: translate(380px, 95px) rotate(0deg); }
+      }
+      .mangalyaan-ship {
+        animation: orbiterManeuver 8s infinite ease-in-out;
+      }
+
+      /* Asteroid 1 Orbit and Tumble */
+      @keyframes asteroidTumble1 {
+        0%   { transform: translate(140px, 40px) rotate(0deg); }
+        100% { transform: translate(140px, 40px) rotate(360deg); }
+      }
+      .asteroid-1 {
+        animation: asteroidTumble1 12s infinite linear;
+        transform-origin: 140px 40px;
+      }
+
+      /* Asteroid 2 Tumble */
+      @keyframes asteroidTumble2 {
+        0%   { transform: translate(660px, 130px) rotate(0deg); }
+        100% { transform: translate(660px, 130px) rotate(-360deg); }
+      }
+      .asteroid-2 {
+        animation: asteroidTumble2 10s infinite linear;
+        transform-origin: 660px 130px;
+      }
+
+      /* Laser Railgun Blast */
+      @keyframes railgunBlast {
+        0%, 30%  { opacity: 0; stroke-dashoffset: 80; }
+        35%      { opacity: 1; stroke-dashoffset: 0; }
+        42%, 100%{ opacity: 0; stroke-dashoffset: -80; }
+      }
+      .railgun-beam {
+        stroke-dasharray: 60 120;
+        animation: railgunBlast 3s infinite linear;
+      }
+
+      /* Thruster Plume */
+      @keyframes thrusterPulse {
+        0%, 100% { transform: scaleY(1); opacity: 0.8; }
+        50%      { transform: scaleY(1.5); opacity: 1; }
+      }
+      .thruster-plume {
+        animation: thrusterPulse 0.2s infinite ease-in-out;
+        transform-origin: 0px 16px;
+      }
+      ]]>
+    </style>
+  </defs>
+
+  <!-- Border & Transparent Frame -->
+  <rect x="2" y="2" width="876" height="186" rx="8" stroke="#30363D" stroke-width="1" fill="none"/>
+
+  <!-- Top Arcade HUD -->
+  <g transform="translate(28, 26)">
+    <text x="0" y="0" fill="#EF4444" font-family="'JetBrains Mono', Consolas, monospace" font-size="12" font-weight="800" letter-spacing="1">
+      ★ MANGALYAAN-INDIA // ISRO MARS LAUNCH &amp; ORBIT
+    </text>
+    <text x="440" y="0" text-anchor="middle" fill="#38BDF8" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="700">
+      AREOCENTRIC ORBIT • TELEMETRY: 11.2 KM/S
+    </text>
+    <text x="824" y="0" text-anchor="end" fill="#FACC15" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="700">
+      TRAJECTORY: LOCKED
+    </text>
+  </g>
+
+  <!-- Glowing Planet Mars in Background -->
+  <g transform="translate(740, 95)">
+    <circle cx="0" cy="0" r="42" fill="url(#mars_glow)" opacity="0.85"/>
+    <ellipse cx="-12" cy="-14" rx="14" ry="7" fill="#FCA5A5" opacity="0.3"/>
+    <ellipse cx="14" cy="18" rx="20" ry="9" fill="#B91C1C" opacity="0.5"/>
+    <!-- Atmosphere haze ring -->
+    <circle cx="0" cy="0" r="46" stroke="#EF4444" stroke-width="1.5" stroke-dasharray="6 4" opacity="0.4"/>
+  </g>
+
+  <!-- Vector Wireframe Asteroid 1 -->
+  <g class="asteroid-1">
+    <polygon points="140,25 155,30 160,45 145,55 130,50 125,35" stroke="#94A3B8" stroke-width="1.5" fill="#1E293B" fill-opacity="0.5"/>
+    <line x1="140" y1="25" x2="145" y2="42" stroke="#64748B" stroke-width="1"/>
+    <line x1="160" y1="45" x2="145" y2="42" stroke="#64748B" stroke-width="1"/>
+    <line x1="125" y1="35" x2="145" y2="42" stroke="#64748B" stroke-width="1"/>
+  </g>
+
+  <!-- Vector Wireframe Asteroid 2 -->
+  <g class="asteroid-2">
+    <polygon points="660,115 675,120 678,138 662,148 648,140 645,125" stroke="#94A3B8" stroke-width="1.5" fill="#1E293B" fill-opacity="0.5"/>
+    <line x1="660" y1="115" x2="664" y2="132" stroke="#64748B" stroke-width="1"/>
+    <line x1="678" y1="138" x2="664" y2="132" stroke="#64748B" stroke-width="1"/>
+  </g>
+
+  <!-- Railgun Vector Laser Beam -->
+  <line x1="395" y1="92" x2="655" y2="130" stroke="#38BDF8" stroke-width="2.5" class="railgun-beam"/>
+
+  <!-- Mangalyaan Orbiter Spacecraft -->
+  <g class="mangalyaan-ship">
+    <!-- Solar Panels -->
+    <rect x="-38" y="-7" width="26" height="14" rx="2" fill="#0284C7" stroke="#38BDF8" stroke-width="1"/>
+    <line x1="-25" y1="-7" x2="-25" y2="7" stroke="#38BDF8" stroke-width="1"/>
+    <rect x="12" y="-7" width="26" height="14" rx="2" fill="#0284C7" stroke="#38BDF8" stroke-width="1"/>
+    <line x1="25" y1="-7" x2="25" y2="7" stroke="#38BDF8" stroke-width="1"/>
+
+    <!-- High Gain Antenna Dish -->
+    <ellipse cx="0" cy="-14" rx="12" ry="4" fill="#E2E8F0" stroke="#94A3B8" stroke-width="1"/>
+    <line x1="0" y1="-14" x2="0" y2="-9" stroke="#94A3B8" stroke-width="1.5"/>
+
+    <!-- Central Gold Foil Cubesat Body -->
+    <rect x="-10" y="-9" width="20" height="18" rx="2" fill="#D97706" stroke="#FBBF24" stroke-width="1.5"/>
+
+    <!-- LAM (Liquid Apogee Motor) Thruster Nozzle -->
+    <polygon points="-4,9 4,9 6,15 -6,15" fill="#475569"/>
+    <!-- Plasma Plume -->
+    <polygon points="-3,16 0,26 3,16" fill="#38BDF8" class="thruster-plume"/>
+    <polygon points="-1.5,16 0,22 1.5,16" fill="#FFFFFF" class="thruster-plume"/>
+  </g>
+</svg>

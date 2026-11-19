@@ -1,0 +1,136 @@
+<svg width="880" height="190" viewBox="0 0 880 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      <![CDATA[
+      @keyframes rooHop {
+        0%, 100% { transform: translate(110px, 118px) rotate(0deg); }
+        20%      { transform: translate(110px, 68px) rotate(-8deg); }
+        45%      { transform: translate(110px, 58px) rotate(2deg); }
+        70%      { transform: translate(110px, 92px) rotate(6deg); }
+        85%      { transform: translate(110px, 118px) rotate(0deg); }
+      }
+      .roo-character {
+        animation: rooHop 1.4s infinite cubic-bezier(0.28, 0.84, 0.42, 1);
+      }
+
+      @keyframes terrainScroll {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-440px); }
+      }
+      .scrolling-terrain {
+        animation: terrainScroll 4s infinite linear;
+      }
+
+      @keyframes coinSpin {
+        0%, 100% { transform: scaleX(1); }
+        50%      { transform: scaleX(0.15); }
+      }
+      .spinning-coin {
+        animation: coinSpin 0.7s infinite ease-in-out;
+        transform-origin: center;
+      }
+
+      @keyframes scoreFloat {
+        0%   { transform: translateY(0); opacity: 0; }
+        25%  { opacity: 1; }
+        80%  { transform: translateY(-24px); opacity: 1; }
+        100% { transform: translateY(-34px); opacity: 0; }
+      }
+      .score-popup {
+        animation: scoreFloat 1.4s infinite ease-out 0.3s;
+      }
+      ]]>
+    </style>
+  </defs>
+
+  <!-- Border & Transparent Frame -->
+  <rect x="2" y="2" width="876" height="186" rx="8" stroke="#30363D" stroke-width="1" fill="none"/>
+
+  <!-- Top Arcade HUD -->
+  <g transform="translate(28, 26)">
+    <text x="0" y="0" fill="#F59E0B" font-family="'JetBrains Mono', Consolas, monospace" font-size="12" font-weight="800" letter-spacing="1">
+      ★ POA-SKIPPI // 3D SHARK TANK EDTECH
+    </text>
+    <text x="440" y="0" text-anchor="middle" fill="#38BDF8" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="700">
+      STAGE: SKIPI ISLAND • 13/13 MILESTONES CLEARED
+    </text>
+    <text x="824" y="0" text-anchor="end" fill="#10B981" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="700">
+      SCORE: 13,400 XP
+    </text>
+  </g>
+
+  <!-- Sky Starfield & Floating Island Clouds -->
+  <g opacity="0.35" fill="#38BDF8">
+    <circle cx="80" cy="50" r="1.5"/>
+    <circle cx="240" cy="42" r="1"/>
+    <circle cx="480" cy="55" r="1.5"/>
+    <circle cx="680" cy="48" r="1"/>
+    <circle cx="810" cy="62" r="1.5"/>
+  </g>
+
+  <!-- Floating Coins -->
+  <g transform="translate(110, 60)" class="score-popup">
+    <text x="18" y="0" fill="#FDE047" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">+250 XP</text>
+  </g>
+
+  <!-- Scrolling Track & Obstacles (Repeated Pattern for seamless scroll) -->
+  <g class="scrolling-terrain">
+    <!-- First Section -->
+    <g transform="translate(0, 0)">
+      <!-- Ground line -->
+      <line x1="0" y1="152" x2="1320" y2="152" stroke="#30363D" stroke-width="2"/>
+      <line x1="0" y1="154" x2="1320" y2="154" stroke="#10B981" stroke-width="1.5" stroke-dasharray="14 8"/>
+
+      <!-- Milestone 1 -->
+      <rect x="220" y="128" width="32" height="24" rx="4" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+      <text x="236" y="144" fill="#38BDF8" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="800">M1</text>
+      <circle cx="236" cy="100" r="7" fill="#FACC15" class="spinning-coin"/>
+
+      <!-- Milestone 4 -->
+      <rect x="420" y="118" width="32" height="34" rx="4" fill="#1E293B" stroke="#C084FC" stroke-width="1.5"/>
+      <text x="436" y="139" fill="#C084FC" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="800">M4</text>
+      <circle cx="436" cy="85" r="7" fill="#FACC15" class="spinning-coin"/>
+
+      <!-- Milestone 8 -->
+      <rect x="640" y="124" width="32" height="28" rx="4" fill="#1E293B" stroke="#F59E0B" stroke-width="1.5"/>
+      <text x="656" y="142" fill="#F59E0B" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="800">M8</text>
+      <circle cx="656" cy="95" r="7" fill="#FACC15" class="spinning-coin"/>
+
+      <!-- Milestone 13 (Shark Tank Victory) -->
+      <rect x="860" y="110" width="36" height="42" rx="4" fill="#1E293B" stroke="#10B981" stroke-width="1.5"/>
+      <text x="878" y="135" fill="#10B981" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="800">M13</text>
+      <circle cx="878" cy="78" r="8" fill="#FDE047" class="spinning-coin"/>
+
+      <!-- Loop repetition -->
+      <rect x="1080" y="128" width="32" height="24" rx="4" fill="#1E293B" stroke="#38BDF8" stroke-width="1.5"/>
+      <text x="1096" y="144" fill="#38BDF8" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="800">M1</text>
+      <circle cx="1096" cy="100" r="7" fill="#FACC15" class="spinning-coin"/>
+    </g>
+  </g>
+
+  <!-- Roo Kangaroo Character (8-Bit Vector Mascot) -->
+  <g class="roo-character">
+    <!-- Tail -->
+    <path d="M-8,14 Q-18,22 -22,12 Q-14,8 -6,10 Z" fill="#D97706"/>
+    <!-- Feet -->
+    <ellipse cx="6" cy="22" rx="8" ry="3.5" fill="#B45309"/>
+    <ellipse cx="-4" cy="21" rx="7" ry="3" fill="#92400E"/>
+    <!-- Body -->
+    <ellipse cx="0" cy="10" rx="9" ry="12" fill="#F59E0B"/>
+    <!-- Pouch -->
+    <ellipse cx="3" cy="13" rx="5" ry="6" fill="#FDE68A"/>
+    <!-- Head -->
+    <circle cx="5" cy="-2" r="7" fill="#F59E0B"/>
+    <circle cx="8" cy="-4" r="1.5" fill="#000000"/>
+    <circle cx="8.5" cy="-4.5" r="0.6" fill="#FFFFFF"/>
+    <!-- Snout -->
+    <ellipse cx="10" cy="-1" rx="3.5" ry="2" fill="#FDE68A"/>
+    <circle cx="12" cy="-1.5" r="0.9" fill="#000000"/>
+    <!-- Ears -->
+    <polygon points="2,-7 6,-18 7,-6" fill="#F59E0B"/>
+    <polygon points="3,-7 6,-15 5,-7" fill="#FDE68A"/>
+    <polygon points="-1,-7 1,-16 3,-7" fill="#D97706"/>
+    <!-- Paws -->
+    <ellipse cx="6" cy="7" rx="3" ry="2" fill="#B45309"/>
+  </g>
+</svg>

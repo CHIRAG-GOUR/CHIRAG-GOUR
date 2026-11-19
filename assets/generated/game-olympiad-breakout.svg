@@ -1,0 +1,88 @@
+<svg width="880" height="190" viewBox="0 0 880 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      <![CDATA[
+      /* Paddle Horizontal Tracking */
+      @keyframes paddleMove {
+        0%, 100% { transform: translateX(280px); }
+        35%      { transform: translateX(480px); }
+        65%      { transform: translateX(160px); }
+        85%      { transform: translateX(420px); }
+      }
+      .breakout-paddle {
+        animation: paddleMove 6s infinite ease-in-out;
+      }
+
+      /* Photon Ball Physics Bounce */
+      @keyframes ballBounce {
+        0%   { transform: translate(320px, 150px); }
+        20%  { transform: translate(440px, 68px); }
+        40%  { transform: translate(560px, 150px); }
+        60%  { transform: translate(380px, 78px); }
+        80%  { transform: translate(220px, 150px); }
+        100% { transform: translate(320px, 150px); }
+      }
+      .energy-ball {
+        animation: ballBounce 6s infinite linear;
+      }
+
+      /* Brick Smash Animation */
+      @keyframes brickPop {
+        0%, 18%  { opacity: 1; transform: scale(1); }
+        20%      { opacity: 1; fill: #FFFFFF; transform: scale(1.2); }
+        24%, 90% { opacity: 0.12; fill: #1E293B; }
+        95%, 100%{ opacity: 1; }
+      }
+      .brick-hit-1 {
+        animation: brickPop 6s infinite ease-out;
+        transform-origin: center;
+      }
+      ]]>
+    </style>
+  </defs>
+
+  <!-- Border & Transparent Frame -->
+  <rect x="2" y="2" width="876" height="186" rx="8" stroke="#30363D" stroke-width="1" fill="none"/>
+
+  <!-- Top Arcade HUD -->
+  <g transform="translate(28, 26)">
+    <text x="0" y="0" fill="#38BDF8" font-family="'JetBrains Mono', Consolas, monospace" font-size="12" font-weight="800" letter-spacing="1">
+      ★ OLYMPIAD-ACTIVITIES // DIGITAL EXAMINATION ENGINE
+    </text>
+    <text x="440" y="0" text-anchor="middle" fill="#34D399" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="700">
+      ACCURACY: 99.4% • QUESTIONS SMASHED: 48/50
+    </text>
+    <text x="824" y="0" text-anchor="end" fill="#FACC15" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="700">
+      RANK: #1 GLOBAL
+    </text>
+  </g>
+
+  <!-- Wall of Examination Bricks -->
+  <!-- Row 1 (Purple - Advanced Logic) -->
+  <g transform="translate(45, 50)">
+    <rect x="0" y="0" width="44" height="12" rx="2" fill="#8B5CF6"/><rect x="49" y="0" width="44" height="12" rx="2" fill="#8B5CF6"/><rect x="98" y="0" width="44" height="12" rx="2" fill="#8B5CF6"/><rect x="147" y="0" width="44" height="12" rx="2" fill="#8B5CF6"/><rect x="196" y="0" width="44" height="12" rx="2" fill="#8B5CF6"/><rect x="245" y="0" width="44" height="12" rx="2" fill="#8B5CF6"/><rect x="294" y="0" width="44" height="12" rx="2" fill="#8B5CF6"/><rect x="343" y="0" width="44" height="12" rx="2" fill="#8B5CF6"/><rect x="392" y="0" width="44" height="12" rx="2" fill="#8B5CF6"/><rect x="441" y="0" width="44" height="12" rx="2" fill="#8B5CF6"/><rect x="490" y="0" width="44" height="12" rx="2" fill="#8B5CF6"/><rect x="539" y="0" width="44" height="12" rx="2" fill="#8B5CF6"/><rect x="588" y="0" width="44" height="12" rx="2" fill="#8B5CF6"/><rect x="637" y="0" width="44" height="12" rx="2" fill="#8B5CF6"/><rect x="686" y="0" width="44" height="12" rx="2" fill="#8B5CF6"/><rect x="735" y="0" width="44" height="12" rx="2" fill="#8B5CF6"/>
+  </g>
+  <!-- Row 2 (Cyan - Computer Architecture) -->
+  <g transform="translate(45, 66)">
+    <rect x="0" y="0" width="44" height="12" rx="2" fill="#38BDF8" class=""/><rect x="49" y="0" width="44" height="12" rx="2" fill="#38BDF8" class=""/><rect x="98" y="0" width="44" height="12" rx="2" fill="#38BDF8" class=""/><rect x="147" y="0" width="44" height="12" rx="2" fill="#38BDF8" class=""/><rect x="196" y="0" width="44" height="12" rx="2" fill="#38BDF8" class=""/><rect x="245" y="0" width="44" height="12" rx="2" fill="#38BDF8" class=""/><rect x="294" y="0" width="44" height="12" rx="2" fill="#38BDF8" class=""/><rect x="343" y="0" width="44" height="12" rx="2" fill="#38BDF8" class=""/><rect x="392" y="0" width="44" height="12" rx="2" fill="#FFFFFF" class="brick-hit-1"/><rect x="441" y="0" width="44" height="12" rx="2" fill="#38BDF8" class=""/><rect x="490" y="0" width="44" height="12" rx="2" fill="#38BDF8" class=""/><rect x="539" y="0" width="44" height="12" rx="2" fill="#38BDF8" class=""/><rect x="588" y="0" width="44" height="12" rx="2" fill="#38BDF8" class=""/><rect x="637" y="0" width="44" height="12" rx="2" fill="#38BDF8" class=""/><rect x="686" y="0" width="44" height="12" rx="2" fill="#38BDF8" class=""/><rect x="735" y="0" width="44" height="12" rx="2" fill="#38BDF8" class=""/>
+  </g>
+  <!-- Row 3 (Emerald - Mathematics & Vectors) -->
+  <g transform="translate(45, 82)">
+    <rect x="0" y="0" width="44" height="12" rx="2" fill="#10B981"/><rect x="49" y="0" width="44" height="12" rx="2" fill="#10B981"/><rect x="98" y="0" width="44" height="12" rx="2" fill="#10B981"/><rect x="147" y="0" width="44" height="12" rx="2" fill="#10B981"/><rect x="196" y="0" width="44" height="12" rx="2" fill="#10B981"/><rect x="245" y="0" width="44" height="12" rx="2" fill="#10B981"/><rect x="294" y="0" width="44" height="12" rx="2" fill="#10B981"/><rect x="343" y="0" width="44" height="12" rx="2" fill="#10B981"/><rect x="392" y="0" width="44" height="12" rx="2" fill="#10B981"/><rect x="441" y="0" width="44" height="12" rx="2" fill="#10B981"/><rect x="490" y="0" width="44" height="12" rx="2" fill="#10B981"/><rect x="539" y="0" width="44" height="12" rx="2" fill="#10B981"/><rect x="588" y="0" width="44" height="12" rx="2" fill="#10B981"/><rect x="637" y="0" width="44" height="12" rx="2" fill="#10B981"/><rect x="686" y="0" width="44" height="12" rx="2" fill="#10B981"/><rect x="735" y="0" width="44" height="12" rx="2" fill="#10B981"/>
+  </g>
+
+  <!-- Bouncing Photon Ball -->
+  <g class="energy-ball">
+    <circle cx="0" cy="0" r="5" fill="#38BDF8"/>
+    <circle cx="0" cy="0" r="2.5" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Player Arkanoid Paddle -->
+  <g class="breakout-paddle" transform="translate(0, 156)">
+    <rect x="0" y="0" width="80" height="10" rx="5" fill="#38BDF8"/>
+    <rect x="15" y="2" width="50" height="6" rx="3" fill="#E0F2FE"/>
+    <!-- Laser Winglets -->
+    <rect x="-4" y="2" width="4" height="6" fill="#F43F5E"/>
+    <rect x="80" y="2" width="4" height="6" fill="#F43F5E"/>
+  </g>
+</svg>
