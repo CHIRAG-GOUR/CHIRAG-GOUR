@@ -87,7 +87,7 @@
       "forks": 0,
       "stage": "Maintained & Stable",
       "stage_badge": "Maintained",
-      "days_since_push": 57,
+      "days_since_push": 58,
       "pushed_at": "2026-09-22T11:34:00Z",
       "featured": true,
       "complexity_tier": "High"
@@ -160,7 +160,7 @@
       "forks": 0,
       "stage": "Showcase / Simulation",
       "stage_badge": "Showcase",
-      "days_since_push": 216,
+      "days_since_push": 217,
       "pushed_at": "2026-04-16T11:01:16Z",
       "featured": true,
       "complexity_tier": "Showcase"
@@ -208,7 +208,7 @@
       "stage": "Actively Developing",
       "stage_badge": "Active",
       "days_since_push": 0,
-      "pushed_at": "2026-11-19T06:31:58Z",
+      "pushed_at": "2026-11-19T11:43:28Z",
       "featured": false,
       "complexity_tier": "Standard"
     },
@@ -302,7 +302,7 @@
       "forks": 0,
       "stage": "Actively Developing",
       "stage_badge": "Active",
-      "days_since_push": 2,
+      "days_since_push": 3,
       "pushed_at": "2026-11-16T11:25:31Z",
       "featured": false,
       "complexity_tier": "Standard"
@@ -322,7 +322,7 @@
       "forks": 0,
       "stage": "Actively Developing",
       "stage_badge": "Active",
-      "days_since_push": 39,
+      "days_since_push": 40,
       "pushed_at": "2026-10-10T11:35:34Z",
       "featured": false,
       "complexity_tier": "Standard"
@@ -409,7 +409,7 @@
       "forks": 0,
       "stage": "Maintained & Stable",
       "stage_badge": "Maintained",
-      "days_since_push": 57,
+      "days_since_push": 58,
       "pushed_at": "2026-09-22T11:34:00Z",
       "featured": true,
       "complexity_tier": "High"
@@ -518,7 +518,7 @@
       "forks": 0,
       "stage": "Maintained & Stable",
       "stage_badge": "Maintained",
-      "days_since_push": 98,
+      "days_since_push": 99,
       "pushed_at": "2026-08-12T11:48:47Z",
       "featured": false,
       "complexity_tier": "Standard"
@@ -538,7 +538,7 @@
       "forks": 0,
       "stage": "Maintained & Stable",
       "stage_badge": "Maintained",
-      "days_since_push": 98,
+      "days_since_push": 99,
       "pushed_at": "2026-08-12T11:48:52Z",
       "featured": false,
       "complexity_tier": "Standard"
@@ -558,7 +558,7 @@
       "forks": 0,
       "stage": "Maintained & Stable",
       "stage_badge": "Maintained",
-      "days_since_push": 104,
+      "days_since_push": 105,
       "pushed_at": "2026-08-06T11:38:49Z",
       "featured": false,
       "complexity_tier": "Standard"
@@ -622,7 +622,7 @@
       "forks": 0,
       "stage": "Maintained & Stable",
       "stage_badge": "Maintained",
-      "days_since_push": 121,
+      "days_since_push": 122,
       "pushed_at": "2026-07-20T11:20:42Z",
       "featured": false,
       "complexity_tier": "Medium"
@@ -878,7 +878,7 @@
       "forks": 0,
       "stage": "Foundational Archive",
       "stage_badge": "Archived",
-      "days_since_push": 211,
+      "days_since_push": 212,
       "pushed_at": "2026-04-21T10:14:07Z",
       "featured": false,
       "complexity_tier": "Standard"
@@ -903,7 +903,7 @@
       "forks": 0,
       "stage": "Showcase / Simulation",
       "stage_badge": "Showcase",
-      "days_since_push": 216,
+      "days_since_push": 217,
       "pushed_at": "2026-04-16T11:01:16Z",
       "featured": true,
       "complexity_tier": "Showcase"
@@ -983,7 +983,7 @@
       "forks": 0,
       "stage": "Foundational Archive",
       "stage_badge": "Archived",
-      "days_since_push": 226,
+      "days_since_push": 227,
       "pushed_at": "2026-04-06T12:06:24Z",
       "featured": false,
       "complexity_tier": "Standard"
@@ -1003,7 +1003,7 @@
       "forks": 0,
       "stage": "Foundational Archive",
       "stage_badge": "Archived",
-      "days_since_push": 229,
+      "days_since_push": 230,
       "pushed_at": "2026-04-03T11:20:20Z",
       "featured": false,
       "complexity_tier": "Standard"
@@ -1163,7 +1163,7 @@
       "forks": 0,
       "stage": "Foundational Archive",
       "stage_badge": "Archived",
-      "days_since_push": 246,
+      "days_since_push": 247,
       "pushed_at": "2026-03-17T11:29:25Z",
       "featured": false,
       "complexity_tier": "Standard"
@@ -1248,7 +1248,7 @@
       "forks": 0,
       "stage": "Foundational Archive",
       "stage_badge": "Archived",
-      "days_since_push": 256,
+      "days_since_push": 257,
       "pushed_at": "2026-03-07T11:05:39Z",
       "featured": false,
       "complexity_tier": "Standard"
@@ -1308,7 +1308,7 @@
       "forks": 0,
       "stage": "Foundational Archive",
       "stage_badge": "Archived",
-      "days_since_push": 264,
+      "days_since_push": 265,
       "pushed_at": "2026-02-27T11:14:10Z",
       "featured": false,
       "complexity_tier": "Standard"
@@ -1348,7 +1348,7 @@
       "forks": 0,
       "stage": "Foundational Archive",
       "stage_badge": "Archived",
-      "days_since_push": 278,
+      "days_since_push": 279,
       "pushed_at": "2026-02-13T11:47:57Z",
       "featured": false,
       "complexity_tier": "Standard"
@@ -1366,7 +1366,7 @@
       "forks": 0,
       "stage": "Foundational Archive",
       "stage_badge": "Archived",
-      "days_since_push": 398,
+      "days_since_push": 399,
       "pushed_at": "2025-10-16T11:35:23Z",
       "featured": false,
       "complexity_tier": "Standard"
