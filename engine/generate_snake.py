@@ -11,8 +11,22 @@ OUTPUT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "asse
 
 def generate_snake_svg():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    
-    # 52 weeks x 7 days
+    out_file = os.path.join(OUTPUT_DIR, "github-contribution-grid-snake.svg")
+
+    # If the authentic full-grid Platane contribution snake exists, preserve and ensure dark theme palette
+    if os.path.exists(out_file):
+        with open(out_file, "r", encoding="utf-8") as f:
+            content = f.read()
+        if "Platane/snk" in content:
+            old_root = ':root{--cb:#1b1f230a;--cs:#15803d;--ce:#ebedf0;--c0:#ebedf0;--c1:#9be9a8;--c2:#40c463;--c3:#30a14e;--c4:#216e39}'
+            dark_root = ':root{--cb:#30363d66;--cs:#39d353;--ce:#161b22;--c0:#161b22;--c1:#0e4429;--c2:#006d32;--c3:#26a641;--c4:#39d353}'
+            themed = content.replace(old_root, dark_root)
+            with open(out_file, "w", encoding="utf-8") as f:
+                f.write(themed)
+            print(f"[SNAKE] Preserved authentic full-grid Platane snake with dark palette at {out_file}")
+            return
+
+    # 52 weeks x 7 days fallback generator
     cols = 52
     rows = 7
     cell_size = 11
