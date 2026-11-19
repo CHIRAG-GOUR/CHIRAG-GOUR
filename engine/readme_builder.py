@@ -69,6 +69,11 @@ class ReadmeBuilder:
 
 <br/><br/>
 
+<!-- RETRO PAC-MAN REAL-TIME COMMIT CHOMPER (10 LATEST COMMITS) -->
+<img src="assets/generated/arcade-pacman-commit-eater.svg" alt="Pac-Man Real-Time Commit Chomper" width="100%"/>
+
+<br/><br/>
+
 <!-- ACTIVITY VELOCITY WAVEFORM & WEEKLY RHYTHM -->
 <img src="assets/generated/activity-velocity-graph.svg" alt="Activity Velocity Waveform" width="100%"/>
 
