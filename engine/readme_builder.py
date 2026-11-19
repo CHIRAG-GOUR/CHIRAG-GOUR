@@ -84,79 +84,18 @@ class ReadmeBuilder:
 
 <br/><br/>
 
-<!-- CURATED FLAGSHIP PROJECTS & ARCADE HIGHLIGHTS -->
+<!-- CURATED FLAGSHIP PROJECTS -->
 <div id="curated-flagship-projects">
-  <img src="assets/generated/project-previews.svg" alt="Curated Flagship Projects Overview" width="100%"/>
+  <img src="assets/generated/project-previews.svg" alt="Curated Flagship Projects" width="100%"/>
 </div>
 
-<br/><br/>
-
-<!-- GAME 1: POA-SKIPPI (8-BIT ROO RUNNER) -->
-<a href="https://poa-skippi.web.app">
-  <img src="assets/generated/game-skippi-roo-runner.svg" alt="POA-Skippi 8-Bit Roo Runner Game" width="100%"/>
-</a>
 <br/>
+
 <div align="center">
-  <a href="https://poa-skippi.web.app"><img src="https://img.shields.io/badge/POA--Skippi-Live_Demo_🚀-0284C7?style=for-the-badge&logo=firebase&logoColor=white" alt="Live Demo"/></a>
+  <a href="https://poa-skippi.web.app"><img src="https://img.shields.io/badge/POA--Skippi-Live_Demo-0284C7?style=for-the-badge&logo=firebase&logoColor=white" alt="POA Skippi Live"/></a>
   &nbsp;&nbsp;
-  <a href="https://github.com/CHIRAG-GOUR/POA-Skippi"><img src="https://img.shields.io/badge/Source_Code-TypeScript_%26_Three.js-7C3AED?style=for-the-badge&logo=github&logoColor=white" alt="Source Code"/></a>
-</div>
-
-<br/><br/>
-
-<!-- GAME 2: MANGALYAAN-INDIA (VECTOR ASTEROIDS & ORBIT) -->
-<a href="https://github.com/CHIRAG-GOUR/Mangalyan-India">
-  <img src="assets/generated/game-mangalyaan-asteroids.svg" alt="Mangalyan-India Vector Space Defense Game" width="100%"/>
-</a>
-<br/>
-<div align="center">
-  <a href="https://github.com/CHIRAG-GOUR/Mangalyan-India"><img src="https://img.shields.io/badge/Mangalyaan--India-Mars_Aerospace_Sim-DC2626?style=for-the-badge&logo=nasa&logoColor=white" alt="Mars Sim"/></a>
+  <a href="https://olympiad-activities.web.app"><img src="https://img.shields.io/badge/Olympiad_Activities-Live_Demo-059669?style=for-the-badge&logo=firebase&logoColor=white" alt="Olympiad Live"/></a>
   &nbsp;&nbsp;
-  <a href="https://github.com/CHIRAG-GOUR/Mangalyan-India"><img src="https://img.shields.io/badge/Source_Code-Three.js_PBR_Shaders-7C3AED?style=for-the-badge&logo=github&logoColor=white" alt="Source Code"/></a>
-</div>
-
-<br/><br/>
-
-<!-- GAME 3: EAT-BETTER-INTERNSHIP (PAC-MAN NUTRITION CHASER) -->
-<a href="https://github.com/CHIRAG-GOUR/Eat-Better-Internship">
-  <img src="assets/generated/game-eatbetter-pacman.svg" alt="Eat-Better Pac-Man Commit Chaser Game" width="100%"/>
-</a>
-<br/>
-<div align="center">
-  <a href="https://github.com/CHIRAG-GOUR/Eat-Better-Internship"><img src="https://img.shields.io/badge/Eat_Better-Spatial_Internship_Platform-F59E0B?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Spatial Platform"/></a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/CHIRAG-GOUR/Eat-Better-Internship"><img src="https://img.shields.io/badge/Source_Code-Next.js_Turbopack-7C3AED?style=for-the-badge&logo=github&logoColor=white" alt="Source Code"/></a>
-</div>
-
-<br/><br/>
-
-<!-- GAME 4: OLYMPIAD-ACTIVITIES (BREAKOUT BRICK BREAKER) -->
-<a href="https://olympiad-activities.web.app">
-  <img src="assets/generated/game-olympiad-breakout.svg" alt="Olympiad Activities Knowledge Breakout Game" width="100%"/>
-</a>
-<br/>
-<div align="center">
-  <a href="https://olympiad-activities.web.app"><img src="https://img.shields.io/badge/Olympiad_Activities-Live_Examination_Platform-059669?style=for-the-badge&logo=firebase&logoColor=white" alt="Live Demo"/></a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/CHIRAG-GOUR/Olympiad-Activities"><img src="https://img.shields.io/badge/Source_Code-React_Three_Fiber-7C3AED?style=for-the-badge&logo=github&logoColor=white" alt="Source Code"/></a>
-</div>
-
-<br/><br/>
-
-<!-- GAME 5: PHYSICSMOTION2 (CONWAY'S GAME OF LIFE & KINEMATICS) -->
-<a href="https://github.com/CHIRAG-GOUR/physicsmotion2">
-  <img src="assets/generated/game-physics-automata.svg" alt="PhysicsMotion2 Conway Automata Simulation" width="100%"/>
-</a>
-<br/>
-<div align="center">
-  <a href="https://github.com/CHIRAG-GOUR/physicsmotion2"><img src="https://img.shields.io/badge/PhysicsMotion2-Kinematic_Simulation_Engine-6366F1?style=for-the-badge&logo=webgl&logoColor=white" alt="Physics Motion"/></a>
-  &nbsp;&nbsp;
-  <a href="https://github.com/CHIRAG-GOUR/physicsmotion2"><img src="https://img.shields.io/badge/Source_Code-Theatre.js_%26_Groq_LPU-7C3AED?style=for-the-badge&logo=github&logoColor=white" alt="Source Code"/></a>
-</div>
-
-<br/><br/>
-
-<div align="center">
   <a href="https://github.com/CHIRAG-GOUR?tab=repositories"><img src="https://img.shields.io/badge/58_Source_Repositories-Explore_All-7C3AED?style=for-the-badge&logo=github&logoColor=white" alt="Explore Repositories"/></a>
 </div>
 
