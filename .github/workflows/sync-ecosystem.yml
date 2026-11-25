@@ -42,17 +42,6 @@ jobs:
         run: |
           python engine/run_pipeline.py
 
-      - name: Generate Contribution Snake
-        uses: Platane/snk@v3
-        continue-on-error: true
-        with:
-          github_user_name: CHIRAG-GOUR
-          outputs: |
-            assets/generated/github-contribution-grid-snake.svg?color_snake=#39d353&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353
-
-      - name: Seat Chirag on the snake + lock dark theme
-        run: python engine/svg_backdrop.py
-
       - name: Commit & Push Changes
         run: |
           git config --local user.name "github-actions[bot]"

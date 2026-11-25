@@ -3,8 +3,8 @@ README Builder Engine — "the README is a cartridge" edition.
 
 Lays the profile out like a game: title screen → menu → six stages
 (Player Select, Skill Tree, Level Select, High Scores, Bonus Arcade, Continue?)
-→ end credits. 3D Chirag runs through every stage banner, rides the snake,
-pilots the rocket and stars in the real 3D game hosted on GitHub Pages.
+→ end credits. 3D Chirag runs through every stage banner, rides the snake row by row,
+blasts his name out of the contribution grid and stars in the real 3D game hosted on GitHub Pages.
 
 GitHub strips scripts, iframes and styles from READMEs, so everything here is
 animated SVG + links; the fully interactive part lives at GAME_URL.
@@ -167,6 +167,21 @@ class ReadmeBuilder:
 
 {_img(f"{ASSET}/trophies-and-achievements.svg", "Milestone trophies")}
 
+<br/><br/><br/>
+
+{_stage(5, "arcade", "Bonus Arcade")}
+<br/>
+
+{_link(f"{GAME_URL}?mode=snake", _img(f"{ASSET}/snake-ride.svg", "Snake Ride — Chirag rides a snake row by row across his real contribution graph. Click to play it in 3D"))}
+
+<br/><br/>
+
+{_link(f"{GAME_URL}?mode=space", _img(f"{ASSET}/arcade-rocket-commit-game.svg", "Space Defender — Chirag blasts only the contribution cells that spell CHIRAG. Click to play it in 3D"))}
+
+<br/><br/>
+
+{_img(f"{ASSET}/arcade-pacman-commit-eater.svg", "Commit chomper eating the 10 latest commits")}
+
 <br/><br/>
 
 {_img(f"{ASSET}/commit-skyline-isometric.svg", "3D isometric commit skyline")}
@@ -179,28 +194,9 @@ class ReadmeBuilder:
 
 {_img(f"{ASSET}/sound-waveform.svg", "Coding cadence waveform")}
 
-<br/><br/><br/>
-
-{_stage(5, "arcade", "Bonus Arcade")}
-<br/>
-
-{_link(GAME_URL, _img(f"{GAME}/game-trailer.svg", "Chirag: The Game — Chirag rides the commit snake and pilots the space defender. Click to play in 3D"))}
-
 <br/><br/>
 
 {play_row}
-
-<br/><br/>
-
-{_img(f"{ASSET}/github-contribution-grid-snake.svg", "Chirag riding the contribution snake")}
-
-<br/><br/>
-
-{_img(f"{ASSET}/arcade-rocket-commit-game.svg", "Chirag piloting the rocket through the contribution grid")}
-
-<br/><br/>
-
-{_img(f"{ASSET}/arcade-pacman-commit-eater.svg", "Commit chomper eating the 10 latest commits")}
 
 <br/><br/><br/>
 

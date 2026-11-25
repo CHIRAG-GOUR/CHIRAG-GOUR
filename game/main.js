@@ -692,6 +692,25 @@ const Snake = {
 };
 
 // ---------- SPACE DEFENDER
+const LETTERS = {
+  C: ['.####', '#....', '#....', '#....', '#....', '#....', '.####'],
+  H: ['#...#', '#...#', '#...#', '#####', '#...#', '#...#', '#...#'],
+  I: ['###', '.#.', '.#.', '.#.', '.#.', '.#.', '###'],
+  R: ['####.', '#...#', '#...#', '####.', '#..#.', '#...#', '#...#'],
+  A: ['.###.', '#...#', '#...#', '#####', '#...#', '#...#', '#...#'],
+  G: ['.####', '#....', '#....', '#.###', '#...#', '#...#', '.####'],
+};
+function nameCells(word = 'CHIRAG') {
+  const out = [];
+  let x = 0;
+  for (const ch of word) {
+    const rows = LETTERS[ch];
+    rows.forEach((row, r) => [...row].forEach((v, c) => { if (v === '#') out.push([x + c, r]); }));
+    x += rows[0].length + 2;
+  }
+  return out;
+}
+
 const Space = {
   enter() {
     this.group = new THREE.Group();
@@ -784,27 +803,32 @@ const Space = {
   },
   nextWave() {
     this.wave += 1;
-    const rows = Math.min(3 + Math.floor(this.wave / 2), 6);
-    const cols = camera.aspect < 0.9 ? 6 : 9;
-    for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
+    // the enemy formation is my name: a horizontal wall of contribution blocks spelling CHIRAG
+    const portrait = camera.aspect < 0.9;
+    this.colGap = portrait ? 0.3 : 0.5;
+    this.rowGap = portrait ? 0.3 : 0.45;  // depth between letter rows
+    this.yGap = portrait ? 0.45 : 0.7;    // letters stand up on a ramp so the word reads from the cockpit
+    const cells = nameCells();
+    const width = Math.max(...cells.map(([c]) => c)) + 1;
+    for (const [c, r] of cells) {
       const hp = Math.min(4, 1 + Math.floor(Math.random() * (1 + this.wave * 0.7)));
       const b = mesh(this.blockGeo, this.blockMats[hp], { outline: 0.05 });
-      b.userData = { hp, col: c - (cols - 1) / 2, row: r };
+      b.userData = { hp, col: c - (width - 1) / 2, row: r, s: this.colGap * 0.9 };
+      b.scale.setScalar(b.userData.s);
       this.group.add(b);
       this.blocks.push(b);
     }
-    this.formZ = -34;
+    this.formZ = -24;
     this.formT = 0;
     this.advance = 0.55 + this.wave * 0.12;
-    banner(`WAVE ${this.wave}`, 1200);
+    banner(`WAVE ${this.wave}<br><small>blast my name</small>`, 1400);
   },
   fire() {
-    for (const k of [-1, 1]) {
-      const b = new THREE.Mesh(this.bulletGeo, this.bulletMat);
-      b.position.set(this.ship.position.x + 1.65 * k, 0, this.ship.position.z - 0.4);
-      this.group.add(b);
-      this.bullets.push(b);
-    }
+    // single centre cannon: precise enough to pick individual letter blocks
+    const b = new THREE.Mesh(this.bulletGeo, this.bulletMat);
+    b.position.set(this.ship.position.x, 0, this.ship.position.z - 1.2);
+    this.group.add(b);
+    this.bullets.push(b);
     sfx.shoot();
   },
   hurt() {
@@ -846,7 +870,7 @@ const Space = {
     }
     this.overShown = false;
     // movement
-    const limit = portrait ? 5.5 : 9;
+    const limit = portrait ? 6.4 : 10.6;
     const target = (input.right ? 1 : 0) - (input.left ? 1 : 0);
     this.vx += (target * 14 - this.vx) * Math.min(1, dt * 8);
     this.ship.position.x = THREE.MathUtils.clamp(this.ship.position.x + this.vx * dt, -limit, limit);
@@ -857,25 +881,37 @@ const Space = {
     Pose.sit(chirag, t, this.vx * 0.02);
     // auto-fire
     this.fireCd -= dt;
-    if (this.fireCd <= 0) { this.fire(); this.fireCd = 0.2; }
+    if (this.fireCd <= 0) { this.fire(); this.fireCd = 0.12; }
     // formation
     this.formT += dt;
     this.formZ += this.advance * dt;
-    const sway = Math.sin(this.formT * 0.9) * (portrait ? 1.2 : 2.5);
+    const sway = Math.sin(this.formT * 0.9) * (portrait ? 0.6 : 1.2);
     for (const b of this.blocks) {
       const u = b.userData;
-      b.position.set(u.col * 1.5 + sway, 0.2 + Math.sin(t * 2 + u.col) * 0.15, this.formZ + u.row * 1.5);
-      b.rotation.y += dt * 0.6;
+      b.position.set(u.col * this.colGap + sway, 0.25 + (6 - u.row) * this.yGap + Math.sin(t * 2 + u.col * 0.3) * 0.08, this.formZ + u.row * this.rowGap);
       if (b.position.z > this.ship.position.z - 1) { this.lives = 1; this.inv = 0; this.hurt(); return; }
     }
     // bullets
     for (let i = this.bullets.length - 1; i >= 0; i--) {
       const bl = this.bullets[i];
+      const prevZ = bl.position.z;
       bl.position.z -= 42 * dt;
+      // once inside the word, the laser climbs the ramp so it can reach every letter row
+      const depth = (this.formZ + 6 * this.rowGap - bl.position.z) / this.rowGap;
+      bl.position.y = 0.25 + THREE.MathUtils.clamp(depth, 0, 6) * this.yGap;
       let hit = false;
-      for (let j = this.blocks.length - 1; j >= 0 && !hit; j--) {
+      // swept test (no tunnelling through the thin letter blocks); nearest block in the lane wins
+      let best = -1;
+      for (let j = 0; j < this.blocks.length; j++) {
+        const b = this.blocks[j], h = b.userData.s * 0.6;
+        if (Math.abs(b.position.x - bl.position.x) < h && b.position.z - h <= prevZ && b.position.z + h >= bl.position.z) {
+          if (best < 0 || b.position.z > this.blocks[best].position.z) best = j;
+        }
+      }
+      if (best >= 0) {
+        const j = best;
         const b = this.blocks[j];
-        if (Math.abs(b.position.x - bl.position.x) < 0.6 && Math.abs(b.position.z - bl.position.z) < 0.6) {
+        {
           hit = true;
           b.userData.hp -= 1;
           if (b.userData.hp <= 0) {
@@ -886,7 +922,7 @@ const Space = {
             sfx.boom();
           } else {
             b.material = this.blockMats[b.userData.hp];
-            b.scale.setScalar(0.85);
+            b.scale.setScalar(b.userData.s * 0.8);
             this.score += 1;
           }
           setScore(this.score, Math.max(this.best, this.score));
@@ -894,7 +930,7 @@ const Space = {
       }
       if (hit || bl.position.z < -60) { this.group.remove(bl); this.bullets.splice(i, 1); }
     }
-    this.blocks.forEach(b => b.scale.lerp(new THREE.Vector3(1, 1, 1), dt * 8));
+    this.blocks.forEach(b => b.scale.lerp(new THREE.Vector3(b.userData.s, b.userData.s, b.userData.s), dt * 8));
     // bugs dropped by the grid
     this.bugCd -= dt;
     if (this.bugCd <= 0 && this.blocks.length) {

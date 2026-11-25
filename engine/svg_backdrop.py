@@ -1,5 +1,5 @@
 """
-SVG Post-Processor — dark-theme lock + the snake rider.
+SVG Post-Processor — dark-theme lock.
 
 The README is dark-theme only. Several generated panels are transparent, so this pass
 bakes the dark page colour (#0D1117 — identical to GitHub's dark theme) into each of
@@ -7,15 +7,12 @@ them: dark-theme viewers see no change, and anyone browsing GitHub in light mode
 gets the dark design instead of white text on a white page.
 
 Idempotent: a marker comment prevents double application. Safe to run after any
-generator, including the third-party contribution snake action.
+generator.
 """
 
 import os
 import re
 import sys
-
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import character as hero  # noqa: E402
 
 ASSETS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "assets", "generated"))
 MARKER = "<!--backdrop-->"
@@ -31,8 +28,6 @@ TARGETS = {
     "activity-velocity-graph.svg": (0, 0),
     "sound-waveform.svg": (0, 0),
     "languages-and-radar.svg": (0, 0),
-    "github-contribution-grid-snake.svg": (0, 0),
-    "arcade-rocket-commit-game.svg": (0, 0),
     "arcade-pacman-commit-eater.svg": (0, 0),
 }
 
@@ -75,37 +70,7 @@ def apply_backdrop(path: str, pad_x: float, pad_y: float) -> bool:
     return True
 
 
-RIDER_MARKER = "<!--rider-->"
-
-
-def add_snake_rider(path: str) -> bool:
-    """Seat 3D Chirag on the contribution snake's head.
-
-    The Platane/snk SVG animates each segment with a CSS class (.s.s0 is the head), so a
-    group sharing those classes inherits the exact same keyframed path and rides along.
-    """
-    with open(path, "r", encoding="utf-8") as f:
-        svg = f.read()
-    if RIDER_MARKER in svg or 'class="s s0"' not in svg:
-        return False
-    cell = 1.2
-    w = len(hero.SIT_FRONT[0]) * cell
-    h = len(hero.SIT_FRONT) * cell
-    rider = (
-        f'{RIDER_MARKER}<g class="s s0" style="fill:none">'
-        f'<g transform="translate({8 - w / 2:.2f} {3.5 - h:.2f})">{hero.sit_front(0, 0, cell)}</g></g>'
-    )
-    end = svg.rfind("</svg>")
-    svg = svg[:end] + rider + svg[end:]
-    with open(path, "w", encoding="utf-8") as f:
-        f.write(svg)
-    return True
-
-
 def main(names=None):
-    snake = os.path.join(ASSETS_DIR, "github-contribution-grid-snake.svg")
-    if os.path.exists(snake) and add_snake_rider(snake):
-        print("[RIDER] Chirag is riding the snake")
     for name, (px, py) in TARGETS.items():
         if names and name not in names:
             continue

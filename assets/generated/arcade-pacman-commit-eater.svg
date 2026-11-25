@@ -386,8 +386,8 @@
     <g transform="translate(40, 48)">
       <rect width="146" height="48" rx="5" fill="#0D1117" stroke="#30363D" stroke-width="1.2" class="slot-box-1"/>
       <text x="8" y="15" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">#8950ed5</text>
-      <text x="138" y="15" text-anchor="end" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Eat-Better</text>
-      <text x="8" y="30" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="500">feat: Module 5 Capstone 3D</text>
+      <text x="138" y="15" text-anchor="end" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Eat-Better-..</text>
+      <text x="8" y="30" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="500">feat: Module 5 Capst..</text>
       <text x="8" y="42" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" class="slot-status-1">● INGESTING COMMIT</text>
     </g>
     <!-- Pellet 1 on top rail -->
@@ -395,8 +395,8 @@
     <g transform="translate(204, 48)">
       <rect width="146" height="48" rx="5" fill="#0D1117" stroke="#30363D" stroke-width="1.2" class="slot-box-2"/>
       <text x="8" y="15" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">#b9b293b</text>
-      <text x="138" y="15" text-anchor="end" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Eat-Better</text>
-      <text x="8" y="30" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="500">feat: Experiential Activity 4</text>
+      <text x="138" y="15" text-anchor="end" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Eat-Better-..</text>
+      <text x="8" y="30" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="500">feat: Experiential A..</text>
       <text x="8" y="42" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" class="slot-status-2">● INGESTING COMMIT</text>
     </g>
     <!-- Pellet 2 on top rail -->
@@ -404,17 +404,17 @@
     <g transform="translate(368, 48)">
       <rect width="146" height="48" rx="5" fill="#0D1117" stroke="#30363D" stroke-width="1.2" class="slot-box-3"/>
       <text x="8" y="15" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">#7786d5b</text>
-      <text x="138" y="15" text-anchor="end" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Eat-Better</text>
-      <text x="8" y="30" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="500">Command Center Distribution</text>
+      <text x="138" y="15" text-anchor="end" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Eat-Better-..</text>
+      <text x="8" y="30" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="500">Experiential Activit..</text>
       <text x="8" y="42" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" class="slot-status-3">● INGESTING COMMIT</text>
     </g>
     <!-- Pellet 3 on top rail -->
     <circle cx="441.0" cy="112" r="4" fill="#22C55E" class="pellet-3"/>    <!-- Slot 4 -->
     <g transform="translate(532, 48)">
       <rect width="146" height="48" rx="5" fill="#0D1117" stroke="#30363D" stroke-width="1.2" class="slot-box-4"/>
-      <text x="8" y="15" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">#b710063</text>
-      <text x="138" y="15" text-anchor="end" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">podcast-ai</text>
-      <text x="8" y="30" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="500">feat: viral clip finder</text>
+      <text x="8" y="15" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">#7a6ddae</text>
+      <text x="138" y="15" text-anchor="end" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Eat-Better-..</text>
+      <text x="8" y="30" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="500">Activity 1: ingredie..</text>
       <text x="8" y="42" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" class="slot-status-4">● INGESTING COMMIT</text>
     </g>
     <!-- Pellet 4 on top rail -->
@@ -422,8 +422,8 @@
     <g transform="translate(696, 48)">
       <rect width="146" height="48" rx="5" fill="#0D1117" stroke="#30363D" stroke-width="1.2" class="slot-box-5"/>
       <text x="8" y="15" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">#973e762</text>
-      <text x="138" y="15" text-anchor="end" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Eat-Better</text>
-      <text x="8" y="30" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="500">feat: experiential activity 2</text>
+      <text x="138" y="15" text-anchor="end" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Eat-Better-..</text>
+      <text x="8" y="30" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="500">feat: experiential a..</text>
       <text x="8" y="42" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" class="slot-status-5">● INGESTING COMMIT</text>
     </g>
     <!-- Pellet 5 on top rail -->
@@ -436,8 +436,8 @@
     <g transform="translate(696, 152)">
       <rect width="146" height="48" rx="5" fill="#0D1117" stroke="#30363D" stroke-width="1.2" class="slot-box-6"/>
       <text x="8" y="15" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">#106a053</text>
-      <text x="138" y="15" text-anchor="end" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">ZeePrep</text>
-      <text x="8" y="30" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="500">feat: audio/video assessment</text>
+      <text x="138" y="15" text-anchor="end" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Eat-Better-..</text>
+      <text x="8" y="30" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="500">Activity 1: hairnet ..</text>
       <text x="8" y="42" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" class="slot-status-6">● INGESTING COMMIT</text>
     </g>
     <!-- Pellet 6 on bottom rail -->
@@ -445,8 +445,8 @@
     <g transform="translate(532, 152)">
       <rect width="146" height="48" rx="5" fill="#0D1117" stroke="#30363D" stroke-width="1.2" class="slot-box-7"/>
       <text x="8" y="15" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">#6c0c6cd</text>
-      <text x="138" y="15" text-anchor="end" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Olympiad</text>
-      <text x="8" y="30" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="500">feat: DND interactive exam</text>
+      <text x="138" y="15" text-anchor="end" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Eat-Better-..</text>
+      <text x="8" y="30" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="500">Activity 1 upgrades:..</text>
       <text x="8" y="42" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" class="slot-status-7">● INGESTING COMMIT</text>
     </g>
     <!-- Pellet 7 on bottom rail -->
@@ -454,8 +454,8 @@
     <g transform="translate(368, 152)">
       <rect width="146" height="48" rx="5" fill="#0D1117" stroke="#30363D" stroke-width="1.2" class="slot-box-8"/>
       <text x="8" y="15" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">#28223e9</text>
-      <text x="138" y="15" text-anchor="end" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Mangalyaan</text>
-      <text x="8" y="30" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="500">feat: PBR launch tower sim</text>
+      <text x="138" y="15" text-anchor="end" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Eat-Better-..</text>
+      <text x="8" y="30" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="500">feat: experiential a..</text>
       <text x="8" y="42" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" class="slot-status-8">● INGESTING COMMIT</text>
     </g>
     <!-- Pellet 8 on bottom rail -->
@@ -463,8 +463,8 @@
     <g transform="translate(204, 152)">
       <rect width="146" height="48" rx="5" fill="#0D1117" stroke="#30363D" stroke-width="1.2" class="slot-box-9"/>
       <text x="8" y="15" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">#a8779c7</text>
-      <text x="138" y="15" text-anchor="end" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">poa-story</text>
-      <text x="8" y="30" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="500">docs: sprint roadmap spec</text>
+      <text x="138" y="15" text-anchor="end" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Eat-Better-..</text>
+      <text x="8" y="30" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="500">docs: experiential a..</text>
       <text x="8" y="42" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" class="slot-status-9">● INGESTING COMMIT</text>
     </g>
     <!-- Pellet 9 on bottom rail -->
@@ -472,8 +472,8 @@
     <g transform="translate(40, 152)">
       <rect width="146" height="48" rx="5" fill="#0D1117" stroke="#30363D" stroke-width="1.2" class="slot-box-10"/>
       <text x="8" y="15" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">#9dd977a</text>
-      <text x="138" y="15" text-anchor="end" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Eat-Better</text>
-      <text x="8" y="30" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="500">Product Innovation Engine</text>
+      <text x="138" y="15" text-anchor="end" fill="#34D399" font-family="'JetBrains Mono', monospace" font-size="9.5" font-weight="700">Eat-Better-..</text>
+      <text x="8" y="30" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="500">Experiential Activit..</text>
       <text x="8" y="42" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="8" font-weight="600" class="slot-status-10">● INGESTING COMMIT</text>
     </g>
     <!-- Pellet 10 on bottom rail -->

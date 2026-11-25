@@ -90,6 +90,24 @@
 
 <img src="assets/generated/trophies-and-achievements.svg" alt="Milestone trophies" width="100%"/>
 
+<br/><br/><br/>
+
+<!-- ═════════════ STAGE 05 · BONUS ARCADE ═════════════ -->
+<a name="arcade"></a>
+<img src="assets/generated/game/stage-5.svg" alt="Stage 05 — Bonus Arcade" width="100%"/>
+
+<br/>
+
+<a href="https://chirag-gour.github.io/CHIRAG-GOUR/?mode=snake"><img src="assets/generated/snake-ride.svg" alt="Snake Ride — Chirag rides a snake row by row across his real contribution graph. Click to play it in 3D" width="100%"/></a>
+
+<br/><br/>
+
+<a href="https://chirag-gour.github.io/CHIRAG-GOUR/?mode=space"><img src="assets/generated/arcade-rocket-commit-game.svg" alt="Space Defender — Chirag blasts only the contribution cells that spell CHIRAG. Click to play it in 3D" width="100%"/></a>
+
+<br/><br/>
+
+<img src="assets/generated/arcade-pacman-commit-eater.svg" alt="Commit chomper eating the 10 latest commits" width="100%"/>
+
 <br/><br/>
 
 <img src="assets/generated/commit-skyline-isometric.svg" alt="3D isometric commit skyline" width="100%"/>
@@ -102,16 +120,6 @@
 
 <img src="assets/generated/sound-waveform.svg" alt="Coding cadence waveform" width="100%"/>
 
-<br/><br/><br/>
-
-<!-- ═════════════ STAGE 05 · BONUS ARCADE ═════════════ -->
-<a name="arcade"></a>
-<img src="assets/generated/game/stage-5.svg" alt="Stage 05 — Bonus Arcade" width="100%"/>
-
-<br/>
-
-<a href="https://chirag-gour.github.io/CHIRAG-GOUR/"><img src="assets/generated/game/game-trailer.svg" alt="Chirag: The Game — Chirag rides the commit snake and pilots the space defender. Click to play in 3D" width="100%"/></a>
-
 <br/><br/>
 
 <a href="https://chirag-gour.github.io/CHIRAG-GOUR/"><img src="https://img.shields.io/badge/▶_PRESS_START-3D_GAME-8A9A3E?style=for-the-badge&labelColor=161B22&logo=threedotjs&logoColor=white" alt="Play Chirag: The Game"/></a>
@@ -119,18 +127,6 @@
 <a href="https://chirag-gour.github.io/CHIRAG-GOUR/?mode=snake"><img src="https://img.shields.io/badge/🐍_SNAKE-RIDE-39D353?style=for-the-badge&labelColor=161B22" alt="Play Snake Ride"/></a>
 &nbsp;
 <a href="https://chirag-gour.github.io/CHIRAG-GOUR/?mode=space"><img src="https://img.shields.io/badge/🚀_SPACE-DEFENDER-38BDF8?style=for-the-badge&labelColor=161B22" alt="Play Space Defender"/></a>
-
-<br/><br/>
-
-<img src="assets/generated/github-contribution-grid-snake.svg" alt="Chirag riding the contribution snake" width="100%"/>
-
-<br/><br/>
-
-<img src="assets/generated/arcade-rocket-commit-game.svg" alt="Chirag piloting the rocket through the contribution grid" width="100%"/>
-
-<br/><br/>
-
-<img src="assets/generated/arcade-pacman-commit-eater.svg" alt="Commit chomper eating the 10 latest commits" width="100%"/>
 
 <br/><br/><br/>
 
@@ -153,7 +149,7 @@
 
 <br/><br/>
 
-<sub>🕹️ this README is a cartridge — re-rendered every 2 hours by <a href="https://github.com/CHIRAG-GOUR/CHIRAG-GOUR/tree/main/engine">a Python engine</a> · no JavaScript was harmed · last sync 2026-11-25 11:39:38 UTC</sub>
+<sub>🕹️ this README is a cartridge — re-rendered every 2 hours by <a href="https://github.com/CHIRAG-GOUR/CHIRAG-GOUR/tree/main/engine">a Python engine</a> · no JavaScript was harmed · last sync 2026-11-25 11:49:30 UTC</sub>
 <br/>
 <sub><a href="#top">▲ back to title screen</a></sub>
 
