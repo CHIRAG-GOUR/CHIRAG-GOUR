@@ -16,6 +16,26 @@ PROJECT_METADATA_REGISTRY = {
         "key_tech": ["React", "Three.js", "R3F", "Zustand", "Framer Motion", "Recharts"],
         "description": "Interactive 3D pedagogical simulation for Grades 4-9 navigating Roo the kangaroo through 13 business milestones on Skippi Island.",
         "complexity_tier": "High",
+        "featured": False
+    },
+    "Podcast-Tool-New": {
+        "title": "Podcast AI Studio — Video Intelligence Tool",
+        "category": "Applied AI & Media",
+        "domain": "Generative Video Tooling",
+        "live_url": "https://podcast-tool-new.vercel.app",
+        "key_tech": ["Next.js", "Gemini AI", "FFmpeg", "Firebase", "WaveSurfer", "Zustand"],
+        "description": "AI studio that scans long-form podcasts for viral moments, auto-captions them word by word and cuts shorts in a full timeline editor.",
+        "complexity_tier": "High",
+        "featured": True
+    },
+    "SaltyRevamp": {
+        "title": "Salty × Skillizee — Virtual Internship",
+        "category": "EdTech & Serious Games",
+        "domain": "Virtual Brand Internship",
+        "live_url": None,
+        "key_tech": ["HTML5", "Tailwind CSS", "Vanilla JS", "Dark Mode"],
+        "description": "Five-module virtual internship inside a D2C jewellery brand: brand story, Gen-Z marketing, pricing and supply chain, experiential tasks and capstones.",
+        "complexity_tier": "Medium",
         "featured": True
     },
     "Eat-Better-Internship": {
@@ -199,7 +219,8 @@ class RepositoryAnalyzer:
         
         # Sort featured projects by priority
         priority_order = [
-            "POA-Skippi",
+            "Podcast-Tool-New",
+            "SaltyRevamp",
             "Eat-Better-Internship",
             "ZeePrep-MobileApp",
             "Olympiad-Activities",

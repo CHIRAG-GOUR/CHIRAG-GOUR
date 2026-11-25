@@ -22,6 +22,9 @@ from generate_pacman_game import generate_pacman_game_svg
 from generate_neofetch import generate_neofetch_svg
 from generate_skyline_game import generate_skyline_game_svg
 from readme_builder import ReadmeBuilder
+from generate_game_ui import render_all as render_game_ui, load_players
+import svg_backdrop
+from collections import Counter
 
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 DATA_CURRENT = os.path.join(BASE_DIR, "data", "current")
@@ -80,8 +83,15 @@ def main():
     evaluated_commits.sort(key=lambda x: x.get("date") or "", reverse=True)
     print(f"Evaluated {len(evaluated_commits)} commits with explainable TIS engine.")
 
-    with open(os.path.join(DATA_CURRENT, "commits_sample.json"), "w", encoding="utf-8") as f:
-        json.dump(evaluated_commits[:100], f, indent=2)
+    commits_path = os.path.join(DATA_CURRENT, "commits_sample.json")
+    if evaluated_commits:
+        with open(commits_path, "w", encoding="utf-8") as f:
+            json.dump(evaluated_commits[:100], f, indent=2)
+    elif os.path.exists(commits_path):
+        # CI has no local commit export: keep the last known sample instead of wiping it
+        with open(commits_path, "r", encoding="utf-8") as f:
+            evaluated_commits = json.load(f)
+        print(f"Reusing {len(evaluated_commits)} cached commits from commits_sample.json.")
 
     portfolio_scores = scorer.aggregate_portfolio_scores(evaluated_commits)
 
@@ -143,13 +153,13 @@ def main():
         "overall_activity_score": analytics["overall_activity_score"],
         "technical_growth_score": analytics["technical_growth_score"],
         "top_languages": {"TypeScript": 31, "JavaScript": 15, "HTML": 8},
-        "primary_focus": "Eat Better Internship (Next.js Turbopack) & Skippi Island 3D"
+        "primary_focus": "Podcast AI Studio & Eat Better Internship"
     }, dt=now_utc)
 
     trends = tracker.calculate_trends(analytics)
 
     # 5. Render Dynamic SVGs
-    print("[5/6] Generating dynamic, high-resolution modern light SVGs...")
+    print("[5/6] Generating dynamic dark-theme SVGs...")
     generate_snake_svg()
     generate_rocket_game_svg()
     generate_pacman_game_svg()
@@ -162,19 +172,30 @@ def main():
     svg_gen.generate_developer_xp_streak()
     svg_gen.generate_activity_waveform()
     svg_gen.generate_sound_waveform()
-    svg_gen.generate_languages_and_radar()
+    languages = Counter(p.get("language") for p in all_projects if p.get("language") and p.get("name") != "CHIRAG-GOUR")
+    svg_gen.generate_languages_and_radar(dict(languages))
     svg_gen.generate_project_previews()
 
     latest_hash = "b710063"
-    latest_repo = "poa-skippi"
-    latest_msg = "deploy: live 3D Shark Tank case study on Firebase"
+    latest_repo = "Podcast-Tool-New"
+    latest_msg = "feat: viral clip finder"
     if evaluated_commits:
         latest_c = evaluated_commits[0]
-        latest_hash = latest_c.get("hash", "b710063")[:7]
-        latest_repo = latest_c.get("project_name", "poa-skippi")
-        latest_msg = (latest_c.get("message") or "ecosystem refinement").split("\n")[0][:50]
+        latest_hash = (latest_c.get("sha") or latest_c.get("hash") or latest_hash)[:7]
+        latest_repo = latest_c.get("project") or latest_c.get("project_name") or latest_repo
+        latest_msg = (latest_c.get("title") or latest_c.get("message") or "ecosystem refinement").splitlines()[0]
+        if len(latest_msg) > 52:
+            latest_msg = latest_msg[:51].rstrip() + "…"
 
-    svg_gen.generate_commit_ticker(commit_hash=latest_hash, repo_name=latest_repo, commit_msg=latest_msg)
+    from html import escape as _esc
+    svg_gen.generate_commit_ticker(commit_hash=_esc(latest_hash), repo_name=_esc(latest_repo), commit_msg=_esc(latest_msg))
+
+    # Game layer: menu, stage banners, player select, trailer, cartridges, continue screen, credits
+    players = load_players()
+    cartridges = render_game_ui(repo_analysis, analytics, players)
+
+    # Dark-theme lock + snake rider (also re-run in CI after the snake action)
+    svg_backdrop.main()
 
     # 6. Build README.md
     print("[6/6] Generating production GitHub README.md...")
@@ -183,7 +204,9 @@ def main():
         analytics=analytics,
         featured_projects=featured_projects,
         sync_time=sync_time_str,
-        trends=trends
+        trends=trends,
+        cartridges=cartridges,
+        players=players,
     )
 
     readme_path = os.path.join(BASE_DIR, "README.md")

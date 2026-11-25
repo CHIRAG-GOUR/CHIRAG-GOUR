@@ -97,6 +97,12 @@ class SVGGenerator:
 
     def generate_commit_ticker(self, commit_hash: str = "b710063", repo_name: str = "poa-skippi", commit_msg: str = "deploy: live 3D Shark Tank case study on Firebase"):
         """Live 'Currently Building' Commit Ticker: Subtle 1-line dark terminal ticker."""
+        # lay the row out from the actual text lengths so long repo names never collide
+        hash_x = 210 + (len(repo_name) + 2) * 6.9 + 16
+        msg_x = hash_x + 7 * 6.4 + 18
+        max_chars = max(12, int((770 - msg_x) / 5.9))
+        if len(commit_msg) > max_chars:
+            commit_msg = commit_msg[: max_chars - 1].rstrip() + "…"
         svg = f"""<svg width="880" height="42" viewBox="0 0 880 42" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Subtle dark terminal container matching GitHub code blocks -->
   <rect x="1" y="1" width="878" height="40" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1.2"/>
@@ -117,12 +123,12 @@ class SVGGenerator:
   </text>
 
   <!-- Commit Hash -->
-  <text x="340" y="25" fill="#C084FC" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">
+  <text x="{hash_x:.0f}" y="25" fill="#C084FC" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">
     {commit_hash}
   </text>
 
   <!-- Commit Message -->
-  <text x="420" y="25" fill="#E6EDF3" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="500">
+  <text x="{msg_x:.0f}" y="25" fill="#E6EDF3" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="500">
     {commit_msg}
   </text>
 
@@ -272,7 +278,7 @@ class SVGGenerator:
 
     def generate_activity_waveform(self):
         """Pure visual area graph & waveform with zero background boxes."""
-        svg = """<svg width="880" height="210" viewBox="0 0 880 210" fill="none" xmlns="http://www.w3.org/2000/svg">
+        svg = """<svg width="880" height="222" viewBox="0 0 880 222" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="wave_fill" x1="0" y1="50" x2="0" y2="180" gradientUnits="userSpaceOnUse">
       <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.3"/>
@@ -439,8 +445,39 @@ class SVGGenerator:
 </svg>"""
         self._save("sound-waveform.svg", svg)
 
-    def generate_languages_and_radar(self):
+    @staticmethod
+    def _language_panel(languages: Dict[str, int]) -> str:
+        """Language mix computed from the real public repository list."""
+        palette = ["#38BDF8", "#FBBF24", "#F472B6", "#818CF8", "#34D399", "#E879F9"]
+        items = sorted(((k, v) for k, v in (languages or {}).items() if k), key=lambda kv: -kv[1])[:6]
+        total = sum(v for _, v in items) or 1
+        bar_w, x, bars, legend = 370.0, 0.0, [], []
+        for i, (name, count) in enumerate(items):
+            color = palette[i % len(palette)]
+            w = max(6.0, bar_w * count / total)
+            if i == len(items) - 1:
+                w = max(6.0, bar_w - x)
+            bars.append(f'<rect x="{x:.1f}" y="0" width="{max(2.0, w - 4):.1f}" height="16" rx="4" fill="{color}"/>')
+            x += w
+            col, row = i % 3, i // 3
+            legend.append(
+                f'<g transform="translate({col * 130}, {row * 48})">'
+                f'<circle cx="5" cy="5" r="4.5" fill="{color}"/>'
+                f'<text x="16" y="9" fill="#E6EDF3" font-weight="700">{name}</text>'
+                f'<text x="16" y="24" fill="#7D8590" font-size="9.5">{count * 100 / total:.1f}% • {count} Repo{"s" if count != 1 else ""}</text></g>'
+            )
+        return (
+            '<g transform="translate(470, 15)">'
+            '<text x="0" y="15" fill="#E6EDF3" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700">'
+            f'Language Mix ({total} Public Repositories)</text>'
+            f'<g transform="translate(0, 36)">{"".join(bars)}</g>'
+            f'<g transform="translate(0, 75)" font-family="JetBrains Mono, Consolas, monospace" font-size="10.5">{"".join(legend)}</g>'
+            '</g>'
+        )
+
+    def generate_languages_and_radar(self, languages: Dict[str, int] = None):
         """Visual Language Stack & Domain Rings. Zero white boxes."""
+        language_panel = self._language_panel(languages or {"TypeScript": 34, "JavaScript": 15, "HTML": 8, "Python": 1})
         svg = """<svg width="880" height="210" viewBox="0 0 880 210" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- ZERO WHITE BACKGROUND: Seamless Transparent Canvas -->
 
@@ -481,55 +518,8 @@ class SVGGenerator:
   <!-- Divider -->
   <line x1="440" y1="20" x2="440" y2="195" stroke="#21262D" stroke-width="1"/>
 
-  <!-- Right Side: Verified Language Distribution -->
-  <g transform="translate(470, 15)">
-    <text x="0" y="15" fill="#E6EDF3" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700">
-      Verified Language Stack (83 Repositories)
-    </text>
-
-    <!-- Stack Bar -->
-    <g transform="translate(0, 36)">
-      <rect x="0" y="0" width="195" height="16" rx="4" fill="#38BDF8"/>
-      <rect x="200" y="0" width="105" height="16" rx="4" fill="#FBBF24"/>
-      <rect x="310" y="0" width="50" height="16" rx="4" fill="#818CF8"/>
-      <rect x="365" y="0" width="30" height="16" rx="4" fill="#34D399"/>
-      <rect x="400" y="0" width="10" height="16" rx="4" fill="#E879F9"/>
-    </g>
-
-    <!-- Legend & Percents -->
-    <g transform="translate(0, 75)" font-family="'JetBrains Mono', monospace" font-size="10.5">
-      <!-- TypeScript -->
-      <g transform="translate(0, 0)">
-        <circle cx="5" cy="5" r="4.5" fill="#38BDF8"/>
-        <text x="16" y="9" fill="#E6EDF3" font-weight="700">TypeScript</text>
-        <text x="16" y="24" fill="#7D8590" font-size="9.5">48.2% • 31 Repos</text>
-      </g>
-      <!-- JavaScript -->
-      <g transform="translate(145, 0)">
-        <circle cx="5" cy="5" r="4.5" fill="#FBBF24"/>
-        <text x="16" y="9" fill="#E6EDF3" font-weight="700">JavaScript</text>
-        <text x="16" y="24" fill="#7D8590" font-size="9.5">26.0% • 15 Repos</text>
-      </g>
-      <!-- Python -->
-      <g transform="translate(290, 0)">
-        <circle cx="5" cy="5" r="4.5" fill="#818CF8"/>
-        <text x="16" y="9" fill="#E6EDF3" font-weight="700">Python</text>
-        <text x="16" y="24" fill="#7D8590" font-size="9.5">12.5% • 5 Repos</text>
-      </g>
-      <!-- GLSL & Dart -->
-      <g transform="translate(0, 48)">
-        <circle cx="5" cy="5" r="4.5" fill="#34D399"/>
-        <text x="16" y="9" fill="#E6EDF3" font-weight="700">GLSL / Shader</text>
-        <text x="16" y="24" fill="#7D8590" font-size="9.5">8.1% • 4 Repos</text>
-      </g>
-      <g transform="translate(145, 48)">
-        <circle cx="5" cy="5" r="4.5" fill="#E879F9"/>
-        <text x="16" y="9" fill="#E6EDF3" font-weight="700">Dart (Flutter)</text>
-        <text x="16" y="24" fill="#7D8590" font-size="9.5">5.2% • 2 Repos</text>
-      </g>
-    </g>
-  </g>
-</svg>"""
+  __LANGUAGE_PANEL__
+</svg>""".replace("__LANGUAGE_PANEL__", language_panel)
         self._save("languages-and-radar.svg", svg)
 
     def generate_project_previews(self):
@@ -751,7 +741,7 @@ class SVGGenerator:
     <g transform="translate(20, 164)">
       <rect width="200" height="175" rx="10" fill="#161B22" stroke="#30363D" stroke-width="1"/>
       <text x="12" y="18" fill="#C084FC" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="800">QUESTION 14 OF 25</text>
-      <text x="12" y="34" fill="#E6EDF3" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="600">Determine time complexity of BVH traversal:</text>
+      <text x="12" y="34" fill="#E6EDF3" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" font-weight="600">Time complexity of BVH traversal?</text>
       
       <!-- Option A -->
       <rect x="12" y="48" width="176" height="24" rx="6" fill="#0D1117" stroke="#21262D"/>

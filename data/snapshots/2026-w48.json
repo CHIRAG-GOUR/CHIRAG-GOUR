@@ -1,16 +1,16 @@
 {
   "snapshot_id": "2026-w48",
-  "timestamp": "2026-11-25T04:46:52.348465+00:00",
+  "timestamp": "2026-11-25T11:37:35.026132+00:00",
   "total_repositories": 58,
-  "active_repositories": 6,
-  "total_commits_recorded": 0,
+  "active_repositories": 5,
+  "total_commits_recorded": 575,
   "streak_days": 11,
-  "overall_activity_score": 0,
-  "technical_growth_score": 0,
+  "overall_activity_score": 37.0,
+  "technical_growth_score": 87.7,
   "top_languages": {
     "TypeScript": 31,
     "JavaScript": 15,
     "HTML": 8
   },
-  "primary_focus": "Eat Better Internship (Next.js Turbopack) & Skippi Island 3D"
+  "primary_focus": "Podcast AI Studio & Eat Better Internship"
 }

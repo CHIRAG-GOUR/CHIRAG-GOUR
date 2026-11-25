@@ -1,0 +1,67 @@
+name: Insert Coin
+
+# A visitor clicks CONTINUE? in the README → opens a pre-filled "insert coin" issue →
+# this bot adds their avatar to the player wall, replies, and closes the issue.
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: readme-writer
+  cancel-in-progress: false
+
+jobs:
+  insert-coin:
+    if: contains(github.event.issue.title, 'insert coin')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Drop the coin
+        id: coin
+        env:
+          PLAYER_LOGIN: ${{ github.event.issue.user.login }}
+        run: python engine/insert_coin.py
+
+      - name: Commit & Push
+        if: steps.coin.outputs.status == 'new' || steps.coin.outputs.status == 'returning'
+        env:
+          PLAYER_LOGIN: ${{ github.event.issue.user.login }}
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/players.json assets/generated/game/ README.md
+          git commit -m "chore(arcade): @${PLAYER_LOGIN} inserted a coin [skip ci]"
+          for i in 1 2 3; do
+            git pull --rebase && git push && break
+            sleep 5
+          done
+
+      - name: Reply and close
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE: ${{ github.event.issue.number }}
+          STATUS: ${{ steps.coin.outputs.status }}
+          PLAYER: ${{ steps.coin.outputs.player }}
+          CREDITS: ${{ steps.coin.outputs.credits }}
+          REPO: ${{ github.repository }}
+        run: |
+          case "$STATUS" in
+            new)       MSG="🪙 **CREDIT ACCEPTED** — welcome, **Player ${PLAYER}**! Your avatar is now on the player wall. Total credits in the machine: ${CREDITS}." ;;
+            returning) MSG="🪙 **+1 CREDIT** — Player ${PLAYER} is back! Total credits in the machine: ${CREDITS}." ;;
+            cooldown)  MSG="⏳ The machine is still counting your last coin, Player ${PLAYER}. Try again in a bit!" ;;
+            *)         MSG="🤔 That coin didn't fit the slot." ;;
+          esac
+          MSG="${MSG}"$'\n\n'"🎮 While you're here, play the 3D game: https://chirag-gour.github.io/CHIRAG-GOUR/"$'\n'"_(this issue closes itself — thanks for playing!)_"
+          gh issue comment "$ISSUE" --repo "$REPO" --body "$MSG"
+          gh issue close "$ISSUE" --repo "$REPO"

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <title>Chirag: The Game</title>
+  <meta name="description" content="A tiny 3D arcade starring Chirag Gour — ride the commit snake or pilot the contribution defender." />
+  <meta name="theme-color" content="#0D1117" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+  </script>
+</head>
+<body>
+  <canvas id="c" aria-label="3D game view"></canvas>
+
+  <!-- HUD -->
+  <header id="hud" class="hidden">
+    <div class="hud-left"><span id="hud-mode">SNAKE RIDE</span></div>
+    <div class="hud-mid"><span class="lbl">SCORE</span> <span id="hud-score">0</span> <span class="lbl">BEST</span> <span id="hud-best">0</span></div>
+    <div class="hud-right"><span id="hud-lives"></span><button id="btn-pause" class="icon" title="Menu (Esc)">⏸</button></div>
+  </header>
+
+  <!-- Title / menu -->
+  <section id="menu" class="overlay">
+    <div class="panel">
+      <p class="kicker">&lt;developer/&gt; presents</p>
+      <h1>CHIRAG<span>:</span> THE GAME</h1>
+      <p class="sub">a tiny 3D arcade where I'm the lead character</p>
+      <div class="modes">
+        <button class="mode" data-mode="snake">
+          <span class="mode-icon">🐍</span>
+          <span class="mode-name">SNAKE RIDE</span>
+          <span class="mode-desc">ride the commit snake · eat commits · don't bite yourself</span>
+          <span class="mode-best">BEST <b id="best-snake">0</b></span>
+        </button>
+        <button class="mode" data-mode="space">
+          <span class="mode-icon">🚀</span>
+          <span class="mode-name">SPACE DEFENDER</span>
+          <span class="mode-desc">pilot the ship · blast the contribution grid · dodge the bugs</span>
+          <span class="mode-best">BEST <b id="best-space">0</b></span>
+        </button>
+      </div>
+      <p class="controls">⌨ arrows / WASD · ESC menu · M mute &nbsp;|&nbsp; 📱 swipe / on-screen pad</p>
+      <p class="links"><a href="https://github.com/CHIRAG-GOUR" target="_blank" rel="noopener">◀ back to my GitHub</a></p>
+    </div>
+  </section>
+
+  <!-- Game over -->
+  <section id="over" class="overlay hidden">
+    <div class="panel small">
+      <h2 id="over-title">GAME OVER</h2>
+      <p class="big"><span id="over-score">0</span></p>
+      <p id="over-best" class="sub"></p>
+      <div class="row">
+        <button id="btn-retry" class="btn primary">▶ PLAY AGAIN</button>
+        <button id="btn-menu" class="btn">☰ MENU</button>
+      </div>
+      <p class="links"><a href="https://github.com/CHIRAG-GOUR" target="_blank" rel="noopener">🪙 drop a coin on my GitHub README</a></p>
+    </div>
+  </section>
+
+  <div id="banner" class="hidden"></div>
+  <div id="toast"></div>
+
+  <!-- Touch controls -->
+  <div id="pad-snake" class="pad hidden">
+    <button data-dir="up">▲</button>
+    <div><button data-dir="left">◀</button><button data-dir="right">▶</button></div>
+    <button data-dir="down">▼</button>
+  </div>
+  <div id="pad-space" class="pad-space hidden">
+    <button data-hold="left">◀</button>
+    <button data-hold="right">▶</button>
+  </div>
+
+  <button id="btn-mute" class="icon corner" title="Mute (M)">🔊</button>
+  <div id="loading">LOADING CHIRAG…</div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

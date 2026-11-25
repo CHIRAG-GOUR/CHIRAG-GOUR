@@ -43,7 +43,7 @@ def load_latest_commits(limit=10):
         {"sha": "8950ed5", "project": "Eat-Better", "title": "feat: Module 5 Capstone 3D"},
         {"sha": "b9b293b", "project": "Eat-Better", "title": "feat: Experiential Activity 4"},
         {"sha": "7786d5b", "project": "Eat-Better", "title": "Command Center Distribution"},
-        {"sha": "b710063", "project": "poa-skippi", "title": "deploy: live 3D Shark Tank"},
+        {"sha": "b710063", "project": "podcast-ai", "title": "feat: viral clip finder"},
         {"sha": "973e762", "project": "Eat-Better", "title": "feat: experiential activity 2"},
         {"sha": "106a053", "project": "ZeePrep", "title": "feat: audio/video assessment"},
         {"sha": "6c0c6cd", "project": "Olympiad", "title": "feat: DND interactive exam"},
@@ -277,8 +277,8 @@ def generate_pacman_game_svg():
     </text>
 
     <!-- Center Status Ticker -->
-    <text x="440" y="0" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="700" letter-spacing="0.8" class="hud-marquee">
-      INGESTING 10 LATEST COMMITS • AUTONOMOUS RUNNER
+    <text x="480" y="0" text-anchor="middle" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="700" letter-spacing="0.8" class="hud-marquee">
+      10 LATEST COMMITS • AUTO-RUNNER
     </text>
 
     <!-- Right XP & Lives -->

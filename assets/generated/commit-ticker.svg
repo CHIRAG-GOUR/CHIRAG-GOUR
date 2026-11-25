@@ -14,17 +14,17 @@
 
   <!-- Repo Badge -->
   <text x="210" y="25" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="800">
-    [poa-skippi]
+    [Eat-Better-Internship]
   </text>
 
   <!-- Commit Hash -->
-  <text x="340" y="25" fill="#C084FC" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">
-    b710063
+  <text x="385" y="25" fill="#C084FC" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="700">
+    8950ed5
   </text>
 
   <!-- Commit Message -->
-  <text x="420" y="25" fill="#E6EDF3" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="500">
-    deploy: live 3D Shark Tank case study on Firebase
+  <text x="448" y="25" fill="#E6EDF3" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="500">
+    feat: Module 5 Capstone (5.1 &amp; 5.2), Activity 4 3…
   </text>
 
   <!-- Right status -->

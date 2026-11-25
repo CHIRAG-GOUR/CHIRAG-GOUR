@@ -24,14 +24,14 @@ def generate_skyline_game_svg(output_path: str = None) -> str:
         {"month": "JAN", "commits": 88,  "tier": "normal", "flagship": None},
         {"month": "FEB", "commits": 112, "tier": "normal", "flagship": None},
         {"month": "MAR", "commits": 146, "tier": "mid",    "flagship": None},
-        {"month": "APR", "commits": 135, "tier": "mid",    "flagship": None},
+        {"month": "APR", "commits": 135, "tier": "mid",    "flagship": "Salty"},
         {"month": "MAY", "commits": 188, "tier": "high",   "flagship": "ZeePrep"},
         {"month": "JUN", "commits": 174, "tier": "high",   "flagship": None},
         {"month": "JUL", "commits": 216, "tier": "surge",  "flagship": "Olympiad"},
-        {"month": "AUG", "commits": 248, "tier": "surge",  "flagship": "Eat-Better"},
+        {"month": "AUG", "commits": 248, "tier": "surge",  "flagship": "Podcast-AI"},
         {"month": "SEP", "commits": 276, "tier": "apex",   "flagship": "Apex Citadel"},
         {"month": "OCT", "commits": 232, "tier": "surge",  "flagship": None},
-        {"month": "NOV", "commits": 264, "tier": "surge",  "flagship": "POA-Skippi"},
+        {"month": "NOV", "commits": 264, "tier": "surge",  "flagship": "Eat-Better"},
         {"month": "DEC", "commits": 220, "tier": "surge",  "flagship": "Mangalyaan"}
     ]
 

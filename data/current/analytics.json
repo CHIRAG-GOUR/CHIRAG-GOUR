@@ -6,20 +6,21 @@
   "overall_activity_score": 0,
   "technical_growth_score": 0,
   "categories": {
-    "Foundation & Systems": 9,
-    "EdTech & Serious Games": 15,
+    "Foundation & Systems": 8,
+    "EdTech & Serious Games": 16,
     "Creative Full-Stack": 1,
-    "Modern Reactive Web": 23,
+    "Modern Reactive Web": 22,
     "Mobile Architecture": 1,
     "Creative 3D & Simulation": 7,
+    "Applied AI & Media": 1,
     "Vision & Applied AI": 1,
     "Simulation & Fast AI": 1
   },
   "stages": {
-    "Active": 6,
-    "Maintained": 21,
+    "Active": 5,
+    "Maintained": 22,
     "Archived": 28,
     "Showcase": 3
   },
-  "sync_timestamp": "2026-11-25 04:46:52 UTC"
+  "sync_timestamp": "2026-11-25 11:37:35 UTC"
 }

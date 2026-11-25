@@ -18,6 +18,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: readme-writer
+  cancel-in-progress: false
+
 jobs:
   sync-ecosystem:
     runs-on: ubuntu-latest
@@ -46,6 +50,9 @@ jobs:
           outputs: |
             assets/generated/github-contribution-grid-snake.svg?color_snake=#39d353&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353
 
+      - name: Seat Chirag on the snake + lock dark theme
+        run: python engine/svg_backdrop.py
+
       - name: Commit & Push Changes
         run: |
           git config --local user.name "github-actions[bot]"
@@ -55,5 +62,5 @@ jobs:
             echo "No changes detected. Ecosystem is up to date."
           else
             git commit -m "chore(ecosystem): autonomous sync $(date -u +'%Y-%m-%d %H:%M UTC') [skip ci]"
-            git push
+            git pull --rebase -X theirs && git push
           fi

@@ -6,6 +6,10 @@ contribution blocks, vaporizing them one by one until only the glowing name
 """
 
 import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import character as hero  # noqa: E402
 import random
 
 OUTPUT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "assets", "generated"))
@@ -169,6 +173,15 @@ def generate_rocket_game_svg():
             grid_svg.append(cell_markup)
 
     css_content = "\n".join(column_keyframes)
+
+    rider_cell = 1.5
+    rider_w = len(hero.SIT_BACK[0]) * rider_cell
+    rider_h = len(hero.SIT_BACK) * rider_cell
+    rider = (
+        '<g><animateTransform attributeName="transform" type="translate" values="0 0;0 -0.8;0 0" dur="0.6s" repeatCount="indefinite"/>'
+        + hero.sit_back(14 - rider_w / 2, 13 - rider_h, rider_cell)
+        + "</g>"
+    )
 
     svg_content = f"""<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
@@ -345,6 +358,7 @@ def generate_rocket_game_svg():
 
   <!-- Flying Retro Rocket Ship with Rapid Lasers -->
   <g class="rocket-ship">
+   <g transform="translate(14 10) scale(1.5) translate(-14 -10)">
     <!-- Upward Laser Cannons (Twin Blaster Beams) -->
     <g class="laser-group">
       <!-- Left Cannon Lasers -->
@@ -393,6 +407,10 @@ def generate_rocket_game_svg():
       <polygon points="11,21 14,31 17,21" fill="#F97316" class="thruster-flame"/>
       <polygon points="12.5,21 14,27 15.5,21" fill="#FDE047" class="thruster-flame"/>
     </g>
+
+    <!-- Pilot: 3D Chirag riding on top of the ship, CHIRAG on his back -->
+    {rider}
+   </g>
   </g>
 </svg>"""
 

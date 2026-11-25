@@ -1,0 +1,47 @@
+name: Deploy 3D Game (GitHub Pages)
+
+# Publishes game/ to https://chirag-gour.github.io/CHIRAG-GOUR/
+# One-time setup: Settings → Pages → Build and deployment → Source: "GitHub Actions".
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'game/**'
+      - 'data/current/repositories.json'
+      - '.github/workflows/deploy-game.yml'
+  schedule:
+    - cron: '30 3 * * *' # daily refresh so the game picks up new repo names
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Bundle game + live repo data
+        run: |
+          mkdir -p _site
+          cp -r game/. _site/
+          cp data/current/repositories.json _site/data.json
+          touch _site/.nojekyll
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

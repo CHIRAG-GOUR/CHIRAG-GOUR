@@ -223,7 +223,7 @@
       <g transform="translate(0, 140)">
         <text x="0" y="0" fill="#38BDF8" font-weight="700">Deployments</text>
         <text x="125" y="0" fill="#8B949E">:</text>
-        <text x="140" y="0" fill="#E6EDF3">POA-Skippi <tspan fill="#38BDF8">•</tspan> Eat-Better <tspan fill="#38BDF8">•</tspan> ZeePrep <tspan fill="#38BDF8">•</tspan> Olympiad</text>
+        <text x="140" y="0" fill="#E6EDF3">Podcast-AI <tspan fill="#38BDF8">•</tspan> Salty <tspan fill="#38BDF8">•</tspan> Eat-Better <tspan fill="#38BDF8">•</tspan> Olympiad</text>
       </g>
 
       <!-- Row 9: Neural / Acceleration -->

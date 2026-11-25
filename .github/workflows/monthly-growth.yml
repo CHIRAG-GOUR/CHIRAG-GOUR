@@ -8,6 +8,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: readme-writer
+  cancel-in-progress: false
+
 jobs:
   monthly-growth:
     runs-on: ubuntu-latest
@@ -35,5 +39,5 @@ jobs:
             echo "Monthly snapshot already committed."
           else
             git commit -m "chore(growth): monthly developer evolution report $(date -u +'%Y-%m') [skip ci]"
-            git push
+            git pull --rebase -X theirs && git push
           fi
