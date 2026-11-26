@@ -127,6 +127,8 @@
 <a href="https://chirag-gour.github.io/CHIRAG-GOUR/?mode=snake"><img src="https://img.shields.io/badge/🐍_SNAKE-RIDE-39D353?style=for-the-badge&labelColor=161B22" alt="Play Snake Ride"/></a>
 &nbsp;
 <a href="https://chirag-gour.github.io/CHIRAG-GOUR/?mode=space"><img src="https://img.shields.io/badge/🚀_SPACE-DEFENDER-38BDF8?style=for-the-badge&labelColor=161B22" alt="Play Space Defender"/></a>
+&nbsp;
+<a href="https://chirag-gour.github.io/CHIRAG-GOUR/?mode=ladders"><img src="https://img.shields.io/badge/🎲_SNAKES-&_LADDERS_VS_ME-F472B6?style=for-the-badge&labelColor=161B22" alt="Play Snakes and Ladders against Chirag"/></a>
 
 <br/><br/><br/>
 

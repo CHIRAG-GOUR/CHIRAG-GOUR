@@ -99,6 +99,7 @@ class ReadmeBuilder:
             _link(GAME_URL, f'<img src="{_badge("▶ PRESS START", "3D GAME", "8A9A3E", "threedotjs")}" alt="Play Chirag: The Game"/>'),
             _link(f"{GAME_URL}?mode=snake", f'<img src="{_badge("🐍 SNAKE", "RIDE", "39D353")}" alt="Play Snake Ride"/>'),
             _link(f"{GAME_URL}?mode=space", f'<img src="{_badge("🚀 SPACE", "DEFENDER", "38BDF8")}" alt="Play Space Defender"/>'),
+            _link(f"{GAME_URL}?mode=ladders", f'<img src="{_badge("🎲 SNAKES", "& LADDERS VS ME", "F472B6")}" alt="Play Snakes and Ladders against Chirag"/>'),
         ])
 
         md = f"""<div align="center">

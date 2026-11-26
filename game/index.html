@@ -4,14 +4,17 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
   <title>Chirag: The Game</title>
-  <meta name="description" content="A tiny 3D arcade starring Chirag Gour — ride the commit snake or pilot the contribution defender." />
+  <meta name="description" content="A tiny 3D arcade starring Chirag Gour — ride the garden snake, blast his name in space, or race him at snakes &amp; ladders." />
   <meta name="theme-color" content="#0D1117" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <script type="importmap">
-    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+    { "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+    } }
   </script>
 </head>
 <body>
@@ -20,7 +23,7 @@
   <!-- HUD -->
   <header id="hud" class="hidden">
     <div class="hud-left"><span id="hud-mode">SNAKE RIDE</span></div>
-    <div class="hud-mid"><span class="lbl">SCORE</span> <span id="hud-score">0</span> <span class="lbl">BEST</span> <span id="hud-best">0</span></div>
+    <div class="hud-mid"><span class="lbl" id="hud-score-lbl">SCORE</span> <span id="hud-score">0</span> <span class="lbl" id="hud-best-lbl">BEST</span> <span id="hud-best">0</span></div>
     <div class="hud-right"><span id="hud-lives"></span><button id="btn-pause" class="icon" title="Menu (Esc)">⏸</button></div>
   </header>
 
@@ -34,14 +37,20 @@
         <button class="mode" data-mode="snake">
           <span class="mode-icon">🐍</span>
           <span class="mode-name">SNAKE RIDE</span>
-          <span class="mode-desc">ride the commit snake · eat commits · don't bite yourself</span>
+          <span class="mode-desc">ride a garden snake at sunset · eat glowing commits · don't bite yourself</span>
           <span class="mode-best">BEST <b id="best-snake">0</b></span>
         </button>
         <button class="mode" data-mode="space">
           <span class="mode-icon">🚀</span>
           <span class="mode-name">SPACE DEFENDER</span>
-          <span class="mode-desc">pilot the ship · blast the contribution grid · dodge the bugs</span>
+          <span class="mode-desc">pilot the ship through a nebula · blast my name · dodge the bugs</span>
           <span class="mode-best">BEST <b id="best-space">0</b></span>
+        </button>
+        <button class="mode" data-mode="ladders">
+          <span class="mode-icon">🎲</span>
+          <span class="mode-name">SNAKES &amp; LADDERS</span>
+          <span class="mode-desc">race me to 100 in a lantern garden · (spoiler: I always win)</span>
+          <span class="mode-best"><b id="best-ladders">CHIRAG 0 – 0 YOU</b></span>
         </button>
       </div>
       <p class="controls">⌨ arrows / WASD · ESC menu · M mute &nbsp;|&nbsp; 📱 swipe / on-screen pad</p>
@@ -75,6 +84,12 @@
   <div id="pad-space" class="pad-space hidden">
     <button data-hold="left">◀</button>
     <button data-hold="right">▶</button>
+  </div>
+
+  <div id="ladders-ui" class="hidden">
+    <div id="ladders-turn" class="turn you">YOUR TURN</div>
+    <button id="btn-roll" class="btn primary roll">🎲 ROLL</button>
+    <div class="hint">space / enter to roll</div>
   </div>
 
   <button id="btn-mute" class="icon corner" title="Mute (M)">🔊</button>
