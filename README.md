@@ -142,7 +142,9 @@
 
 <br/><br/>
 
-<sub>🕹️ no players on the wall yet — <b>be Player 1</b></sub>
+<sub><b>PLAYER WALL</b> · 1 player · 1 credits inserted</sub>
+<br/><br/>
+<a href="https://github.com/CHIRAG-GOUR" title="Player 1 · @CHIRAG-GOUR"><img src="https://github.com/CHIRAG-GOUR.png?size=80" width="40" alt="@CHIRAG-GOUR"/></a>
 
 <br/><br/><br/>
 
