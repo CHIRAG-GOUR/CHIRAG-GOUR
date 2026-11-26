@@ -6,10 +6,10 @@
   "overall_activity_score": 39.4,
   "technical_growth_score": 99.0,
   "categories": {
+    "Modern Reactive Web": 23,
     "Foundation & Systems": 8,
     "EdTech & Serious Games": 16,
     "Creative Full-Stack": 1,
-    "Modern Reactive Web": 22,
     "Mobile Architecture": 1,
     "Creative 3D & Simulation": 7,
     "Applied AI & Media": 1,
@@ -17,10 +17,10 @@
     "Simulation & Fast AI": 1
   },
   "stages": {
-    "Active": 5,
+    "Active": 6,
     "Maintained": 22,
     "Archived": 28,
     "Showcase": 3
   },
-  "sync_timestamp": "2026-11-26 06:41:52 UTC"
+  "sync_timestamp": "2026-11-26 10:22:24 UTC"
 }
