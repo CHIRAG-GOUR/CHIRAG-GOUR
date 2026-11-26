@@ -20,14 +20,13 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false # never cut a Pages deployment off halfway
 
 jobs:
-  deploy:
+  # Upload in its own job: deploy-pages can look for the artifact before GitHub has
+  # registered it when both steps share one job (actions/deploy-pages#451).
+  build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v7
@@ -39,8 +38,27 @@ jobs:
           cp data/current/repositories.json _site/data.json
 
       - uses: actions/configure-pages@v6
+
       - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment_retry.outputs.page_url }}
+    steps:
       - id: deployment
+        uses: actions/deploy-pages@v5
+        continue-on-error: true
+
+      # If GitHub still hasn't listed the artifact, give it a moment and try once more.
+      - name: Wait before retrying
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 20
+
+      - id: deployment_retry
+        if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v5
